@@ -1,0 +1,4 @@
+{
+  "out": "docs",
+  "src": ["src/index.ts"]
+}

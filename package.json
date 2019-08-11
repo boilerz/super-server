@@ -10,6 +10,8 @@
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "build": "buildTSPackage",
+    "docs": "typedoc && cp docs_config.yml docs/_config.yml",
+    "preversion": "yarn docs",
     "test": "jest --coverage --runInBand"
   },
   "peerDependencies": {
@@ -41,6 +43,7 @@
     "supertest": "^4.0.2",
     "ts-jest": "^24.0.2",
     "type-graphql": "^0.17.4",
+    "typedoc": "^0.15.0",
     "typescript": "^3"
   },
   "dependencies": {
