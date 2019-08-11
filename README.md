@@ -1,7 +1,7 @@
 # @boilerz/super-server
 
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/boilerz/super-server)](https://www.npmjs.com/package/@boilerz/super-server)
-
+[![CircleCI](https://circleci.com/gh/boilerz/super-server.svg?style=shield)](https://circleci.com/gh/boilerz/super-server)
 > Express server with type-graphql. 
 
 ### Install
