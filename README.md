@@ -1,21 +1,56 @@
-# @boilerz/boilerplate-lib
+# @boilerz/super-server
 
-[![GitHub forks](https://img.shields.io/github/forks/boilerz/boilerplate-lib?label=Fork%20me)](https://github.com/boilerz/boilerplate-lib/fork)
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/boilerz/super-server)](https://www.npmjs.com/package/@boilerz/super-server)
 
-> Boilerplate lib.
+> Express server with type-graphql. 
 
-### Setup
+### Install
 
-1. Fork the project or manually run:
 ```bash
-git clone git@github.com:boilerz/boilerplate-lib.git my-lib
-cd my-lib
-git remote set-url origin git@github.com:gh_user/my-lib
+npx install-peerdeps @boilerz/super-server
 ```
 
-Then after pull run:
+### Usage
+
+```typescript
+import server from 'super-server';
+import { Arg, Query, Resolver } from 'type-graphql';
+
+@Resolver()
+class GreetingResolver {
+  @Query(() => String)
+  public hello(@Arg('name') name: string): string {
+    return `Hello ${name}`;
+  }
+}
+
+// Start the server with your resolvers
+server.start({ resolvers: [GreetingResolver] });
+
+// For full control:
+server.start({
+  graphQLServerOptions: {
+    buildSchemaOptions: {
+      resolvers: [GreetingResolver],
+    },
+  },
+});
+```
+
+Some configuration can only be changed by env vars:
+
+| Name               | Default                   | Description                                                     |
+|--------------------|---------------------------|-----------------------------------------------------------------|
+| PORT               | `3000`                    | Server port.                                                    |
+| ALLOWED_DOMAINS    | `/http:\/\/localhost.*/`  | CORS whitelisted domains (separated using a comma).             |
+| SSL_REDIRECT       | `false`                   | Have to be set to `true` to redirect any http request to https. |
+
+For the `@boilerz/logger`'s configuration here the [readme](https://github.com/boilerz/logger#usage).
+
+### Release
 
 ```bash
-yarn install
-yarn custom
+yarn version
+yarn build
+yarn publish dist --access public
 ```

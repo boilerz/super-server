@@ -1,3 +1,10 @@
 {
-  "extends": "@boilerz/eslint-config"
+  "extends": "@boilerz/eslint-config",
+  "rules": {
+    "import/prefer-default-export": "off",
+    "class-methods-use-this": "off"
+  },
+  "env": {
+    "jest": true
+  }
 }
