@@ -41,7 +41,7 @@
     "lodash": "^4.17.15",
     "prettier": "^1",
     "supertest": "^4.0.2",
-    "ts-jest": "^24.0.2",
+    "ts-jest": "^25.1.0",
     "type-graphql": "^0.17.4",
     "typedoc": "^0.15.0",
     "typescript": "^3"
