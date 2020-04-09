@@ -37,11 +37,11 @@
     "eslint": "^6.1.0",
     "express": "^4.17.1",
     "graphql": "^14.4.2",
-    "jest": "^24.8.0",
+    "jest": "^25.3.0",
     "lodash": "^4.17.15",
     "prettier": "^1",
     "supertest": "^4.0.2",
-    "ts-jest": "^24.0.2",
+    "ts-jest": "^25.3.1",
     "type-graphql": "^0.17.4",
     "typedoc": "^0.17.4",
     "typescript": "^3"
