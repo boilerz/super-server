@@ -295,10 +295,10 @@
     eslint-plugin-prettier "^3.1.0"
     eslint-plugin-react "^7.14.3"
 
-"@boilerz/logger@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@boilerz/logger/-/logger-1.0.4.tgz#a698e7a9ea917afe9de6605926eefce935d0f836"
-  integrity sha512-4E4v2wQIclMmwynJIgsUoLnGTAiyTyipnudnO48T8DLqy6JYZZ9d0K7RdU0XUL7JUXKvdxMYfj0qcumRfSLmRQ==
+"@boilerz/logger@1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@boilerz/logger/-/logger-1.0.6.tgz#9a2f16cfebcc60a6f5d028e6b0096050c6208d96"
+  integrity sha512-fBPfYV4ensz451a9dYUHpNAVQ41mMZEraYA/LSuqFMkGmMWD2QpXXxjQqPHWFM0ehZ3rLOp+lPFkzI9Yr0gclQ==
   dependencies:
     "@sentry/types" "^5.5.0"
     "@types/bunyan" "^1.8.6"
