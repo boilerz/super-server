@@ -1,5 +1,6 @@
 # @boilerz/super-server
 
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/boilerz/super-server/blob/master/LICENSE)
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/boilerz/super-server)](https://www.npmjs.com/package/@boilerz/super-server)
 [![CircleCI](https://circleci.com/gh/boilerz/super-server.svg?style=shield)](https://circleci.com/gh/boilerz/super-server)
 [![codecov](https://codecov.io/gh/boilerz/super-server/branch/master/graph/badge.svg)](https://codecov.io/gh/boilerz/super-server)
