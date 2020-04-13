@@ -2,6 +2,8 @@
 
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/boilerz/super-server)](https://www.npmjs.com/package/@boilerz/super-server)
 [![CircleCI](https://circleci.com/gh/boilerz/super-server.svg?style=shield)](https://circleci.com/gh/boilerz/super-server)
+[![codecov](https://codecov.io/gh/boilerz/super-server/branch/master/graph/badge.svg)](https://codecov.io/gh/boilerz/super-server)
+
 > Express server with type-graphql. 
 
 ### Install
@@ -13,7 +15,7 @@ npx install-peerdeps @boilerz/super-server
 ### Usage
 
 ```typescript
-import server from 'super-server';
+import server from '@boilerz/super-server';
 import { Arg, Query, Resolver } from 'type-graphql';
 
 @Resolver()
