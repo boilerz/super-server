@@ -68,3 +68,7 @@ export async function start({
   );
   return server;
 }
+
+export function getExpressApp(): Express {
+  return app;
+}

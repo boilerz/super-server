@@ -148,4 +148,10 @@ describe('Super server 🚀', () => {
             `);
     });
   });
+
+  describe('#getExpressApp', () => {
+    it('should return the express app', () => {
+      expect(server.getExpressApp()).toBeDefined();
+    });
+  });
 });
