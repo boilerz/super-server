@@ -38,7 +38,7 @@
     "eslint": "^6.1.0",
     "express": "^4.17.1",
     "graphql": "^14.4.2",
-    "jest": "^25.4.0",
+    "jest": "^25.5.0",
     "lodash": "^4.17.15",
     "prettier": "^1",
     "supertest": "^4.0.2",
