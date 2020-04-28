@@ -16,7 +16,7 @@ npx install-peerdeps @boilerz/super-server
 ### Usage
 
 ```typescript
-import server from '@boilerz/super-server';
+import superServer from '@boilerz/super-server';
 import { Arg, Query, Resolver } from 'type-graphql';
 
 @Resolver()
@@ -28,16 +28,24 @@ class GreetingResolver {
 }
 
 // Start the server with your resolvers
-server.start({ resolvers: [GreetingResolver] });
+superServer.start({ resolvers: [GreetingResolver] });
 
-// For full control:
-server.start({
+// OR
+
+// For more control on the underlying express app (the server is not automatically started):
+const server = superServer.setup({
   graphQLServerOptions: {
     buildSchemaOptions: {
       resolvers: [GreetingResolver],
     },
   },
 });
+
+// Express configuration
+superServer.getExpressApp().get('/yo', (req, res) => res.send('Yo'));
+
+// Manually start the server
+server.listen(process.env.PORT);
 ```
 
 Some configuration can only be changed by env vars:

@@ -37,11 +37,10 @@ export function setupSignalHandlers(): void {
   );
 }
 
-export async function start({
+export async function setup({
   graphQLServerOptions = {},
   withSignalHandlers = true,
   resolvers = [],
-  port,
 }: SuperServerOptions = {}): Promise<Server> {
   if (withSignalHandlers) setupSignalHandlers();
   if (
@@ -61,6 +60,17 @@ export async function start({
       ],
     },
   });
+  return server;
+}
+
+export async function start({
+  graphQLServerOptions = {},
+  withSignalHandlers = true,
+  resolvers = [],
+  port,
+}: SuperServerOptions = {}): Promise<Server> {
+  await setup({ graphQLServerOptions, withSignalHandlers, resolvers });
+
   server.listen(port || config.port);
   logger.info(
     { port: config.port, environment: config.environment },
