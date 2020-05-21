@@ -1,15 +1,14 @@
 {
-  "name": "@gh_user/gh_repo_name",
-  "version": "package_version",
+  "name": "@boilerz/super-server-auth-core",
+  "version": "1.0.0",
   "main": "src/index.ts",
-  "repository": "git@github.com:gh_user/gh_repo_name.git",
-  "author": "gh_user",
-  "description": "gh_short_description",
+  "repository": "git@github.com:boilerz/super-server-auth-core.git",
+  "author": "boilerz",
+  "description": "Core module for authentication support on super server",
   "license": "MIT",
   "private": false,
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "custom": "customBoilerplate",
     "build": "buildTSPackage",
     "test": "jest --coverage",
     "codecov": "codecov"
