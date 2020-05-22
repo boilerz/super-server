@@ -23,3 +23,10 @@ yarn version
 yarn build
 yarn publish dist --access public
 ```
+
+# Env vars
+
+| Name               | Default                   | Description                                                     |
+|--------------------|---------------------------|-----------------------------------------------------------------|
+| JWT_SECRET         |                           | JWT secret                                                      |
+| JWT_EXPIRE_IN      | `30 * 60 * 1000`          | Token expiration in seconds.                                    |
