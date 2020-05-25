@@ -2,7 +2,7 @@ import _ from 'lodash';
 import { plural } from 'pluralize';
 import { DocumentType, prop, getModelForClass } from '@typegoose/typegoose';
 import { ObjectID } from 'bson';
-import { Model } from 'mongoose';
+import type { Model } from 'mongoose';
 
 const VERSION_KEY = 'documentVersion';
 
