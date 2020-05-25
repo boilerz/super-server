@@ -9,7 +9,7 @@
 ### Install
 
 ```bash
-npx install-peerdeps -d @boilerz/super-server-auth-core
+npx install-peerdeps @boilerz/super-server-auth-core
 ```
 
 ### Usage
