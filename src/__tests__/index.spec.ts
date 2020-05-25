@@ -4,6 +4,7 @@ import request from 'supertest';
 import _ from 'lodash';
 
 import * as server from '../index';
+import { SuperServerPlugin } from '../index';
 
 @Resolver()
 class GreetingResolver {
@@ -15,7 +16,16 @@ class GreetingResolver {
 
 describe('Super server 🚀', () => {
   let serverInstance: Server;
+  let dummyPlugin: SuperServerPlugin;
 
+  beforeEach(() => {
+    dummyPlugin = {
+      setup: jest.fn(),
+      configure: jest.fn(),
+      getResolvers: jest.fn(),
+      tearDown: jest.fn(),
+    };
+  });
   afterEach(() => {
     jest.clearAllMocks();
     if (serverInstance) serverInstance.close();
@@ -32,6 +42,7 @@ describe('Super server 🚀', () => {
       serverInstance = await server.start({
         withSignalHandlers: false,
         resolvers: [GreetingResolver],
+        plugins: [dummyPlugin],
       });
 
       const { status, body } = await request(serverInstance).get('/status');
@@ -41,6 +52,11 @@ describe('Super server 🚀', () => {
                                                                   "status": 200,
                                                                 }
                                                 `);
+
+      expect(dummyPlugin.setup).toHaveBeenCalledTimes(1);
+      expect(dummyPlugin.configure).toHaveBeenCalledTimes(1);
+      expect(dummyPlugin.getResolvers).toHaveBeenCalledTimes(1);
+      expect(dummyPlugin.tearDown).not.toHaveBeenCalled();
     });
 
     it('should start the server and setup signal handlers', async () => {
@@ -125,11 +141,13 @@ describe('Super server 🚀', () => {
         .mockImplementation(_.noop);
       serverInstance = await server.start({
         resolvers: [GreetingResolver],
+        plugins: [dummyPlugin],
       });
       const closeSpy = jest.spyOn(serverInstance, 'close');
 
       await server.shutdown(true);
 
+      expect(dummyPlugin.tearDown).toHaveBeenCalledTimes(1);
       expect(closeSpy).toHaveBeenCalledTimes(1);
       expect(processExitSpy).toMatchInlineSnapshot(`
                 [MockFunction] {
