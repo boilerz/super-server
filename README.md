@@ -9,12 +9,14 @@
 ### Install
 
 ```bash
-yarn add -D @boilerz/super-server-auth-local
+npx install-peerdeps -d @boilerz/super-server-auth-local
 ```
 
 ### Usage
 
-// ...
+This plugin depends on `super-server-auth-core` (and it dependencies).
+
+Full example [here](https://github.com/boilerz/super-server/blob/master/examples/withLocalAuth.ts)
 
 ### Release
 
