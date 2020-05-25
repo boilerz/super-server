@@ -9,12 +9,38 @@
 ### Install
 
 ```bash
-yarn add -D @boilerz/super-server-auth-core
+npx install-peerdeps -d @boilerz/super-server-auth-core
 ```
 
 ### Usage
 
-// ...
+This plugin add support for a sign up resolver and it is required for other `super-server-auth-*` plugin.
+It need a mongo setup to work so the plugin `@boilerz/super-server-mongo` need to be set before this one.
+
+```typescript
+import { Arg, Query, Resolver } from 'type-graphql';
+import * as superServer from '@boilerz/super-server';
+import mongoPlugin from '@boilerz/super-server-mongo';
+import authCorePlugin from '@boilerz/super-server-auth-core';
+
+@Resolver()
+class GreetingResolver {
+  @Query(() => String)
+  public hello(@Arg('name') name: string): string {
+    return `Hello ${name}`;
+  }
+}
+
+superServer
+  .start({
+    resolvers: [GreetingResolver],
+    plugins: [mongoPlugin, authCorePlugin], // <-- Plugin here (after mongoPlugin)
+  })
+  .catch(console.error);
+```
+
+In situation example with local auth plugin [example](https://github.com/boilerz/super-server/blob/master/examples/withLocalAuth.ts)
+
 
 ### Release
 
