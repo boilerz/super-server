@@ -20,7 +20,7 @@ describe('Plugin', () => {
         post: jest.fn(),
       };
 
-      plugin.configure(app);
+      plugin.configure(app, {});
 
       expect(app.post).toHaveBeenCalled();
     });

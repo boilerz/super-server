@@ -10,7 +10,7 @@ import * as authenticationService from '@boilerz/super-server-auth-core/service/
 import User from '@boilerz/super-server-auth-core/model/user/User';
 import { Resolver, SuperServerPlugin } from './typings';
 
-class SuperServerAuthLocalPlugin implements SuperServerPlugin {
+const plugin: SuperServerPlugin = {
   async configure(app: Express): Promise<void> {
     app.post('/auth/local', (req, res, next) => {
       passport.authenticate('local', async (err, user, info) => {
@@ -28,11 +28,11 @@ class SuperServerAuthLocalPlugin implements SuperServerPlugin {
         });
       })(req, res, next);
     });
-  }
+  },
 
   getResolvers(): Resolver[] {
     return [];
-  }
+  },
 
   async setup(): Promise<void> {
     passport.use(
@@ -52,7 +52,11 @@ class SuperServerAuthLocalPlugin implements SuperServerPlugin {
         },
       ),
     );
-  }
-}
+  },
 
-export default new SuperServerAuthLocalPlugin();
+  async tearDown(): Promise<void> {
+    // Noop
+  },
+};
+
+export default plugin;

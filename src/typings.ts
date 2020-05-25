@@ -15,6 +15,7 @@ export type Resolver = Function | string;
 
 export interface SuperServerPlugin {
   setup(): Promise<void>;
+  tearDown(): Promise<void>;
   configure(
     app: Express,
     graphQLServerOptions: GraphQLServerOptions,
