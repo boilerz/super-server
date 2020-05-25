@@ -2,10 +2,12 @@ import type { Express } from 'express';
 import passport from 'passport';
 import { Strategy as LocalStrategy } from 'passport-local';
 import logger from '@boilerz/logger';
+import type { DocumentType } from '@typegoose/typegoose';
 import UserModel, {
   UserSchema,
 } from '@boilerz/super-server-auth-core/model/user/UserModel';
 import * as authenticationService from '@boilerz/super-server-auth-core/service/authentication';
+import User from '@boilerz/super-server-auth-core/model/user/User';
 import { Resolver, SuperServerPlugin } from './typings';
 
 class SuperServerAuthLocalPlugin implements SuperServerPlugin {
@@ -37,13 +39,16 @@ class SuperServerAuthLocalPlugin implements SuperServerPlugin {
       new LocalStrategy(
         { usernameField: 'email', passwordField: 'password' },
         (email: string, password: string, done: Function) => {
-          UserModel.findOne({ email }, (err: Error, user: UserSchema) => {
-            if (err) return done(err);
-            if (!user) return done(null, false);
-            if (!user.authenticate(password)) return done(null, false);
+          UserModel.findOne(
+            { email },
+            (err: Error, user: DocumentType<UserSchema>) => {
+              if (err) return done(err);
+              if (!user) return done(null, false);
+              if (!user.authenticate(password)) return done(null, false);
 
-            return done(null, user);
-          });
+              return done(null, user.toObjectType(User));
+            },
+          );
         },
       ),
     );
