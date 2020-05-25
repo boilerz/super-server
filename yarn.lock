@@ -346,12 +346,13 @@
   resolved "https://registry.yarnpkg.com/@boilerz/prettier-config/-/prettier-config-1.0.0.tgz#5fbbc39512390c2f91bf16f0568c601f93d6fdd7"
   integrity sha512-mM5neNrNdV79wRFFuKutFBAV56ndIGf1CjB66DUtz7pizHStuFxMtnJgGvHDQEKotCxt3F1L1jEtPh72EUEUZg==
 
-"@boilerz/super-server@1.2.1":
-  version "1.2.1"
-  resolved "https://registry.npmjs.org/@boilerz/super-server/-/super-server-1.2.1.tgz#383615a55e3a6536f5fe6e1bd7f27b8880768b64"
-  integrity sha512-MjkznjQewDldz8bvQqj8EHgVtj6WoxqKZ94wm2D8pl20WkwGmZgzFJjMB4YuCu3ZmtVZooRmVx1K3/MXvN7SEg==
+"@boilerz/super-server@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@boilerz/super-server/-/super-server-1.3.0.tgz#bf06190f6beb484300a3594457b47d8904b7137a"
+  integrity sha512-o+RGZDgxZbXztRgoAH2SCRmcic3Z3DQK+6Z965nxGn5aoHlEo+UJ2N+aShXpghP7wNqN9Wh+oNe2iSUNo8DT9g==
   dependencies:
-    "@sentry/node" "^5.15.4"
+    "@sentry/node" "^5.15.5"
+    body-parser "^1.19.0"
     reflect-metadata "^0.1.13"
 
 "@boilerz/tsconfig@^1.3.0":
@@ -1683,7 +1684,7 @@ bluebird@3.5.1:
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
   integrity sha512-MKiLiV+I1AA596t9w1sQJ8jkiSr5+ZKi0WKrYGUn6d1Fx+Ij4tIj+m2WMQSGczs5jZVxV339chE8iwk6F64wjA==
 
-body-parser@1.19.0, body-parser@^1.18.3:
+body-parser@1.19.0, body-parser@^1.18.3, body-parser@^1.19.0:
   version "1.19.0"
   resolved "https://registry.npmjs.org/body-parser/-/body-parser-1.19.0.tgz#96b2709e57c9c4e09a6fd66a8fd979844f69f08a"
   integrity sha512-dhEPs72UPbDnAQJ9ZKMNTP6ptJaionhP5cBb541nXPlW60Jepo9RV/a4fX4XWW9CuFNK22krhrj1+rgzifNCsw==
