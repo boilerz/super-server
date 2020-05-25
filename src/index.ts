@@ -14,7 +14,7 @@ class SuperServerAuthLocalPlugin implements SuperServerPlugin {
   async configure(app: Express): Promise<void> {
     app.post('/auth/local', (req, res, next) => {
       passport.authenticate('local', async (err, user, info) => {
-        if (err) {
+        if (err || !user) {
           logger.error(
             { err, info },
             '[super-server-auth-local] Authentication error',
