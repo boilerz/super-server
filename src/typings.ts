@@ -1,6 +1,6 @@
 // FIXME to remove after super-server next's release
 
-import { BuildSchemaOptions } from 'type-graphql';
+import type { BuildSchemaOptions } from 'type-graphql';
 import type { ApolloServerExpressConfig } from 'apollo-server-express';
 import type { Express } from 'express';
 
@@ -15,6 +15,7 @@ export type Resolver = Function | string;
 
 export interface SuperServerPlugin {
   setup(): Promise<void>;
+  tearDown(): Promise<void>;
   configure(
     app: Express,
     graphQLServerOptions: GraphQLServerOptions,
