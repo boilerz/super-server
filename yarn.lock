@@ -346,10 +346,10 @@
   resolved "https://registry.yarnpkg.com/@boilerz/prettier-config/-/prettier-config-1.0.0.tgz#5fbbc39512390c2f91bf16f0568c601f93d6fdd7"
   integrity sha512-mM5neNrNdV79wRFFuKutFBAV56ndIGf1CjB66DUtz7pizHStuFxMtnJgGvHDQEKotCxt3F1L1jEtPh72EUEUZg==
 
-"@boilerz/super-server-auth-core@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@boilerz/super-server-auth-core/-/super-server-auth-core-1.2.1.tgz#43f878cd0a686269b88530d38c0cd0f13cdd74cd"
-  integrity sha512-Yc7/tx78E06ouCj/3ywx6IjjTAMos/lEs0Gg8WKYdcB9nDvbnAJMuTZ3RJKcN6arHhBBBv3iwhRKrRmqusUyKQ==
+"@boilerz/super-server-auth-core@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@boilerz/super-server-auth-core/-/super-server-auth-core-1.2.2.tgz#b36b6d5b22aedb4397d67182b6e9b1184376c76c"
+  integrity sha512-CIlxuk2eJ0mGzY3loSqpxm/uotm+SNcxfb4JkDafcvZR6T5t3mOrQz8nQ1vx6ZgbBKcmR7SDyFGPrcaftKoVlA==
   dependencies:
     bson "^4.0.4"
     jsonwebtoken "^8.5.1"
