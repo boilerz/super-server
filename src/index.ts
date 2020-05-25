@@ -1,6 +1,6 @@
 import type { Express } from 'express';
 import passport from 'passport';
-import { Resolver, SuperServerPlugin } from './typings';
+import type { Resolver, SuperServerPlugin } from '@boilerz/super-server';
 import AuthenticationResolver from './resolver/authentication';
 
 const plugin: SuperServerPlugin = {
