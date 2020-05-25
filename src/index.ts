@@ -3,12 +3,12 @@ import passport from 'passport';
 import { Strategy as LocalStrategy } from 'passport-local';
 import logger from '@boilerz/logger';
 import type { DocumentType } from '@typegoose/typegoose';
+import type { Resolver, SuperServerPlugin } from '@boilerz/super-server';
 import UserModel, {
   UserSchema,
 } from '@boilerz/super-server-auth-core/model/user/UserModel';
 import * as authenticationService from '@boilerz/super-server-auth-core/service/authentication';
 import User from '@boilerz/super-server-auth-core/model/user/User';
-import { Resolver, SuperServerPlugin } from './typings';
 
 const plugin: SuperServerPlugin = {
   async configure(app: Express): Promise<void> {
