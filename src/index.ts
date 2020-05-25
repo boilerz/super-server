@@ -5,6 +5,7 @@ import logger from '@boilerz/logger';
 import UserModel, {
   UserSchema,
 } from '@boilerz/super-server-auth-core/model/user/UserModel';
+import * as authenticationService from '@boilerz/super-server-auth-core/service/authentication';
 import { Resolver, SuperServerPlugin } from './typings';
 
 class SuperServerAuthLocalPlugin implements SuperServerPlugin {
@@ -20,7 +21,9 @@ class SuperServerAuthLocalPlugin implements SuperServerPlugin {
           return;
         }
 
-        res.status(200).send(user);
+        res.status(200).send({
+          token: authenticationService.signToken(user),
+        });
       })(req, res, next);
     });
   }
