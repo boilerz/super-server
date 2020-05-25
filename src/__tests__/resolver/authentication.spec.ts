@@ -4,7 +4,7 @@ import { Query, Resolver } from 'type-graphql';
 import request from 'supertest';
 
 import { Server } from 'http';
-import AuthenticationResolver from '../../resolver/authentication';
+import plugin from '../../index';
 
 // https://graphql.github.io/graphql-spec/June2018/#sec-Schema
 @Resolver()
@@ -25,7 +25,7 @@ describe('AuthenticationResolver', () => {
     });
     await mongooseHelper.dropDatabase();
     server = await superServer.start({
-      resolvers: [DummyResolver, AuthenticationResolver],
+      resolvers: [DummyResolver, ...plugin.getResolvers()],
       port: 5000,
     });
   });
