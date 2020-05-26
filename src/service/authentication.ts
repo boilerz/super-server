@@ -26,7 +26,10 @@ if (!process.env.JWT_EXPIRE_IN) {
 }
 
 export async function signUp(user: UserInput): Promise<User> {
-  const createdUser: DocumentType<UserSchema> = await UserModel.create(user);
+  const createdUser: DocumentType<UserSchema> = await UserModel.create({
+    ...user,
+    isActive: false,
+  });
   return createdUser.toObjectType(User);
 }
 

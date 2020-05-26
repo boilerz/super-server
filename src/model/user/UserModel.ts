@@ -6,9 +6,19 @@ import User from './User';
 import AuthProvider from '../../enum/AuthProvider';
 import { EntityModel } from '../Entity';
 
+function emailValidationCodeGenerator(): string {
+  return crypto.randomBytes(20).toString('hex');
+}
+
 export class UserSchema extends User {
   @prop({ required: true, default: AuthProvider.LOCAL, enum: AuthProvider })
   provider: string;
+
+  @prop({ default: true })
+  isActive: boolean;
+
+  @prop({ default: emailValidationCodeGenerator })
+  emailValidationCode: string;
 
   @prop({
     required: true,
