@@ -1,5 +1,6 @@
 export interface Config {
   host: string;
+  emailValidationExpiresDuration: number;
   waitingDurationBeforeNextEmailAttempt: number;
   sendgrid: {
     apiKey: string;
@@ -12,6 +13,10 @@ export interface Config {
 
 const config: Config = {
   host: process.env.SERVER_HOST || 'http://localhost:3000',
+  emailValidationExpiresDuration: parseInt(
+    process.env.EMAIL_VALIDATION_EXPIRES_DURATION || '48',
+    10,
+  ),
   waitingDurationBeforeNextEmailAttempt: parseInt(
     process.env.WAITING_DURATION_BEFORE_NEXT_EMAIL_ATTEMPT || '5000',
     10,
