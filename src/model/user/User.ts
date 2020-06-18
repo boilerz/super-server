@@ -7,8 +7,10 @@ import Role from '../../enum/Role';
 import Profile from './Profile';
 
 async function validateEmailInUse(email: string): Promise<boolean> {
-  // @ts-ignore
-  return (await this.constructor.countDocuments({ email })) === 0;
+  return (
+    // @ts-ignore
+    !this.isNew || (await this.constructor.countDocuments({ email })) === 0
+  );
 }
 
 @ObjectType()
@@ -36,7 +38,7 @@ export default class User extends Entity {
   @Field(() => [String])
   @prop({
     required: true,
-    items: String,
+    type: String,
     enum: Role,
     default: [Role.USER],
   })

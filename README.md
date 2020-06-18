@@ -52,7 +52,12 @@ yarn publish dist --access public
 
 # Env vars
 
-| Name               | Default                   | Description                                                     |
-|--------------------|---------------------------|-----------------------------------------------------------------|
-| JWT_SECRET         |                           | JWT secret                                                      |
-| JWT_EXPIRE_IN      | `30 * 60 * 1000`          | Token expiration in seconds.                                    |
+| Name                                        | Default                   | Description                                                                                                        |
+|---------------------------------------------|---------------------------|--------------------------------------------------------------------------------------------------------------------|
+| JWT_SECRET                                  |                           | JWT secret                                                                                                         |
+| JWT_EXPIRE_IN                               | `30 * 60 * 1000`          | Token expiration in seconds.                                                                                       |
+| SENDGRID_API_KEY                            |                           | Sendgrid API Key for email validation.                                                                             |
+| SENDER_EMAIL                                |                           | Sendgrid sender email (must be validated by sendgrid).                                                             |
+| EMAIL_VALIDATION_TEMPLATE_ID                |                           | Sendgrid validation email template id. (Must handle `firstName`, `lastName` and `validationUrl` as template data). |
+| WAITING_DURATION_BEFORE_NEXT_EMAIL_ATTEMPT  | `5000`                    | Waiting duration in ms between two email validation attempt.                                                       |
+| EMAIL_VALIDATION_EXPIRES_DURATION           | `48`                      | Validation code expiration in hours.                                                                               |

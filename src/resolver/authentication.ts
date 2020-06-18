@@ -9,6 +9,14 @@ class AuthenticationResolver {
   async signUp(@Arg('userInput') userInput: UserInput): Promise<User> {
     return authenticationService.signUp(userInput);
   }
+
+  @Mutation(() => Boolean)
+  async validateEmail(
+    @Arg('email') email: string,
+    @Arg('validationCode') validationCode: string,
+  ): Promise<boolean> {
+    return authenticationService.validateEmail(email, validationCode);
+  }
 }
 
 export default AuthenticationResolver;
