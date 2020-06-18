@@ -5,6 +5,7 @@ import logger from '@boilerz/logger';
 import UserInput from '../model/user/UserInput';
 import User from '../model/user/User';
 import UserModel, { UserSchema } from '../model/user/UserModel';
+import * as emailHelper from '../helper/email';
 
 const secret = process.env.JWT_SECRET || Math.random().toString(36);
 const SIGN_OPTIONS: jwt.SignOptions = {
@@ -29,6 +30,12 @@ export async function signUp(user: UserInput): Promise<User> {
   const createdUser: DocumentType<UserSchema> = await UserModel.create({
     ...user,
     isActive: false,
+  });
+  await emailHelper.sendValidationEmailRequest({
+    email: user.email,
+    firstName: user.firstName,
+    lastName: user.lastName,
+    validationCode: createdUser.emailValidationCode,
   });
   return createdUser.toObjectType(User);
 }

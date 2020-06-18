@@ -36,7 +36,7 @@ export default class User extends Entity {
   @Field(() => [String])
   @prop({
     required: true,
-    items: String,
+    type: String,
     enum: Role,
     default: [Role.USER],
   })

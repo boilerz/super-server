@@ -2,8 +2,9 @@ import * as mongooseHelper from '@boilerz/mongoose-helper';
 import * as superServer from '@boilerz/super-server';
 import { Query, Resolver } from 'type-graphql';
 import request from 'supertest';
-
 import { Server } from 'http';
+
+import * as emailHelper from '../../helper/email';
 import plugin from '../../index';
 
 // https://graphql.github.io/graphql-spec/June2018/#sec-Schema
@@ -22,10 +23,12 @@ describe('AuthenticationResolver', () => {
     await mongooseHelper.connect(undefined, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      useCreateIndex: true,
     });
     await mongooseHelper.dropDatabase();
     server = await superServer.start({
-      resolvers: [DummyResolver, ...plugin.getResolvers()],
+      plugins: [plugin],
+      resolvers: [DummyResolver],
       port: 5000,
     });
   });
@@ -36,6 +39,10 @@ describe('AuthenticationResolver', () => {
   });
 
   it('should handle sign up', async () => {
+    const publishSpy = jest
+      .spyOn(emailHelper.getPublisherClient(), 'publish')
+      .mockResolvedValue();
+
     const query = `
       mutation {
         signUp(
@@ -67,6 +74,13 @@ describe('AuthenticationResolver', () => {
         },
       }
     `);
+
+    expect(publishSpy).toHaveBeenCalledWith({
+      email: 'johny@boy.fr',
+      firstName: 'Johny',
+      lastName: 'Boy',
+      validationCode: expect.any(String),
+    });
 
     const { body: secondResponse } = await request(server)
       .post('/graphql')
