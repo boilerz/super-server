@@ -37,7 +37,7 @@
     "@typegoose/typegoose": "^7.2.0",
     "@types/express": "^4.17.0",
     "@types/graphql": "^14.0.7",
-    "@types/jest": "^25.2.3",
+    "@types/jest": "^26.0.0",
     "@types/lodash": "^4.14.155",
     "@types/supertest": "^2.0.9",
     "apollo-server-express": "^2.15.0",
