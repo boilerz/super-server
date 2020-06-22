@@ -38,7 +38,7 @@
     "@types/bson": "^4.0.2",
     "@types/jest": "^26.0.0",
     "@types/jsonwebtoken": "^8.5.0",
-    "@types/lodash": "^4.14.155",
+    "@types/lodash": "^4.14.156",
     "@types/mongoose": "^5.7.21",
     "@types/passport": "^1.0.3",
     "@types/pluralize": "^0.0.29",
