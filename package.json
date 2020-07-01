@@ -54,7 +54,7 @@
     "jest": "^25.5.4",
     "lodash": "^4.17.15",
     "mockdate": "^3.0.2",
-    "mongoose": "^5.9.20",
+    "mongoose": "^5.9.21",
     "passport": "^0.4.1",
     "prettier": "^2.0.5",
     "supertest": "^4.0.2",
