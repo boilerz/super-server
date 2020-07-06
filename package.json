@@ -19,7 +19,7 @@
     "@typegoose/typegoose": "^7.2.0",
     "class-validator": "^0.12.2",
     "dayjs": "^1.8.29",
-    "graphql": "^14.4.2",
+    "graphql": "^14.7.0",
     "lodash": "^4.17.15",
     "passport": "^0.4.1",
     "type-graphql": "^0.17.4"
@@ -50,7 +50,7 @@
     "dayjs": "^1.8.29",
     "eslint": "^6.8.0",
     "express": "^4.17.1",
-    "graphql": "^14.4.2",
+    "graphql": "^14.7.0",
     "jest": "^25.5.4",
     "lodash": "^4.17.15",
     "mockdate": "^3.0.2",
