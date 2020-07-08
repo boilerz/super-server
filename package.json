@@ -20,7 +20,7 @@
     "class-validator": "^0.12.2",
     "dayjs": "^1.8.29",
     "graphql": "^14.7.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.16",
     "passport": "^0.4.1",
     "type-graphql": "^0.17.4"
   },
@@ -52,7 +52,7 @@
     "express": "^4.17.1",
     "graphql": "^14.7.0",
     "jest": "^25.5.4",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.16",
     "mockdate": "^3.0.2",
     "mongoose": "^5.9.22",
     "passport": "^0.4.1",
