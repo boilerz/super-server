@@ -21,7 +21,7 @@
     "apollo-server-express": "^2.8.1",
     "express": "^4.17.1",
     "graphql": "^14.7.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.18",
     "type-graphql": "^0.17.4"
   },
   "devDependencies": {
@@ -47,7 +47,7 @@
     "express": "^4.17.1",
     "graphql": "^14.7.0",
     "jest": "^25.5.4",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.18",
     "mongoose": "^5.9.22",
     "passport": "^0.4.1",
     "prettier": "^1",
