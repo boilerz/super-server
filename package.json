@@ -53,7 +53,7 @@
     "prettier": "^1",
     "supertest": "^4.0.2",
     "ts-jest": "^25.5.1",
-    "ts-node-dev": "^1.0.0-pre.49",
+    "ts-node-dev": "^1.0.0-pre.52",
     "type-graphql": "^0.17.4",
     "typedoc": "^0.17.7",
     "typescript": "^3"
