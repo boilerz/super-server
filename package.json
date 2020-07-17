@@ -46,7 +46,7 @@
     "amqplib": "^0.5.6",
     "apollo-server-express": "^2.16.0",
     "class-validator": "^0.12.2",
-    "codecov": "^3.7.0",
+    "codecov": "^3.7.1",
     "dayjs": "^1.8.29",
     "eslint": "^6.8.0",
     "express": "^4.17.1",
