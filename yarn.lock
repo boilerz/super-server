@@ -1819,10 +1819,10 @@ bson@^1.1.4:
   resolved "https://registry.yarnpkg.com/bson/-/bson-1.1.4.tgz#f76870d799f15b854dffb7ee32f0a874797f7e89"
   integrity sha512-S/yKGU1syOMzO86+dGpg2qGoDL0zvzcb262G+gqEy6TgP6rt6z6qxSFX/8X6vLC91P7G7C3nLs0+bvDzmvBA3Q==
 
-bson@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/bson/-/bson-4.0.4.tgz#4bda2cedf2ae7a18d15cb24ee1ede8c797f8eecf"
-  integrity sha512-Ioi3TD0/1V3aI8+hPfC56TetYmzfq2H07jJa9A1lKTxWsFtHtYdLMGMXjtGEg9v0f72NSM07diRQEUNYhLupIA==
+bson@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/bson/-/bson-4.1.0.tgz#8135dbaaf90d78d0ee4675f31600162d4c12be28"
+  integrity sha512-xwNzRRsK2xmHvHuPESi0zVfgsm4edO47WdulNaShTriunNUMRDOAlKwpJc8zpkOXczIzbxUD7kFzhUGVYoZLDw==
   dependencies:
     buffer "^5.1.0"
     long "^4.0.0"
