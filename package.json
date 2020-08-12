@@ -26,7 +26,7 @@
     "@boilerz/super-server": "^1.3.0",
     "@boilerz/super-server-auth-core": "1.2.3",
     "@boilerz/tsconfig": "^1.3.0",
-    "@sentry/node": "^5.20.1",   
+    "@sentry/node": "^5.21.0",   
     "@types/jest": "^26.0.9",
     "@typegoose/typegoose": "^7.3.2",
     "@types/passport": "^1.0.4",
