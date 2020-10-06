@@ -51,7 +51,7 @@
     "mongoose": "^5.10.8",
     "passport": "^0.4.1",
     "prettier": "^1",
-    "supertest": "^4.0.2",
+    "supertest": "^5.0.0",
     "ts-jest": "^25.5.1",
     "ts-node-dev": "^1.0.0-pre.55",
     "type-graphql": "^0.17.4",
