@@ -25,10 +25,4 @@ describe('Plugin', () => {
       expect(app.post).toHaveBeenCalled();
     });
   });
-
-  describe('#getResolvers', () => {
-    it('should return plugin resolvers', () => {
-      expect(plugin.getResolvers()).toEqual([]);
-    });
-  });
 });

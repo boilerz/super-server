@@ -3,7 +3,7 @@ import passport from 'passport';
 import { Strategy as LocalStrategy } from 'passport-local';
 import logger from '@boilerz/logger';
 import type { DocumentType } from '@typegoose/typegoose';
-import type { Resolver, SuperServerPlugin } from '@boilerz/super-server';
+import type { SuperServerPlugin } from '@boilerz/super-server';
 import UserModel, {
   UserSchema,
 } from '@boilerz/super-server-auth-core/model/user/UserModel';
@@ -28,10 +28,6 @@ const plugin: SuperServerPlugin = {
         });
       })(req, res, next);
     });
-  },
-
-  getResolvers(): Resolver[] {
-    return [];
   },
 
   async setup(): Promise<void> {
