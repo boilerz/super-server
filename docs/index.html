@@ -81,13 +81,13 @@
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 					<h3>Usage</h3>
 				</a>
-				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> superServer <span class="hljs-keyword">from</span> <span class="hljs-string">'@boilerz/super-server'</span>;
-<span class="hljs-keyword">import</span> { Arg, Query, Resolver } <span class="hljs-keyword">from</span> <span class="hljs-string">'type-graphql'</span>;
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> superServer <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@boilerz/super-server&#x27;</span>;
+<span class="hljs-keyword">import</span> { Arg, Query, Resolver } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;type-graphql&#x27;</span>;
 
 <span class="hljs-meta">@Resolver</span>()
 <span class="hljs-keyword">class</span> GreetingResolver {
-  <span class="hljs-meta">@Query</span>(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">String</span>)
-  <span class="hljs-keyword">public</span> hello(<span class="hljs-meta">@Arg</span>(<span class="hljs-string">'name'</span>) name: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">string</span> {
+  <span class="hljs-meta">@Query</span>(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">String</span>)
+  <span class="hljs-keyword">public</span> hello(<span class="hljs-meta">@Arg</span>(<span class="hljs-string">&#x27;name&#x27;</span>) name: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">string</span> {
     <span class="hljs-keyword">return</span> <span class="hljs-string">`Hello <span class="hljs-subst">${name}</span>`</span>;
   }
 }
@@ -107,7 +107,7 @@ superServer.start({ resolvers: [GreetingResolver] });
 });
 
 <span class="hljs-comment">// Express configuration</span>
-superServer.getExpressApp().get(<span class="hljs-string">'/yo'</span>, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> res.send(<span class="hljs-string">'Yo'</span>));
+superServer.getExpressApp().get(<span class="hljs-string">&#x27;/yo&#x27;</span>, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> res.send(<span class="hljs-string">&#x27;Yo&#x27;</span>));
 
 <span class="hljs-comment">// Manually start the server</span>
 server.listen(process.env.PORT);</code></pre>
@@ -151,31 +151,34 @@ yarn publish dist --access public</code></pre>
 					<li class="globals  ">
 						<a href="globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/___tests___index_spec_.html">&quot;__tests__/index.spec&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/_config_express_.html">&quot;config/express&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/_config_index_.html">&quot;config/index&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/_graphql_helper_.html">&quot;graphql/helper&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/_graphql_index_.html">&quot;graphql/index&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/_graphql_schema_.html">&quot;graphql/schema&quot;</a>
+					<li class="label tsd-is-external">
+						<span>Internals</span>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/_index_.html">&quot;index&quot;</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="label tsd-is-external">
+						<span>Externals</span>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="modules/_config_express_.html">&quot;config/express&quot;</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="modules/_config_index_.html">&quot;config/index&quot;</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="modules/_graphql_helper_.html">&quot;graphql/helper&quot;</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="modules/_graphql_index_.html">&quot;graphql/index&quot;</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="modules/_graphql_schema_.html">&quot;graphql/schema&quot;</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_middleware_sslredirect_.html">&quot;middleware/ssl<wbr>Redirect&quot;</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_typings_.html">&quot;typings&quot;</a>
 					</li>
 				</ul>
@@ -192,17 +195,11 @@ yarn publish dist --access public</code></pre>
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
 				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
 			</ul>
 		</div>
 	</div>
@@ -212,6 +209,5 @@ yarn publish dist --access public</code></pre>
 </div>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
