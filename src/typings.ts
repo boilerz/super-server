@@ -13,10 +13,11 @@ export type Resolver = Function | string;
 
 export interface SuperServerPlugin {
   setup(): Promise<void>;
+  /** Options are updated before the `configure` call */
+  updateServerOptions?(options: GraphQLServerOptions): GraphQLServerOptions;
   configure(
     app: Express,
     graphQLServerOptions: GraphQLServerOptions,
   ): Promise<void>;
-  getResolvers(): Resolver[];
   tearDown(): Promise<void>;
 }

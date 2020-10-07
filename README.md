@@ -16,7 +16,7 @@ npx install-peerdeps @boilerz/super-server
 ### Usage
 
 ```typescript
-import superServer from '@boilerz/super-server';
+import * as superServer from '@boilerz/super-server';
 import { Arg, Query, Resolver } from 'type-graphql';
 
 @Resolver()

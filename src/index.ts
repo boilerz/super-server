@@ -52,10 +52,12 @@ export async function setup({
   plugins = [],
 }: SuperServerOptions = {}): Promise<Server> {
   if (withSignalHandlers) setupSignalHandlers();
-  if (
-    _.isEmpty(resolvers) &&
-    _.isEmpty(_.get(graphQLServerOptions, 'buildSchemaOptions.resolvers'))
-  ) {
+
+  const appResolvers = [
+    ...resolvers,
+    ...(graphQLServerOptions?.buildSchemaOptions?.resolvers || []),
+  ];
+  if (_.isEmpty(appResolvers)) {
     throw new Error('Missing resolvers');
   }
 
@@ -64,21 +66,22 @@ export async function setup({
     await plugin.setup();
   }
 
-  await configure(
-    app,
-    {
-      ...graphQLServerOptions,
-      buildSchemaOptions: {
-        ...graphQLServerOptions.buildSchemaOptions,
-        resolvers: [
-          ..._.get(graphQLServerOptions, 'buildSchemaOptions.resolvers', []),
-          ...resolvers,
-          _.flatten(plugins.map(plugin => plugin.getResolvers())),
-        ],
-      },
+  let serverOptions: GraphQLServerOptions = {
+    ...graphQLServerOptions,
+    buildSchemaOptions: {
+      ...graphQLServerOptions.buildSchemaOptions,
+      resolvers: appResolvers,
     },
-    plugins,
-  );
+  };
+
+  for (const plugin of plugins) {
+    if (plugin.updateServerOptions) {
+      serverOptions = plugin.updateServerOptions(serverOptions);
+    }
+  }
+
+  await configure(app, serverOptions, plugins);
+
   return server;
 }
 
