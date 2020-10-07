@@ -22,7 +22,7 @@ describe('Super server 🚀', () => {
     dummyPlugin = {
       setup: jest.fn(),
       configure: jest.fn(),
-      getResolvers: jest.fn(),
+      updateServerOptions: jest.fn().mockImplementation(_.identity),
       tearDown: jest.fn(),
     };
   });
@@ -55,7 +55,7 @@ describe('Super server 🚀', () => {
 
       expect(dummyPlugin.setup).toHaveBeenCalledTimes(1);
       expect(dummyPlugin.configure).toHaveBeenCalledTimes(1);
-      expect(dummyPlugin.getResolvers).toHaveBeenCalledTimes(1);
+      expect(dummyPlugin.updateServerOptions).toHaveBeenCalledTimes(1);
       expect(dummyPlugin.tearDown).not.toHaveBeenCalled();
     });
 
