@@ -1,7 +1,10 @@
 import type { Express } from 'express';
 import passport from 'passport';
 import mail from '@sendgrid/mail';
-import type { Resolver, SuperServerPlugin } from '@boilerz/super-server';
+import type {
+  SuperServerPlugin,
+  GraphQLServerOptions,
+} from '@boilerz/super-server';
 import assert from 'assert';
 import AuthenticationResolver from './resolver/authentication';
 import * as emailHelper from './helper/email';
@@ -12,8 +15,14 @@ const plugin: SuperServerPlugin = {
     app.use(passport.initialize());
   },
 
-  getResolvers(): Resolver[] {
-    return [AuthenticationResolver];
+  updateServerOptions(options: GraphQLServerOptions): GraphQLServerOptions {
+    return {
+      ...options,
+      buildSchemaOptions: {
+        ...options.buildSchemaOptions,
+        resolvers: [AuthenticationResolver],
+      },
+    };
   },
 
   async setup(): Promise<void> {
