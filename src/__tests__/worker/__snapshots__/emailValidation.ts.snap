@@ -23,7 +23,7 @@ exports[`[worker] emailValidation should handle a send validation email request 
       "value": MailService {
         "MailService": [Function],
         "client": Client {
-          "auth": "",
+          "auth": "Bearer SG.dummy-api-key",
           "defaultHeaders": Object {
             "Accept": "application/json",
             "Content-Type": "application/json",

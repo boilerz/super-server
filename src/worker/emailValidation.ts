@@ -1,10 +1,12 @@
 import logger from '@boilerz/logger';
 import ConsumerClient from '@boilerz/amqp-helper/ConsumerClient';
+import mail from '@sendgrid/mail';
 import {
   EXCHANGE_NAME,
   EmailValidationMessage,
   sendValidationEmail,
 } from '../helper/email';
+import config from '../config';
 
 let consumerClient: ConsumerClient<EmailValidationMessage>;
 
@@ -13,6 +15,7 @@ export function getConsumerClient(): ConsumerClient<EmailValidationMessage> {
 }
 
 export async function start(): Promise<void> {
+  mail.setApiKey(config.sendgrid.apiKey);
   consumerClient = await ConsumerClient.createAndSetupClient<
     EmailValidationMessage
   >({
