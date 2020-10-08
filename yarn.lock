@@ -350,10 +350,10 @@
     jsonwebtoken "^8.5.1"
     pluralize "^8.0.0"
 
-"@boilerz/super-server@^1.4.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@boilerz/super-server/-/super-server-1.4.1.tgz#f5b38ea60012b0beb8917dc5fb7fcce8b58e559d"
-  integrity sha512-unwgqhMGxEn0pNG0ZgMgEPAfa26PMG784Aps6ICaGsFA/ZBng4kGOhJo396CUht5FCVpfw6ToYYC9uXSNrmHOA==
+"@boilerz/super-server@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@boilerz/super-server/-/super-server-1.5.0.tgz#78f5961bdba5ccce881d531f4f21d846b4b33233"
+  integrity sha512-/1Ljg3iFG9QgvewKOrTehXfWtJsAkGvK6qNSV5nMEQTmUK+Gu/cmYBhu3VWGXSh1tEQ+dpo1Lzp7k53NX/qMtg==
   dependencies:
     "@sentry/node" "^5.25.0"
     body-parser "^1.19.0"
