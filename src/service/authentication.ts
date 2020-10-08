@@ -3,6 +3,7 @@ import * as jwt from 'jsonwebtoken';
 import logger from '@boilerz/logger';
 import dayjs from 'dayjs';
 import crypto from 'crypto';
+import { SignOptions } from 'jsonwebtoken';
 import UserInput from '../model/user/UserInput';
 import User from '../model/user/User';
 import UserModel, { UserSchema } from '../model/user/UserModel';
@@ -48,8 +49,11 @@ export async function signUp(user: UserInput): Promise<User> {
   return createdUser.toObjectType(User);
 }
 
-export function signToken(user: User): string {
-  return jwt.sign({ ...user.profile(), id: user.id }, secret, SIGN_OPTIONS);
+export function signToken(user: User, options?: SignOptions): string {
+  return jwt.sign({ ...user.profile(), id: user.id }, secret, {
+    ...SIGN_OPTIONS,
+    ...options,
+  });
 }
 
 export async function validateEmail(

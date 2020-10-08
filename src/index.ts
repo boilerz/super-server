@@ -6,22 +6,37 @@ import type {
   GraphQLServerOptions,
 } from '@boilerz/super-server';
 import assert from 'assert';
+import type { ExpressContext } from 'apollo-server-express/dist/ApolloServer';
 import AuthenticationResolver from './resolver/authentication';
 import * as emailHelper from './helper/email';
 import config from './config';
+import { authChecker, AuthCoreContext } from './helper/authentication';
 
-const plugin: SuperServerPlugin = {
+const plugin: SuperServerPlugin<AuthCoreContext> = {
   async configure(app: Express): Promise<void> {
     app.use(passport.initialize());
   },
 
-  updateServerOptions(options: GraphQLServerOptions): GraphQLServerOptions {
+  updateGraphQLServerOptions(
+    options: GraphQLServerOptions,
+  ): GraphQLServerOptions {
     return {
       ...options,
       buildSchemaOptions: {
         ...options.buildSchemaOptions,
         resolvers: [AuthenticationResolver],
+        authChecker,
       },
+    };
+  },
+
+  buildContext({ req }: ExpressContext): AuthCoreContext {
+    const authorizationHeader: string | undefined = req.header('Authorization');
+
+    return {
+      accessToken: authorizationHeader
+        ? authorizationHeader.replace('Bearer ', '')
+        : null,
     };
   },
 
@@ -42,5 +57,7 @@ const plugin: SuperServerPlugin = {
     await emailHelper.getPublisherClient().tearDown();
   },
 };
+
+export type { AuthCoreContext };
 
 export default plugin;
