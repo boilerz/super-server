@@ -5,6 +5,7 @@ import _ from 'lodash';
 
 import logger from '@boilerz/logger';
 
+import { ExpressContext } from 'apollo-server-express/dist/ApolloServer';
 import config from './config';
 import configure from './config/express';
 import { GraphQLServerOptions } from './graphql';
@@ -66,21 +67,37 @@ export async function setup({
     await plugin.setup();
   }
 
-  let serverOptions: GraphQLServerOptions = {
+  let updatedGraphQLServerOptions: GraphQLServerOptions = {
     ...graphQLServerOptions,
     buildSchemaOptions: {
       ...graphQLServerOptions.buildSchemaOptions,
       resolvers: appResolvers,
     },
+    context: (context: ExpressContext): Promise<object> => {
+      return plugins?.reduce(
+        async (
+          producedContext: Promise<object>,
+          plugin: SuperServerPlugin,
+        ): Promise<object> => {
+          return {
+            ...(await producedContext),
+            ...(plugin.buildContext ? await plugin.buildContext(context) : {}),
+          };
+        },
+        Promise.resolve({}),
+      );
+    },
   };
 
   for (const plugin of plugins) {
-    if (plugin.updateServerOptions) {
-      serverOptions = plugin.updateServerOptions(serverOptions);
+    if (plugin.updateGraphQLServerOptions) {
+      updatedGraphQLServerOptions = plugin.updateGraphQLServerOptions(
+        updatedGraphQLServerOptions,
+      );
     }
   }
 
-  await configure(app, serverOptions, plugins);
+  await configure(app, updatedGraphQLServerOptions, plugins);
 
   return server;
 }
