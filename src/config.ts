@@ -1,3 +1,6 @@
+import * as jwt from 'jsonwebtoken';
+import logger from '@boilerz/logger';
+
 export interface Config {
   host: string;
   emailValidationExpiresDuration: number;
@@ -9,6 +12,28 @@ export interface Config {
       emailValidationId: string;
     };
   };
+  jwt: {
+    secret: string;
+    signOptions: jwt.SignOptions;
+  };
+}
+
+const signOptions: jwt.SignOptions = {
+  expiresIn: parseInt(
+    process.env.JWT_EXPIRE_IN || (30 * 60 * 1000).toString(),
+    10,
+  ),
+};
+
+if (!process.env.JWT_SECRET) {
+  logger.warn('JWT_SECRET env var is not defined');
+}
+
+if (!process.env.JWT_EXPIRE_IN) {
+  logger.warn(
+    { defaultExpiresIn: signOptions.expiresIn },
+    'JWT_EXPIRE_IN env var is not defined (second units)',
+  );
 }
 
 const config: Config = {
@@ -27,6 +52,10 @@ const config: Config = {
     mailTemplates: {
       emailValidationId: process.env.EMAIL_VALIDATION_TEMPLATE_ID!,
     },
+  },
+  jwt: {
+    secret: process.env.JWT_SECRET || Math.random().toString(36),
+    signOptions,
   },
 };
 

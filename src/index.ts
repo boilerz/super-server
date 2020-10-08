@@ -1,5 +1,6 @@
 import type { Express } from 'express';
 import passport from 'passport';
+import * as jwt from 'jsonwebtoken';
 import mail from '@sendgrid/mail';
 import type {
   SuperServerPlugin,
@@ -10,7 +11,11 @@ import type { ExpressContext } from 'apollo-server-express/dist/ApolloServer';
 import AuthenticationResolver from './resolver/authentication';
 import * as emailHelper from './helper/email';
 import config from './config';
-import { authChecker, AuthCoreContext } from './helper/authentication';
+import {
+  authChecker,
+  AuthCoreContext,
+  DecodedToken,
+} from './helper/authentication';
 
 const plugin: SuperServerPlugin<AuthCoreContext> = {
   async configure(app: Express): Promise<void> {
@@ -32,11 +37,20 @@ const plugin: SuperServerPlugin<AuthCoreContext> = {
 
   buildContext({ req }: ExpressContext): AuthCoreContext {
     const authorizationHeader: string | undefined = req.header('Authorization');
-
+    const accessToken = authorizationHeader
+      ? authorizationHeader.replace('Bearer ', '')
+      : null;
+    let decodedToken: DecodedToken | null = null;
+    try {
+      decodedToken = accessToken
+        ? (jwt.verify(accessToken, config.jwt.secret) as DecodedToken)
+        : null;
+    } catch (err) {
+      // Noop
+    }
     return {
-      accessToken: authorizationHeader
-        ? authorizationHeader.replace('Bearer ', '')
-        : null,
+      accessToken,
+      decodedToken,
     };
   },
 

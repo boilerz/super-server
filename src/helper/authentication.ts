@@ -1,12 +1,7 @@
 import { ResolverData } from 'type-graphql';
 import logger from '@boilerz/logger';
-import jwt from 'jsonwebtoken';
 
-export interface AuthCoreContext {
-  accessToken: string | null;
-}
-
-interface DecodedToken {
+export interface DecodedToken {
   id: string;
   exp: number;
   iat: number;
@@ -15,11 +10,17 @@ interface DecodedToken {
   roles: string[];
 }
 
-function isAccessTokenValid(token: string, allowedRoles: string[]): boolean {
+export interface AuthCoreContext {
+  accessToken: string | null;
+  decodedToken: DecodedToken | null;
+}
+
+function isAccessTokenValid(
+  decodedToken: DecodedToken,
+  allowedRoles: string[],
+): boolean {
   try {
-    const { exp, roles: userRoles }: DecodedToken = jwt.decode(
-      token,
-    ) as DecodedToken;
+    const { exp, roles: userRoles }: DecodedToken = decodedToken;
 
     if (!userRoles.some((userRole) => allowedRoles.includes(userRole))) {
       return false;
@@ -36,7 +37,7 @@ export function authChecker(
   { context }: ResolverData<AuthCoreContext>,
   roles: string[],
 ): boolean {
-  const { accessToken } = context;
+  const { decodedToken } = context;
 
-  return !!accessToken && isAccessTokenValid(accessToken!, roles);
+  return !!decodedToken && isAccessTokenValid(decodedToken!, roles);
 }
