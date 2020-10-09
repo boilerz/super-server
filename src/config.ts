@@ -6,6 +6,7 @@ export interface Config {
   emailValidationExpiresDuration: number;
   waitingDurationBeforeNextEmailAttempt: number;
   isMailingSupportEnabled: boolean;
+  amqpUrl: string;
   sendgrid: {
     apiKey: string;
     senderEmail: string;
@@ -48,6 +49,7 @@ const config: Config = {
     10,
   ),
   isMailingSupportEnabled: process.env.DISABLE_MAILING_SUPPORT !== 'true',
+  amqpUrl: process.env.AMQP_URL || 'amqp://localhost',
   sendgrid: {
     apiKey: process.env.SENDGRID_API_KEY!,
     senderEmail: process.env.SENDER_EMAIL!,

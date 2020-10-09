@@ -21,6 +21,7 @@ export async function setupEmailValidationPublisherClient(): Promise<void> {
   publisherClient = await PublisherClient.createAndSetupClient<
     EmailValidationMessage
   >({
+    amqpUrl: config.amqpUrl,
     exchangeName: EXCHANGE_NAME,
   });
 }

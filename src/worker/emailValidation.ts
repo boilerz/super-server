@@ -28,6 +28,7 @@ export async function start(): Promise<void> {
   consumerClient = await ConsumerClient.createAndSetupClient<
     EmailValidationMessage
   >({
+    amqpUrl: config.amqpUrl,
     exchangeName: EXCHANGE_NAME,
     queueName: 'email-validation',
     nAckThrottle: 5000,

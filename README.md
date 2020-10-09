@@ -65,6 +65,7 @@ yarn publish dist --access public
 | JWT_EXPIRE_IN                               | `30 * 60 * 1000`             | Token expiration in seconds.                                                                                       |
 | DISABLE_MAILING_SUPPORT                     | `false`                      | Disable mailing support.                                                                                           |
 | EMAIL_VALIDATION_EXPIRES_DURATION           | `48`                         | Validation code expiration in hours.                                                                               |
+| AMQP_URL                                    | `amqp://localhost`           | AMQP url (*used for communication between the plugin and the email validation worker*).                            |
 
 ## Email validation worker
 
@@ -74,3 +75,4 @@ yarn publish dist --access public
 | SENDER_EMAIL                                |                           | Sendgrid sender email (must be validated by sendgrid).                                                             |
 | EMAIL_VALIDATION_TEMPLATE_ID                |                           | Sendgrid validation email template id. (Must handle `firstName`, `lastName` and `validationUrl` as template data). |
 | WAITING_DURATION_BEFORE_NEXT_EMAIL_ATTEMPT  | `5000`                    | Waiting duration in ms between two email validation attempt.                                                       |
+| AMQP_URL                                    | `amqp://localhost`        | See above                                                                                                              |
