@@ -1,5 +1,6 @@
 import { ResolverData } from 'type-graphql';
 import logger from '@boilerz/logger';
+import _ from 'lodash';
 
 export interface DecodedToken {
   id: string;
@@ -22,7 +23,10 @@ function isAccessTokenValid(
   try {
     const { exp, roles: userRoles }: DecodedToken = decodedToken;
 
-    if (!userRoles.some((userRole) => allowedRoles.includes(userRole))) {
+    if (
+      !_.isEmpty(allowedRoles) &&
+      !userRoles.some((userRole) => allowedRoles.includes(userRole))
+    ) {
       return false;
     }
 
