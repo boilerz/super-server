@@ -13,20 +13,28 @@ import User from '@boilerz/super-server-auth-core/model/user/User';
 const plugin: SuperServerPlugin = {
   async configure(app: Express): Promise<void> {
     app.post('/auth/local', (req, res, next) => {
-      passport.authenticate('local', async (err, user, info) => {
-        if (err || !user) {
-          logger.error(
-            { err, info },
-            '[super-server-auth-local] Authentication error',
-          );
-          res.sendStatus(401);
-          return;
-        }
+      passport.authenticate(
+        'local',
+        async (err: Error, user: UserSchema, info: object) => {
+          if (err || !user) {
+            logger.error(
+              { err, info },
+              '[super-server-auth-local] Authentication error',
+            );
+            res.sendStatus(401);
+            return;
+          }
 
-        res.status(200).send({
-          token: authenticationService.signToken(user),
-        });
-      })(req, res, next);
+          if (!user.isActive) {
+            res.status(401).send({ code: 'user.not.active' });
+            return;
+          }
+
+          res.status(200).send({
+            token: authenticationService.signToken(user),
+          });
+        },
+      )(req, res, next);
     });
   },
 
