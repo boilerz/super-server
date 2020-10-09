@@ -5,6 +5,7 @@ export interface Config {
   host: string;
   emailValidationExpiresDuration: number;
   waitingDurationBeforeNextEmailAttempt: number;
+  isMailingSupportEnabled: boolean;
   sendgrid: {
     apiKey: string;
     senderEmail: string;
@@ -46,6 +47,7 @@ const config: Config = {
     process.env.WAITING_DURATION_BEFORE_NEXT_EMAIL_ATTEMPT || '5000',
     10,
   ),
+  isMailingSupportEnabled: process.env.DISABLE_MAILING_SUPPORT !== 'true',
   sendgrid: {
     apiKey: process.env.SENDGRID_API_KEY!,
     senderEmail: process.env.SENDER_EMAIL!,

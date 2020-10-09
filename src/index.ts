@@ -1,12 +1,10 @@
 import type { Express } from 'express';
 import passport from 'passport';
 import * as jwt from 'jsonwebtoken';
-import mail from '@sendgrid/mail';
 import type {
   SuperServerPlugin,
   GraphQLServerOptions,
 } from '@boilerz/super-server';
-import assert from 'assert';
 import type { ExpressContext } from 'apollo-server-express/dist/ApolloServer';
 import AuthenticationResolver from './resolver/authentication';
 import * as emailHelper from './helper/email';
@@ -55,19 +53,14 @@ const plugin: SuperServerPlugin<AuthCoreContext> = {
   },
 
   async setup(): Promise<void> {
-    assert(config.host, 'SERVER_HOST need to be set');
-    assert(config.sendgrid.apiKey, 'SENDGRID_API_KEY need to be set');
-    assert(config.sendgrid.senderEmail, 'SENDER_EMAIL need to be set');
-    assert(
-      config.sendgrid.mailTemplates.emailValidationId,
-      'EMAIL_VALIDATION_TEMPLATE_ID need to be set',
-    );
+    if (!config.isMailingSupportEnabled) return;
 
-    mail.setApiKey(config.sendgrid.apiKey);
     await emailHelper.setupEmailValidationPublisherClient();
   },
 
   async tearDown(): Promise<void> {
+    if (!config.isMailingSupportEnabled) return;
+
     await emailHelper.getPublisherClient().tearDown();
   },
 };

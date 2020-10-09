@@ -20,12 +20,14 @@ export async function signUp(user: UserInput): Promise<User> {
     emailValidationCode,
     emailValidationCodeExpirationDate,
   });
-  await emailHelper.sendValidationEmailRequest({
-    email: user.email,
-    firstName: user.firstName,
-    lastName: user.lastName,
-    validationCode: emailValidationCode,
-  });
+  if (config.isMailingSupportEnabled) {
+    await emailHelper.sendValidationEmailRequest({
+      email: user.email,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      validationCode: emailValidationCode,
+    });
+  }
   return createdUser.toObjectType(User);
 }
 

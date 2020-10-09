@@ -41,6 +41,11 @@ superServer
 
 In situation example with local auth plugin [example](https://github.com/boilerz/super-server/blob/master/examples/withLocalAuth.ts)
 
+If mail support is not disabled (@see `DISABLE_MAILING_SUPPORT` below) the worker process defined below should be setup: 
+
+```bash
+node node_modules/@boilerz/super-server-auth-core/worker/emailValidation
+```
 
 ### Release
 
@@ -52,12 +57,20 @@ yarn publish dist --access public
 
 # Env vars
 
+## Web plugin
+
+| Name                                        | Default                      | Description                                                                                                        |
+|---------------------------------------------|------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| JWT_SECRET                                  | `Math.random().toString(36)` | JWT secret                                                                                                         |
+| JWT_EXPIRE_IN                               | `30 * 60 * 1000`             | Token expiration in seconds.                                                                                       |
+| DISABLE_MAILING_SUPPORT                     | `false`                      | Disable mailing support.                                                                                           |
+| EMAIL_VALIDATION_EXPIRES_DURATION           | `48`                         | Validation code expiration in hours.                                                                               |
+
+## Email validation worker
+
 | Name                                        | Default                   | Description                                                                                                        |
 |---------------------------------------------|---------------------------|--------------------------------------------------------------------------------------------------------------------|
-| JWT_SECRET                                  |                           | JWT secret                                                                                                         |
-| JWT_EXPIRE_IN                               | `30 * 60 * 1000`          | Token expiration in seconds.                                                                                       |
 | SENDGRID_API_KEY                            |                           | Sendgrid API Key for email validation.                                                                             |
 | SENDER_EMAIL                                |                           | Sendgrid sender email (must be validated by sendgrid).                                                             |
 | EMAIL_VALIDATION_TEMPLATE_ID                |                           | Sendgrid validation email template id. (Must handle `firstName`, `lastName` and `validationUrl` as template data). |
 | WAITING_DURATION_BEFORE_NEXT_EMAIL_ATTEMPT  | `5000`                    | Waiting duration in ms between two email validation attempt.                                                       |
-| EMAIL_VALIDATION_EXPIRES_DURATION           | `48`                      | Validation code expiration in hours.                                                                               |
