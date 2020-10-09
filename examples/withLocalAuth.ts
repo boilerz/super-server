@@ -1,8 +1,10 @@
 import 'reflect-metadata';
-import { Arg, Query, Resolver } from 'type-graphql';
+import { Arg, Authorized, Ctx, Query, Resolver } from 'type-graphql';
 import logger from '@boilerz/logger';
 import mongoPlugin from '@boilerz/super-server-mongo';
-import authCorePlugin from '@boilerz/super-server-auth-core';
+import authCorePlugin, {
+  AuthCoreContext,
+} from '@boilerz/super-server-auth-core';
 import authLocalPlugin from '@boilerz/super-server-auth-local';
 
 import * as superServer from '../src';
@@ -12,6 +14,12 @@ class GreetingResolver {
   @Query(() => String)
   public hello(@Arg('name') name: string): string {
     return `Hello ${name}`;
+  }
+
+  @Authorized()
+  @Query(() => String)
+  public authenticatedHello(@Ctx() context: AuthCoreContext): string {
+    return `Hello ${context.decodedToken?.firstName}`;
   }
 }
 
