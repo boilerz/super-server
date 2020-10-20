@@ -35,7 +35,7 @@
     "@boilerz/tsconfig": "^1.3.0",
     "@sentry/node": "^5.26.0",
     "@typegoose/typegoose": "^7.2.0",
-    "@types/bson": "^4.0.2",
+    "@types/bson": "^4.0.3",
     "@types/jest": "^26.0.14",
     "@types/jsonwebtoken": "^8.5.0",
     "@types/lodash": "^4.14.162",
