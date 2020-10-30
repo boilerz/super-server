@@ -33,7 +33,7 @@
     "@types/passport": "^1.0.4",
     "@types/passport-local": "^1.0.33",
     "amqplib": "^0.6.0",
-    "apollo-server-express": "^2.18.2",
+    "apollo-server-express": "^2.19.0",
     "class-validator": "^0.12.2",
     "codecov": "^3.8.0",
     "dayjs": "^1.9.4",
