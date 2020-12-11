@@ -343,12 +343,12 @@
     bunyan-sentry-stream "^1.2.1"
     read-pkg "^5.2.0"
 
-"@boilerz/mongoose-helper@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@boilerz/mongoose-helper/-/mongoose-helper-1.2.1.tgz#864cd1aedfc0d376a79d80bc7000b82ee6774bed"
-  integrity sha512-gCqbJZ/tvNXUEyG+Zr3/dq3yJl6o43LDLslmL5WBnzXyMnsaFoM0jVHp0cur3ccFJabWNKn1vJUH8WtIClQPKA==
+"@boilerz/mongoose-helper@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@boilerz/mongoose-helper/-/mongoose-helper-1.2.2.tgz#3ec8400eca948b326edf9121d98378ca407caa79"
+  integrity sha512-sU1U+k0ACGNgjZY9HpHOOcuS/D7GoMHcb7LunQLHJThnQt82akyMM7ynNjpfJ5elMfwWBpuPiSM7B/EHKjS4mw==
   dependencies:
-    "@sentry/node" "^5.25.0"
+    "@sentry/node" "^5.29.0"
 
 "@boilerz/prettier-config@^1.0.0":
   version "1.0.0"
