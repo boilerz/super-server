@@ -44,7 +44,7 @@ In situation example with local auth plugin [example](https://github.com/boilerz
 If mail support is not disabled (@see `DISABLE_MAILING_SUPPORT` below) the worker process defined below should be setup: 
 
 ```bash
-node node_modules/@boilerz/super-server-auth-core/worker/emailValidation
+node node_modules/@boilerz/super-server-auth-core/worker/email
 ```
 
 ### Release
@@ -64,6 +64,7 @@ yarn publish dist --access public
 | JWT_SECRET                                  | `Math.random().toString(36)` | JWT secret                                                                                                         |
 | JWT_EXPIRE_IN                               | `30 * 60 * 1000`             | Token expiration in seconds.                                                                                       |
 | DISABLE_MAILING_SUPPORT                     | `false`                      | Disable mailing support.                                                                                           |
+| EXTERNAL_PROVIDER_LINK_CODE_EXPIRES_DURATION| `2`                          | External provider link code expiration in hours.                                                                   |
 | EMAIL_VALIDATION_EXPIRES_DURATION           | `48`                         | Validation code expiration in hours.                                                                               |
 | AMQP_URL                                    | `amqp://localhost`           | AMQP url (*used for communication between the plugin and the email validation worker*).                            |
 
@@ -74,5 +75,6 @@ yarn publish dist --access public
 | SENDGRID_API_KEY                            |                           | Sendgrid API Key for email validation.                                                                             |
 | SENDER_EMAIL                                |                           | Sendgrid sender email (must be validated by sendgrid).                                                             |
 | EMAIL_VALIDATION_TEMPLATE_ID                |                           | Sendgrid validation email template id. (Must handle `firstName`, `lastName` and `validationUrl` as template data). |
+| LINK_ACCOUNT_TEMPLATE_ID                    |                           | Sendgrid link account template id. (Must handle `firstName`, `lastName` and `linkCode` as template data).          |
 | WAITING_DURATION_BEFORE_NEXT_EMAIL_ATTEMPT  | `5000`                    | Waiting duration in ms between two email validation attempt.                                                       |
 | AMQP_URL                                    | `amqp://localhost`        | See above                                                                                                              |

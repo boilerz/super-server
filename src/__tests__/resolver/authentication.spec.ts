@@ -12,6 +12,7 @@ import plugin from '../../index';
 import UserModel from '../../model/user/UserModel';
 import Role from '../../enum/Role';
 import User from '../../model/user/User';
+import { ExternalProvider } from '../../model/user/ExternalProviderAccount';
 
 // https://graphql.github.io/graphql-spec/June2018/#sec-Schema
 @Resolver()
@@ -31,11 +32,14 @@ class DummyResolver {
 describe('AuthenticationResolver', () => {
   let server: Server;
   let publishSpy: jest.SpyInstance;
-  const johnDoeUserInput = Object.freeze({
+  const johnDoe = Object.freeze({
     firstName: 'John',
     lastName: 'Doe',
-    password: 'passw0rd',
     email: 'john@doe.co',
+  });
+  const johnDoeUserInput = Object.freeze({
+    ...johnDoe,
+    password: 'passw0rd',
   });
   let johnDoeUser: User;
 
@@ -50,9 +54,6 @@ describe('AuthenticationResolver', () => {
       resolvers: [DummyResolver],
       port: 5000,
     });
-    publishSpy = jest
-      .spyOn(emailHelper.getPublisherClient(), 'publish')
-      .mockResolvedValue();
   });
   beforeEach(async () => {
     await mongooseHelper.dropDatabase();
@@ -63,6 +64,9 @@ describe('AuthenticationResolver', () => {
       documentVersion: 0,
       roles: [Role.USER],
     });
+    publishSpy = jest
+      .spyOn(emailHelper.getPublisherClient(), 'publish')
+      .mockResolvedValue();
   });
 
   afterAll(async () => {
@@ -103,12 +107,15 @@ describe('AuthenticationResolver', () => {
       }
     `);
 
-    expect(publishSpy).toHaveBeenCalledWith({
-      email: 'johny@boy.fr',
-      firstName: 'Johny',
-      lastName: 'Boy',
-      validationCode: expect.any(String),
-    });
+    expect(publishSpy).toHaveBeenCalledWith(
+      {
+        email: 'johny@boy.fr',
+        firstName: 'Johny',
+        lastName: 'Boy',
+        validationCode: expect.any(String),
+      },
+      'emailValidation',
+    );
 
     const { body: secondResponse } = await request(server)
       .post('/graphql')
@@ -158,12 +165,12 @@ describe('AuthenticationResolver', () => {
   });
 
   it('should fail to validate with an expired validation code', async () => {
-    await authenticationService.signUp(johnDoeUserInput);
+    await authenticationService.localSignUp(johnDoeUserInput);
     const user = await UserModel.findOne({ email: johnDoeUserInput.email });
     await UserModel.updateOne(
       { email: johnDoeUserInput.email },
       {
-        emailValidationCodeExpirationDate: dayjs()
+        'provider.local.emailValidationCodeExpirationDate': dayjs()
           .subtract(24, 'hour')
           .toDate(),
       },
@@ -173,7 +180,7 @@ describe('AuthenticationResolver', () => {
       mutation {
         validateEmail(
           email: "john@doe.co",
-          validationCode: "${user?.emailValidationCode}"
+          validationCode: "${user?.provider.local.emailValidationCode}"
         )
       }
     `;
@@ -189,7 +196,7 @@ describe('AuthenticationResolver', () => {
   });
 
   it('should successfully validate user email', async () => {
-    await authenticationService.signUp(johnDoeUserInput);
+    await authenticationService.localSignUp(johnDoeUserInput);
     const user = await UserModel.findOne({
       email: 'john@doe.co',
     });
@@ -198,7 +205,7 @@ describe('AuthenticationResolver', () => {
       mutation {
         validateEmail(
           email: "john@doe.co",
-          validationCode: "${user?.emailValidationCode}"
+          validationCode: "${user?.provider.local.emailValidationCode}"
         )
       }
     `;
@@ -208,6 +215,96 @@ describe('AuthenticationResolver', () => {
       Object {
         "data": Object {
           "validateEmail": true,
+        },
+      }
+    `);
+  });
+
+  it('should fail to link an unknown email / provider / linkCode triple', async () => {
+    const query = `
+      mutation {
+        linkProvider(
+          email: "john@doe.co",
+          provider: GOOGLE,
+          linkCode: "15"
+        )
+      }
+    `;
+    const { body } = await request(server).post('/graphql').send({ query });
+
+    expect(body).toMatchInlineSnapshot(`
+      Object {
+        "data": Object {
+          "linkProvider": false,
+        },
+      }
+    `);
+  });
+
+  it('should fail to link a provider with an expired validation code', async () => {
+    await authenticationService.continueWith(johnDoe, ExternalProvider.GOOGLE, {
+      id: '15',
+      data: {
+        extra: 'things',
+      },
+    });
+    const user = await UserModel.findOne({ email: johnDoe.email });
+    await UserModel.updateOne(
+      { email: johnDoeUserInput.email },
+      {
+        'provider.google.linkCodeExpirationDate': dayjs()
+          .subtract(24, 'hour')
+          .toDate(),
+      },
+    );
+
+    const query = `
+      mutation {
+        linkProvider(
+          email: "john@doe.co",
+          provider: GOOGLE,
+          linkCode: "${user?.provider.google.linkCode}"
+        )
+      }
+    `;
+    const { body } = await request(server).post('/graphql').send({ query });
+
+    expect(body).toMatchInlineSnapshot(`
+      Object {
+        "data": Object {
+          "linkProvider": false,
+        },
+      }
+    `);
+  });
+
+  it('should successfully link an external provider', async () => {
+    await authenticationService.localSignUp(johnDoeUserInput);
+    await authenticationService.continueWith(johnDoe, ExternalProvider.GOOGLE, {
+      id: '15',
+      data: {
+        extra: 'things',
+      },
+    });
+    const user = await UserModel.findOne({
+      email: 'john@doe.co',
+    });
+
+    const query = `
+      mutation {
+        linkProvider(
+          email: "john@doe.co",
+          provider: GOOGLE,
+          linkCode: "${user?.provider.google.linkCode}"
+        )
+      }
+    `;
+    const { body } = await request(server).post('/graphql').send({ query });
+
+    expect(body).toMatchInlineSnapshot(`
+      Object {
+        "data": Object {
+          "linkProvider": true,
         },
       }
     `);

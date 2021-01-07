@@ -3,6 +3,7 @@ import logger from '@boilerz/logger';
 
 export interface Config {
   host: string;
+  externalProviderLinkCodeExpiresDuration: number;
   emailValidationExpiresDuration: number;
   waitingDurationBeforeNextEmailAttempt: number;
   isMailingSupportEnabled: boolean;
@@ -12,6 +13,7 @@ export interface Config {
     senderEmail: string;
     mailTemplates: {
       emailValidationId: string;
+      linkAccountId: string;
     };
   };
   jwt: {
@@ -40,6 +42,10 @@ if (!process.env.JWT_EXPIRE_IN) {
 
 const config: Config = {
   host: process.env.SERVER_HOST || 'http://localhost:3000',
+  externalProviderLinkCodeExpiresDuration: parseInt(
+    process.env.EXTERNAL_PROVIDER_LINK_CODE_EXPIRES_DURATION || '2',
+    10,
+  ),
   emailValidationExpiresDuration: parseInt(
     process.env.EMAIL_VALIDATION_EXPIRES_DURATION || '48',
     10,
@@ -55,6 +61,7 @@ const config: Config = {
     senderEmail: process.env.SENDER_EMAIL!,
     mailTemplates: {
       emailValidationId: process.env.EMAIL_VALIDATION_TEMPLATE_ID!,
+      linkAccountId: process.env.LINK_ACCOUNT_TEMPLATE_ID!,
     },
   },
   jwt: {

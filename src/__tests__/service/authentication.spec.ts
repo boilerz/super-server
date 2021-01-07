@@ -2,14 +2,40 @@ import { ObjectID } from 'bson';
 import MockDate from 'mockdate';
 
 import * as jwt from 'jsonwebtoken';
+import * as mongooseHelper from '@boilerz/mongoose-helper';
 import * as authenticationService from '../../service/authentication';
 
 import User from '../../model/user/User';
 import Profile from '../../model/user/Profile';
+import { ExternalProvider } from '../../model/user/ExternalProviderAccount';
+import * as emailHelper from '../../helper/email';
+import UserModel from '../../model/user/UserModel';
 
 describe('[service] authentication', () => {
-  beforeEach(() => MockDate.set(new Date(0)));
+  const johnDoe = Object.freeze({
+    firstName: 'John',
+    lastName: 'Doe',
+    email: 'john@doe.com',
+  });
+  let sendLinkAccountRequestSpy: jest.SpyInstance;
+
+  beforeAll(async () =>
+    mongooseHelper.connect(undefined, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+    }),
+  );
+
+  beforeEach(async () => {
+    MockDate.set(new Date(0));
+    await mongooseHelper.dropDatabase();
+    sendLinkAccountRequestSpy = jest
+      .spyOn(emailHelper, 'sendLinkAccountRequest')
+      .mockResolvedValue();
+  });
   afterEach(() => MockDate.reset());
+  afterAll(() => mongooseHelper.disconnect());
 
   describe('#signToken', () => {
     it('should sign token successfully', () => {
@@ -39,6 +65,145 @@ describe('[service] authentication', () => {
           "roles": Array [],
         }
       `);
+    });
+  });
+
+  describe('#continueWith', () => {
+    it('should sign up when no user exist with this email / provider.id', async () => {
+      const user = await authenticationService.continueWith(
+        johnDoe,
+        ExternalProvider.GOOGLE,
+        {
+          id: '42',
+          data: {
+            extra: 'google extra',
+          },
+        },
+      );
+
+      expect(user).toBeInstanceOf(User);
+      expect(sendLinkAccountRequestSpy).not.toHaveBeenCalled();
+    });
+
+    it('should ask to link the provider (if not already) to the user account if email matches', async () => {
+      await authenticationService.continueWith(
+        johnDoe,
+        ExternalProvider.FACEBOOK,
+        {
+          id: '15',
+          data: {
+            extra: 'facebook extra',
+          },
+        },
+      );
+      const linkCode = await authenticationService.continueWith(
+        johnDoe,
+        ExternalProvider.GOOGLE,
+        {
+          id: '42',
+          data: {
+            extra: 'google extra',
+          },
+        },
+      );
+
+      expect(linkCode).toHaveLength(6);
+      expect(sendLinkAccountRequestSpy).toHaveBeenCalledWith({
+        ...johnDoe,
+        linkCode,
+      });
+    });
+
+    it('should sign in if the user is registered and active with this provider', async () => {
+      const appleProviderData = {
+        id: '8',
+        data: {
+          extra: 'apple extra',
+        },
+      };
+      await authenticationService.continueWith(
+        johnDoe,
+        ExternalProvider.APPLE,
+        appleProviderData,
+      );
+      const user = await authenticationService.continueWith(
+        johnDoe,
+        ExternalProvider.APPLE,
+        appleProviderData,
+      );
+
+      expect(user).toBeInstanceOf(User);
+      expect(sendLinkAccountRequestSpy).not.toHaveBeenCalled();
+    });
+
+    it('should update provider link code when it expires', async () => {
+      MockDate.reset();
+
+      await authenticationService.continueWith(
+        johnDoe,
+        ExternalProvider.GITHUB,
+        {
+          id: '4',
+          data: {},
+        },
+      );
+
+      const originalLinkCode = await authenticationService.continueWith(
+        johnDoe,
+        ExternalProvider.GOOGLE,
+        {
+          id: '42',
+          data: {},
+        },
+      );
+
+      await UserModel.updateOne(
+        { email: johnDoe.email },
+        { 'provider.google.linkCodeExpirationDate': 0 },
+      );
+      const updatedLinkCode = await authenticationService.continueWith(
+        johnDoe,
+        ExternalProvider.GOOGLE,
+        {
+          id: '42',
+          data: {},
+        },
+      );
+
+      expect(originalLinkCode).toHaveLength(6);
+      expect(updatedLinkCode).toHaveLength(6);
+      expect(originalLinkCode).not.toEqual(updatedLinkCode);
+    });
+
+    it('should return same non expired link code after first link attempt', async () => {
+      await authenticationService.continueWith(
+        johnDoe,
+        ExternalProvider.GITHUB,
+        {
+          id: '4',
+          data: {},
+        },
+      );
+      const originalLinkCode = await authenticationService.continueWith(
+        johnDoe,
+        ExternalProvider.GOOGLE,
+        {
+          id: '42',
+          data: {},
+        },
+      );
+      const linkCode = await authenticationService.continueWith(
+        johnDoe,
+        ExternalProvider.GOOGLE,
+        {
+          id: '42',
+          data: {},
+        },
+      );
+
+      expect(originalLinkCode).toHaveLength(6);
+      expect(linkCode).toHaveLength(6);
+      expect(originalLinkCode).toEqual(linkCode);
     });
   });
 });

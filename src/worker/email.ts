@@ -6,6 +6,10 @@ import {
   EXCHANGE_NAME,
   EmailValidationMessage,
   sendValidationEmail,
+  EmailMessage,
+  EmailRootingKey,
+  LinkAccountMessage,
+  sendLinkAccountEmail,
 } from '../helper/email';
 import config from '../config';
 
@@ -25,16 +29,24 @@ export async function start(): Promise<void> {
   );
 
   mail.setApiKey(config.sendgrid.apiKey);
+
   consumerClient = await ConsumerClient.createAndSetupClient<
-    EmailValidationMessage
+    EmailMessage,
+    EmailRootingKey
   >({
     amqpUrl: config.amqpUrl,
     exchangeName: EXCHANGE_NAME,
-    queueName: 'email-validation',
+    queueName: 'email',
     nAckThrottle: 5000,
-    async onMessageHandler(message, rootingKey): Promise<void> {
-      logger.info({ message, rootingKey }, 'single handler consumer');
-      await sendValidationEmail(message);
+    onMessageHandlerByRootingKey: {
+      async emailValidation(message: EmailValidationMessage): Promise<void> {
+        logger.info({ message }, '[worker.email] Email validation');
+        await sendValidationEmail(message);
+      },
+      async linkAccount(message: LinkAccountMessage): Promise<void> {
+        logger.info({ message }, '[worker.email] Account linking');
+        await sendLinkAccountEmail(message);
+      },
     },
   });
 
