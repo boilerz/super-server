@@ -33,7 +33,7 @@
     "@boilerz/mongoose-helper": "1.2.1",
     "@boilerz/prettier-config": "^1.0.0",
     "@boilerz/super-server-auth-core": "^1.6.1",
-    "@boilerz/super-server-auth-local": "^1.5.1",
+    "@boilerz/super-server-auth-local": "^1.6.0",
     "@boilerz/super-server-mongo": "1.1.0",
     "@boilerz/tsconfig": "1.3.0",
     "@typegoose/typegoose": "^7.4.2",
