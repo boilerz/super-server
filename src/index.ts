@@ -27,7 +27,10 @@ const plugin: SuperServerPlugin<AuthCoreContext> = {
       ...options,
       buildSchemaOptions: {
         ...options.buildSchemaOptions,
-        resolvers: [AuthenticationResolver],
+        resolvers: [
+          ...(options?.buildSchemaOptions?.resolvers || []),
+          AuthenticationResolver,
+        ],
         authChecker,
       },
     };
