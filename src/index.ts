@@ -58,9 +58,6 @@ export async function setup({
     ...resolvers,
     ...(graphQLServerOptions?.buildSchemaOptions?.resolvers || []),
   ];
-  if (_.isEmpty(appResolvers)) {
-    throw new Error('Missing resolvers');
-  }
 
   // Plugins setup
   for (const plugin of plugins) {
@@ -95,6 +92,10 @@ export async function setup({
         updatedGraphQLServerOptions,
       );
     }
+  }
+
+  if (_.isEmpty(updatedGraphQLServerOptions.buildSchemaOptions?.resolvers)) {
+    throw new Error('Missing resolvers');
   }
 
   await configure(app, updatedGraphQLServerOptions, plugins);
