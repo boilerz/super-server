@@ -1,6 +1,6 @@
 {
   "name": "@boilerz/super-server",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "main": "src/index.ts",
   "repository": "git@github.com:boilerz/super-server.git",
   "author": "boilerz",
@@ -11,7 +11,6 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "build": "buildTSPackage",
     "docs": "typedoc && cp docs_config.yml docs/_config.yml",
-    "preversion": "yarn docs",
     "test": "jest --coverage --runInBand",
     "start:example:basic": "ts-node-dev examples/basic.ts",
     "start:example:withLocalAuth": "ts-node-dev examples/withLocalAuth.ts",
