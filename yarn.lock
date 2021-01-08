@@ -358,12 +358,12 @@
     jsonwebtoken "^8.5.1"
     pluralize "^8.0.0"
 
-"@boilerz/super-server@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@boilerz/super-server/-/super-server-1.5.0.tgz#78f5961bdba5ccce881d531f4f21d846b4b33233"
-  integrity sha512-/1Ljg3iFG9QgvewKOrTehXfWtJsAkGvK6qNSV5nMEQTmUK+Gu/cmYBhu3VWGXSh1tEQ+dpo1Lzp7k53NX/qMtg==
+"@boilerz/super-server@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@boilerz/super-server/-/super-server-1.6.0.tgz#7812e0281e4023808a575b9d225e90bfd686060d"
+  integrity sha512-cjon2vu3GfB1pnPaF8Pw6eZtsm9XXRkZKU5RQ+HoFdi3n3VyYuHD99r8Ip/zVkopDTVb1EhshhNkX2catW9dWw==
   dependencies:
-    "@sentry/node" "^5.25.0"
+    "@sentry/node" "^5.29.2"
     body-parser "^1.19.0"
     reflect-metadata "^0.1.13"
 
@@ -679,7 +679,7 @@
     "@sentry/types" "5.29.2"
     tslib "^1.9.3"
 
-"@sentry/node@^5.25.0", "@sentry/node@^5.29.2":
+"@sentry/node@^5.29.2":
   version "5.29.2"
   resolved "https://registry.yarnpkg.com/@sentry/node/-/node-5.29.2.tgz#f0f0b4b2be63c9ddd702729fab998cead271dff1"
   integrity sha512-98m1ZejmJgA+eiz6jEFyYYfp6kJZQnx6d6KrJDMxGfss4YTmmJY57bE4xStnjjk7WINDGzlCiHuk+wJFMBjuoA==
