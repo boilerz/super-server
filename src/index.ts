@@ -25,7 +25,7 @@ const plugin: SuperServerPlugin = {
             return;
           }
 
-          if (!user.isActive) {
+          if (!user.provider.local || !user.provider.local.isActive) {
             res.status(401).send({ code: 'user.not.active' });
             return;
           }
@@ -47,8 +47,10 @@ const plugin: SuperServerPlugin = {
             { email },
             (err: Error, user: DocumentType<UserSchema>) => {
               if (err) return done(err);
-              if (!user) return done(null, false);
-              if (!user.authenticate(password)) return done(null, false);
+              if (!user || !user.provider.local) return done(null, false);
+              if (!user.provider.local.authenticate(password)) {
+                return done(null, false);
+              }
 
               return done(null, user.toObjectType(User));
             },
