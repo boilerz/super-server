@@ -43,18 +43,16 @@ const plugin: SuperServerPlugin = {
       new LocalStrategy(
         { usernameField: 'email', passwordField: 'password' },
         (email: string, password: string, done: Function) => {
-          UserModel.findOne(
-            { email },
-            (err: Error, user: DocumentType<UserSchema>) => {
-              if (err) return done(err);
+          UserModel.findOne({ email })
+            .then((user: DocumentType<UserSchema>) => {
               if (!user || !user.provider.local) return done(null, false);
               if (!user.provider.local.authenticate(password)) {
                 return done(null, false);
               }
 
               return done(null, user.toObjectType(User));
-            },
-          );
+            })
+            .catch((err) => done(err));
         },
       ),
     );
