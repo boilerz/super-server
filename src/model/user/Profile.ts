@@ -10,10 +10,4 @@ export default class Profile {
 
   @Field(() => [String])
   roles: string[];
-
-  @Field()
-  iat?: number;
-
-  @Field()
-  exp?: number;
 }
