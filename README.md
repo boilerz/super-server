@@ -16,6 +16,17 @@ npx install-peerdeps @boilerz/super-server-auth-google
 
 // ...
 
+# Env vars
+
+| Name                                        | Default                                                                                           | Description                                                                                                        |
+|---------------------------------------------|---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| SERVER_HOST                                 | `http://localhost:3000`                                                                           | Server host                                                                                                        |
+| GOOGLE_OAUTH_SCOPE                          | `https://www.googleapis.com/auth/userinfo.profile,https://www.googleapis.com/auth/userinfo.email` | Oauth scope                                                                                                        |
+| GOOGLE_CLIENT_ID                            |                                                                                                   | Client ID.                                                                                                         |
+| GOOGLE_CLIENT_SECRET                        |                                                                                                   | Client secret.                                                                                                     |
+| GOOGLE_FAILURE_REDIRECT                     | `/login`                                                                                          | Google failure redirect.                                                                                           |
+| GOOGLE_LINK_PROVIDER_CALLBACK_URL           | `${SERVER_HOST}/auth/connect`                                                                     | Callback used for account linking.                                                                                 |
+
 ### Release
 
 ```bash

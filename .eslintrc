@@ -1,3 +1,6 @@
 {
-  "extends": "@boilerz/eslint-config"
+  "extends": "@boilerz/eslint-config",
+  "rules": {
+    "class-methods-use-this": "off"
+  }
 }

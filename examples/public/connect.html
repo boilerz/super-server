@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" >
+<head >
+    <meta charset="UTF-8" >
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" >
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" >
+    <title >Connect</title >
+</head >
+<body >
+
+<h2>To connect your account <span id="email"></span> enter the provided link code:</h2>
+
+<form id="linkAccountForm" action="javascript:void(0);" onsubmit="linkAccount(this)">
+    <label for="linkCode">Link code</label>
+    <input id="linkCode" name="linkCode" type="text" />
+
+    <input type="submit" value="Link account" />
+</form>
+
+<h4 id="linkFailure" style="color: red; display: none;">Link failure, check the code</h4>
+
+<script type="application/javascript" src="common.js"></script>
+<script type="application/javascript">
+  const email = getCookie('linkEmail');
+
+  document.getElementById('email').innerHTML = email;
+
+  async function linkAccount({ linkCode }) {
+    document.getElementById('linkFailure').style.display = 'none';
+
+    const response = await fetch('/graphql', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        query: `
+          mutation {
+            linkProvider(
+              email: "${email}",
+              provider: GOOGLE,
+              linkCode: "${linkCode.value}"
+            )
+          }
+        `
+      })
+    });
+
+    const { data } = await response.json();
+    if (!data || data.linkProvider === false) {
+      document.getElementById('linkFailure').style.display = 'block';
+    } else {
+      window.location.assign('/');
+    }
+  }
+</script>
+</body >
+</html >
