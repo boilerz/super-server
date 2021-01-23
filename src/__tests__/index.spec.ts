@@ -1,13 +1,16 @@
-import * as superServer from '@boilerz/super-server';
-import mongoPlugin from '@boilerz/super-server-mongo';
-import authCorePlugin from '@boilerz/super-server-auth-core';
-import * as mongooseHelper from '@boilerz/mongoose-helper';
 import { Server } from 'http';
+
 import request from 'supertest';
 import { Arg, Query, Resolver } from 'type-graphql';
+
+import * as mongooseHelper from '@boilerz/mongoose-helper';
+import * as superServer from '@boilerz/super-server';
+import authCorePlugin from '@boilerz/super-server-auth-core';
+import { ExternalProvider } from '@boilerz/super-server-auth-core/model/user/ExternalProviderAccount';
 import UserModel from '@boilerz/super-server-auth-core/model/user/UserModel';
 import * as authenticationService from '@boilerz/super-server-auth-core/service/authentication';
-import { ExternalProvider } from '@boilerz/super-server-auth-core/model/user/ExternalProviderAccount';
+import mongoPlugin from '@boilerz/super-server-mongo';
+
 import plugin from '../index';
 
 @Resolver()
