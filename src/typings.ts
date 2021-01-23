@@ -1,7 +1,7 @@
-import { Express } from 'express';
-import { BuildSchemaOptions } from 'type-graphql';
 import { ApolloServerExpressConfig } from 'apollo-server-express';
 import { ExpressContext } from 'apollo-server-express/dist/ApolloServer';
+import { Express } from 'express';
+import { BuildSchemaOptions } from 'type-graphql';
 
 export interface GraphQLServerOptions {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

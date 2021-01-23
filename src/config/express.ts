@@ -1,9 +1,8 @@
 import * as Sentry from '@sentry/node';
-import { Express, Request, Response } from 'express';
 import bodyParser from 'body-parser';
+import { Express, Request, Response } from 'express';
 
 import { GraphQLServerOptions, setupGraphQLServer } from '../graphql';
-
 import sslRedirect from '../middleware/sslRedirect';
 import { SuperServerPlugin } from '../typings';
 

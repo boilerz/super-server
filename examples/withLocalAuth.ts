@@ -1,11 +1,12 @@
 import 'reflect-metadata';
 import { Arg, Authorized, Ctx, Query, Resolver } from 'type-graphql';
+
 import logger from '@boilerz/logger';
-import mongoPlugin from '@boilerz/super-server-mongo';
 import authCorePlugin, {
   AuthCoreContext,
 } from '@boilerz/super-server-auth-core';
 import authLocalPlugin from '@boilerz/super-server-auth-local';
+import mongoPlugin from '@boilerz/super-server-mongo';
 
 import * as superServer from '../src';
 
@@ -28,4 +29,4 @@ superServer
     resolvers: [GreetingResolver],
     plugins: [mongoPlugin, authCorePlugin, authLocalPlugin],
   })
-  .catch(err => logger.error({ err }, '[examples/withLocalAuth]'));
+  .catch((err) => logger.error({ err }, '[examples/withLocalAuth]'));

@@ -1,7 +1,8 @@
-import { Arg, Query, Resolver } from 'type-graphql';
 import { Server } from 'http';
-import request from 'supertest';
+
 import _ from 'lodash';
+import request from 'supertest';
+import { Arg, Query, Resolver } from 'type-graphql';
 
 import * as server from '../index';
 import { SuperServerPlugin } from '../index';

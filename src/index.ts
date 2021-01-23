@@ -1,11 +1,11 @@
 import http, { Server } from 'http';
 
+import { ExpressContext } from 'apollo-server-express/dist/ApolloServer';
 import express, { Express } from 'express';
 import _ from 'lodash';
 
 import logger from '@boilerz/logger';
 
-import { ExpressContext } from 'apollo-server-express/dist/ApolloServer';
 import config from './config';
 import configure from './config/express';
 import { GraphQLServerOptions } from './graphql';
