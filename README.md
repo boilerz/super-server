@@ -14,7 +14,9 @@ npx install-peerdeps @boilerz/super-server-auth-google
 
 ### Usage
 
-// ...
+Require `super-server-mongo` and `super-server-auth-core`.
+
+Full example [here](https://github.com/boilerz/super-server-auth-google/blob/master/examples/minimal.ts)
 
 # Env vars
 
