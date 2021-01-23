@@ -1,12 +1,14 @@
 process.env.GOOGLE_LINK_PROVIDER_CALLBACK_URL = '/connect.html';
 
-import express from 'express';
-import * as superServer from '@boilerz/super-server';
-import mongoPlugin from '@boilerz/super-server-mongo';
-import authCorePlugin from '@boilerz/super-server-auth-core';
-import logger from '@boilerz/logger';
-
 import path from 'path';
+
+import express from 'express';
+
+import logger from '@boilerz/logger';
+import * as superServer from '@boilerz/super-server';
+import authCorePlugin from '@boilerz/super-server-auth-core';
+import mongoPlugin from '@boilerz/super-server-mongo';
+
 import authGooglePlugin from '../src';
 
 superServer

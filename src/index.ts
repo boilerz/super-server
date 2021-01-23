@@ -1,11 +1,13 @@
 import passport from 'passport';
+
 import type {
   GraphQLServerOptions,
   SuperServerPlugin,
 } from '@boilerz/super-server';
-import strategy from './strategy';
-import GoogleAuthenticationResolver from './resolver/authentication';
+
 import configureExpress from './config/express';
+import GoogleAuthenticationResolver from './resolver/authentication';
+import strategy from './strategy';
 
 const plugin: SuperServerPlugin = {
   configure: configureExpress,

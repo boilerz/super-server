@@ -3,8 +3,10 @@ import {
   Profile,
   VerifyFunction,
 } from 'passport-google-oauth';
-import * as authenticationService from '@boilerz/super-server-auth-core/service/authentication';
+
 import { ExternalProvider } from '@boilerz/super-server-auth-core/model/user/ExternalProviderAccount';
+import * as authenticationService from '@boilerz/super-server-auth-core/service/authentication';
+
 import config from './config';
 
 export const LINK_REQUEST_ACTION = 'LINK_REQUEST';

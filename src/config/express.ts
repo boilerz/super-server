@@ -1,10 +1,12 @@
-import passport from 'passport';
 import dayjs from 'dayjs';
-import * as authenticationService from '@boilerz/super-server-auth-core/service/authentication';
-import User from '@boilerz/super-server-auth-core/model/user/User';
 import type { CookieOptions, Express, Request, Response } from 'express';
-import { LINK_REQUEST_ACTION, LinkRequestOption } from '../strategy';
+import passport from 'passport';
+
+import User from '@boilerz/super-server-auth-core/model/user/User';
+import * as authenticationService from '@boilerz/super-server-auth-core/service/authentication';
+
 import config from '.';
+import { LINK_REQUEST_ACTION, LinkRequestOption } from '../strategy';
 
 const linkEmailCookieOption: CookieOptions = {
   encode: (email: string): string => email,

@@ -1,20 +1,21 @@
-import * as mongooseHelper from '@boilerz/mongoose-helper';
-import * as superServer from '@boilerz/super-server';
-import request from 'supertest';
 import { Server } from 'http';
 
+import dayjs from 'dayjs';
 import { LoginTicket, TokenPayload } from 'google-auth-library';
-import mongoPlugin from '@boilerz/super-server-mongo';
+import request from 'supertest';
+
+import * as mongooseHelper from '@boilerz/mongoose-helper';
+import * as superServer from '@boilerz/super-server';
 import authCorePlugin from '@boilerz/super-server-auth-core';
-import { continueWith } from '@boilerz/super-server-auth-core/service/authentication';
 import * as emailHelper from '@boilerz/super-server-auth-core/helper/email';
 import { ExternalProvider } from '@boilerz/super-server-auth-core/model/user/ExternalProviderAccount';
+import { continueWith } from '@boilerz/super-server-auth-core/service/authentication';
+import mongoPlugin from '@boilerz/super-server-mongo';
+
 import plugin from '../../index';
 import { auth2Client } from '../../resolver/authentication';
-import { johnDoe as johnDoeTokenPayload } from '../__fixtures/tokenPayloads';
 import { johnDoe } from '../__fixtures/profiles';
-
-import dayjs = require('dayjs');
+import { johnDoe as johnDoeTokenPayload } from '../__fixtures/tokenPayloads';
 
 function mockVerifyIdToken(tokenPayload: TokenPayload): void {
   jest

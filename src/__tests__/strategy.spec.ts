@@ -1,5 +1,6 @@
 import * as mongooseHelper from '@boilerz/mongoose-helper';
 import * as authenticationService from '@boilerz/super-server-auth-core/service/authentication';
+
 import { verify } from '../strategy';
 import { johnDoe } from './__fixtures/profiles';
 import strategyVerifyFunctionSerializer, {

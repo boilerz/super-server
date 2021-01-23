@@ -1,6 +1,9 @@
 import util from 'util';
+
 import { VerifyFunction } from 'passport-google-oauth';
+
 import User from '@boilerz/super-server-auth-core/model/user/User';
+
 import { LinkRequestOption } from '../../strategy';
 
 const strategyVerifyFunctionMockName = 'strategy.verifyFunction';

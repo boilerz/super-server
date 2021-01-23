@@ -1,6 +1,8 @@
 import type { Request, Response } from 'express';
-import User from '@boilerz/super-server-auth-core/model/user/User';
+
 import Role from '@boilerz/super-server-auth-core/enum/Role';
+import User from '@boilerz/super-server-auth-core/model/user/User';
+
 import { callbackHandler } from '../../config/express';
 import { LinkRequestOption } from '../../strategy';
 

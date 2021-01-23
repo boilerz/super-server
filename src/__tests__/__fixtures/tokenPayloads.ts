@@ -1,7 +1,8 @@
-import { TokenPayload } from 'google-auth-library';
 import dayjs from 'dayjs';
-import { johnDoe as johnDoeProfile } from './profiles';
+import { TokenPayload } from 'google-auth-library';
+
 import config from '../../config';
+import { johnDoe as johnDoeProfile } from './profiles';
 
 export const johnDoe: TokenPayload = Object.freeze({
   ...johnDoeProfile,

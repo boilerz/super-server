@@ -1,5 +1,6 @@
 import type { Express } from 'express';
 import passport from 'passport';
+
 import plugin from '../index';
 import strategy from '../strategy';
 

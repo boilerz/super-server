@@ -1,8 +1,10 @@
-import { Arg, Query, Resolver } from 'type-graphql';
 import { OAuth2Client } from 'google-auth-library';
-import * as authenticationService from '@boilerz/super-server-auth-core/service/authentication';
-import { ExternalProvider } from '@boilerz/super-server-auth-core/model/user/ExternalProviderAccount';
+import { Arg, Query, Resolver } from 'type-graphql';
+
 import logger from '@boilerz/logger';
+import { ExternalProvider } from '@boilerz/super-server-auth-core/model/user/ExternalProviderAccount';
+import * as authenticationService from '@boilerz/super-server-auth-core/service/authentication';
+
 import config from '../config';
 import VerifyIDTokenResponse from '../model/VerifyIDTokenResponse';
 
