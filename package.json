@@ -61,7 +61,6 @@
     "passport-google-oauth": "^2.0.0"
   },
   "resolutions": {
-    "eslint/mkdirp/minimist": "^1.2.5",
     "node-notifier": "^9.0.0"
   }
 }
