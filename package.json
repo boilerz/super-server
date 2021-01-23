@@ -53,10 +53,10 @@
     "type-graphql": "^0.17.4",
     "typescript": "^3"
   },
-  "resolutions": {
-    "eslint/mkdirp/minimist": "^1.2.5"
-  },
   "dependencies": {
     "passport-local": "^1.0.0"
+  },
+  "resolutions": {
+    "node-notifier": "^9.0.0"
   }
 }
