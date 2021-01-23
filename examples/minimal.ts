@@ -1,7 +1,8 @@
 import { Arg, Query, Resolver } from 'type-graphql';
+
+import logger from '@boilerz/logger';
 import * as superServer from '@boilerz/super-server';
 import mongoPlugin from '@boilerz/super-server-mongo';
-import logger from '@boilerz/logger';
 
 import authCorePlugin from '../src';
 

@@ -1,8 +1,9 @@
 import { Arg, Mutation, Resolver } from 'type-graphql';
+
+import { ExternalProvider } from '../model/user/ExternalProviderAccount';
 import User from '../model/user/User';
 import UserInput from '../model/user/UserInput';
 import * as authenticationService from '../service/authentication';
-import { ExternalProvider } from '../model/user/ExternalProviderAccount';
 
 @Resolver(User)
 class AuthenticationResolver {

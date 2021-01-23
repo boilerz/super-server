@@ -1,15 +1,15 @@
 import { ObjectID } from 'bson';
+import * as jwt from 'jsonwebtoken';
 import MockDate from 'mockdate';
 
-import * as jwt from 'jsonwebtoken';
 import * as mongooseHelper from '@boilerz/mongoose-helper';
-import * as authenticationService from '../../service/authentication';
 
-import User from '../../model/user/User';
-import Profile from '../../model/user/Profile';
-import { ExternalProvider } from '../../model/user/ExternalProviderAccount';
 import * as emailHelper from '../../helper/email';
+import { ExternalProvider } from '../../model/user/ExternalProviderAccount';
+import Profile from '../../model/user/Profile';
+import User from '../../model/user/User';
 import UserModel from '../../model/user/UserModel';
+import * as authenticationService from '../../service/authentication';
 
 describe('[service] authentication', () => {
   const johnDoe = Object.freeze({

@@ -1,8 +1,11 @@
-import PublisherClient from '@boilerz/amqp-helper/PublisherClient';
-import mail from '@sendgrid/mail';
 import url from 'url';
-import User from '../model/user/User';
+
+import mail from '@sendgrid/mail';
+
+import PublisherClient from '@boilerz/amqp-helper/PublisherClient';
+
 import config from '../config';
+import User from '../model/user/User';
 
 export const EXCHANGE_NAME = 'super-server-auth-core';
 

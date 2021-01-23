@@ -1,4 +1,5 @@
 import * as jwt from 'jsonwebtoken';
+
 import logger from '@boilerz/logger';
 
 export interface Config {

@@ -1,6 +1,7 @@
 import { prop } from '@typegoose/typegoose';
-import LocalProviderAccount from './LocalProviderAccount';
+
 import ExternalProviderAccount from './ExternalProviderAccount';
+import LocalProviderAccount from './LocalProviderAccount';
 
 export default class ProviderAccountDictionary {
   @prop({ _id: false })

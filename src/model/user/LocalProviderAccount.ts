@@ -1,6 +1,7 @@
+import crypto from 'crypto';
+
 import { prop } from '@typegoose/typegoose';
 import * as _ from 'lodash';
-import crypto from 'crypto';
 
 export default class LocalProviderAccount {
   @prop({ default: true })

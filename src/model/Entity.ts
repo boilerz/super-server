@@ -1,8 +1,8 @@
-import _ from 'lodash';
-import { plural } from 'pluralize';
 import { DocumentType, prop, getModelForClass } from '@typegoose/typegoose';
 import { ObjectID } from 'bson';
+import _ from 'lodash';
 import type { Model } from 'mongoose';
+import { plural } from 'pluralize';
 
 const VERSION_KEY = 'documentVersion';
 

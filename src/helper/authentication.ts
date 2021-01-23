@@ -1,6 +1,7 @@
-import { ResolverData } from 'type-graphql';
-import logger from '@boilerz/logger';
 import _ from 'lodash';
+import { ResolverData } from 'type-graphql';
+
+import logger from '@boilerz/logger';
 
 export interface DecodedToken {
   id: string;

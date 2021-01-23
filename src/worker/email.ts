@@ -1,7 +1,11 @@
-import logger from '@boilerz/logger';
-import ConsumerClient from '@boilerz/amqp-helper/ConsumerClient';
-import mail from '@sendgrid/mail';
 import assert from 'assert';
+
+import mail from '@sendgrid/mail';
+
+import ConsumerClient from '@boilerz/amqp-helper/ConsumerClient';
+import logger from '@boilerz/logger';
+
+import config from '../config';
 import {
   EXCHANGE_NAME,
   EmailValidationMessage,
@@ -11,7 +15,6 @@ import {
   LinkAccountMessage,
   sendLinkAccountEmail,
 } from '../helper/email';
-import config from '../config';
 
 let consumerClient: ConsumerClient<EmailValidationMessage>;
 

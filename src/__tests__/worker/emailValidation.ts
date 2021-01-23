@@ -1,6 +1,7 @@
 import mail from '@sendgrid/mail';
-import * as emailWorker from '../../worker/email';
+
 import * as emailHelper from '../../helper/email';
+import * as emailWorker from '../../worker/email';
 
 describe('[worker] emailValidation', () => {
   let processExitSpy: jest.SpyInstance;

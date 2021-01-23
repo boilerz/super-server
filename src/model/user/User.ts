@@ -1,9 +1,9 @@
+import { prop } from '@typegoose/typegoose';
 import _ from 'lodash';
 import { ObjectType, Field } from 'type-graphql';
-import { prop } from '@typegoose/typegoose';
 
-import Entity from '../Entity';
 import Role from '../../enum/Role';
+import Entity from '../Entity';
 import Profile from './Profile';
 
 async function validateEmailInUse(email: string): Promise<boolean> {

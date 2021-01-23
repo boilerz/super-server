@@ -1,18 +1,20 @@
-import _ from 'lodash';
-import { DocumentType } from '@typegoose/typegoose';
-import * as jwt from 'jsonwebtoken';
-import dayjs from 'dayjs';
 import crypto from 'crypto';
+
+import { DocumentType } from '@typegoose/typegoose';
+import dayjs from 'dayjs';
+import * as jwt from 'jsonwebtoken';
 import { SignOptions } from 'jsonwebtoken';
-import UserInput from '../model/user/UserInput';
-import User from '../model/user/User';
-import UserModel, { UserSchema } from '../model/user/UserModel';
-import * as emailHelper from '../helper/email';
+import _ from 'lodash';
+
 import config from '../config';
+import * as emailHelper from '../helper/email';
 import ExternalProviderAccount, {
   ExternalProviderData,
   ExternalProvider,
 } from '../model/user/ExternalProviderAccount';
+import User from '../model/user/User';
+import UserInput from '../model/user/UserInput';
+import UserModel, { UserSchema } from '../model/user/UserModel';
 
 async function updateProviderLinkingInformation(
   registeredUser: DocumentType<UserSchema>,

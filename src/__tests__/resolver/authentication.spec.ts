@@ -1,18 +1,20 @@
-import * as mongooseHelper from '@boilerz/mongoose-helper';
-import * as superServer from '@boilerz/super-server';
-import { Authorized, Query, Resolver } from 'type-graphql';
-import request from 'supertest';
 import { Server } from 'http';
-import dayjs from 'dayjs';
 
 import { ObjectID } from 'bson';
-import * as authenticationService from '../../service/authentication';
+import dayjs from 'dayjs';
+import request from 'supertest';
+import { Authorized, Query, Resolver } from 'type-graphql';
+
+import * as mongooseHelper from '@boilerz/mongoose-helper';
+import * as superServer from '@boilerz/super-server';
+
+import Role from '../../enum/Role';
 import * as emailHelper from '../../helper/email';
 import plugin from '../../index';
-import UserModel from '../../model/user/UserModel';
-import Role from '../../enum/Role';
-import User from '../../model/user/User';
 import { ExternalProvider } from '../../model/user/ExternalProviderAccount';
+import User from '../../model/user/User';
+import UserModel from '../../model/user/UserModel';
+import * as authenticationService from '../../service/authentication';
 
 // https://graphql.github.io/graphql-spec/June2018/#sec-Schema
 @Resolver()

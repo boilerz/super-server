@@ -1,19 +1,21 @@
+import type { ExpressContext } from 'apollo-server-express/dist/ApolloServer';
 import type { Express } from 'express';
-import passport from 'passport';
 import * as jwt from 'jsonwebtoken';
+import passport from 'passport';
+
 import type {
   SuperServerPlugin,
   GraphQLServerOptions,
 } from '@boilerz/super-server';
-import type { ExpressContext } from 'apollo-server-express/dist/ApolloServer';
-import AuthenticationResolver from './resolver/authentication';
-import * as emailHelper from './helper/email';
+
 import config from './config';
 import {
   authChecker,
   AuthCoreContext,
   DecodedToken,
 } from './helper/authentication';
+import * as emailHelper from './helper/email';
+import AuthenticationResolver from './resolver/authentication';
 
 const plugin: SuperServerPlugin<AuthCoreContext> = {
   async configure(app: Express): Promise<void> {
