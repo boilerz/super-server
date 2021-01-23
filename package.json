@@ -66,7 +66,8 @@
     "typescript": "^3"
   },
   "resolutions": {
-    "eslint/mkdirp/minimist": "^1.2.5"
+    "eslint/mkdirp/minimist": "^1.2.5",
+    "node-notifier": "^9.0.0"
   },
   "dependencies": {
     "@sendgrid/mail": "^7.4.2",
