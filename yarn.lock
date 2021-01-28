@@ -391,10 +391,10 @@
     body-parser "^1.19.0"
     reflect-metadata "^0.1.13"
 
-"@boilerz/tsconfig@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@boilerz/tsconfig/-/tsconfig-1.3.0.tgz#e00e7f6910893ed1640ae4843b5e4cd42b9dedec"
-  integrity sha512-GRVUnhbJjiNQ9Vw16YcQjOFafQ1XBWJbNhFZeVVdTm0XwisYcZNzYKq+BXe08U9RPpbO+Ncjuvrds9JHPEOqCw==
+"@boilerz/tsconfig@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@boilerz/tsconfig/-/tsconfig-1.3.1.tgz#79c9c46ad6b1da2894caa372774d20b95348204b"
+  integrity sha512-Xsv6K4/+kARSpXV3aBl3hMa13ODtFcytqCZLBv9xbu1wCxRjsnQ77DsxhaZuGReJR0TChTaYx05d5dWV5KrB+w==
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
