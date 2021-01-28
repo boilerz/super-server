@@ -44,7 +44,6 @@ jobs:
       - uses: boilerz/action-release@master
         if: github.ref == 'refs/heads/master'
         with:
-          version: 'false' # cut that line to enable this action
           publishDirectory: 'dist'
           buildStep: 'true'
         env:
