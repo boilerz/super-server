@@ -350,10 +350,10 @@
   dependencies:
     "@sentry/node" "^5.25.0"
 
-"@boilerz/prettier-config@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@boilerz/prettier-config/-/prettier-config-1.0.0.tgz#5fbbc39512390c2f91bf16f0568c601f93d6fdd7"
-  integrity sha512-mM5neNrNdV79wRFFuKutFBAV56ndIGf1CjB66DUtz7pizHStuFxMtnJgGvHDQEKotCxt3F1L1jEtPh72EUEUZg==
+"@boilerz/prettier-config@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@boilerz/prettier-config/-/prettier-config-1.0.2.tgz#3c91b444373ba5ffaa532b6038dbaf9954013b87"
+  integrity sha512-no7jOWhR+Tq4sJmS/ZOCF60i0j2f1r2PTavJRZ6pAvJefcfbzdaDZrFbc7RJE/dLYBi3OcstDe7E+ZE+L64rlg==
 
 "@boilerz/super-server-auth-core@1.6.2":
   version "1.6.2"
