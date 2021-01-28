@@ -305,10 +305,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@boilerz/amqp-helper@1.1.1":
-  version "1.1.1"
-  resolved "https://registry.npmjs.org/@boilerz/amqp-helper/-/amqp-helper-1.1.1.tgz#fbedc9017214ca36a5f9a9de12a62b1a1dfa5a49"
-  integrity sha512-tHndblBvIeJWUcW1+FEYS3YaSFIA+arJiJ9cJfIHFT2kMSx0ig4+gUj6S8sY7NKHrG6ozeIp6NLXf8FcWMdy1w==
+"@boilerz/amqp-helper@1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@boilerz/amqp-helper/-/amqp-helper-1.1.5.tgz#245952afaa481884eb20493df21aa1362c25d019"
+  integrity sha512-3VMBvTXvFHJqhrz1mvJCJFmrT9jXJAN3Cd3PoaY5TmDZZBIKORIuQ61W2I9AaPwXS0YhpdBuykT9PCrQlNw3XA==
   dependencies:
     waait "^1.0.5"
 
