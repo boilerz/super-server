@@ -312,10 +312,10 @@
   dependencies:
     waait "^1.0.5"
 
-"@boilerz/build-tools@^1.4.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@boilerz/build-tools/-/build-tools-1.4.1.tgz#2ebe6fbc452a7ca5f979a3c23c7c3fc0edac8ccb"
-  integrity sha512-BS1McRGJ+KEUCqS0nBjZduevX+kr67esRqsC5Vpgr5vUtoDGohNiwcdAZGKphHUlXFky75gvf9eQu+yxoJ9RCQ==
+"@boilerz/build-tools@^1.4.4":
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/@boilerz/build-tools/-/build-tools-1.4.4.tgz#a5eea50fd8b353a99b34ef804445a8d19d31b50b"
+  integrity sha512-BUe3W31fdjTiq7Jy2gk3Kwy7bPFt9137kDercPvgy3G83z8taR+viDpKshSNiZVAFnNi86VKb/vctR7vKdtchw==
 
 "@boilerz/eslint-config@^2.0.1":
   version "2.0.2"
@@ -343,36 +343,36 @@
     bunyan-sentry-stream "^1.2.1"
     read-pkg "^5.2.0"
 
-"@boilerz/mongoose-helper@^1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@boilerz/mongoose-helper/-/mongoose-helper-1.2.2.tgz#3ec8400eca948b326edf9121d98378ca407caa79"
-  integrity sha512-sU1U+k0ACGNgjZY9HpHOOcuS/D7GoMHcb7LunQLHJThnQt82akyMM7ynNjpfJ5elMfwWBpuPiSM7B/EHKjS4mw==
+"@boilerz/mongoose-helper@^1.2.5":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@boilerz/mongoose-helper/-/mongoose-helper-1.2.5.tgz#553dc954731217b00a666237d2005234db235cf9"
+  integrity sha512-UcFEQBd0j6zuneS27UXIq7/S/HgV44noYtM8k6ebcL1cunYpUzSPyGtUGIshmPBu0J7FYiXCpIrg82tVekSF9g==
   dependencies:
-    "@sentry/node" "^5.29.0"
+    "@sentry/node" "^5.30.0"
 
-"@boilerz/prettier-config@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@boilerz/prettier-config/-/prettier-config-1.0.0.tgz#5fbbc39512390c2f91bf16f0568c601f93d6fdd7"
-  integrity sha512-mM5neNrNdV79wRFFuKutFBAV56ndIGf1CjB66DUtz7pizHStuFxMtnJgGvHDQEKotCxt3F1L1jEtPh72EUEUZg==
+"@boilerz/prettier-config@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@boilerz/prettier-config/-/prettier-config-1.0.2.tgz#3c91b444373ba5ffaa532b6038dbaf9954013b87"
+  integrity sha512-no7jOWhR+Tq4sJmS/ZOCF60i0j2f1r2PTavJRZ6pAvJefcfbzdaDZrFbc7RJE/dLYBi3OcstDe7E+ZE+L64rlg==
 
-"@boilerz/super-server-mongo@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@boilerz/super-server-mongo/-/super-server-mongo-1.1.0.tgz#a22bd8bf46e1626cda3bc0c020fccd52c4c1aaaf"
-  integrity sha512-kW1ylz+0aD01GlVt33Iw9byJMfgP5EbvOxMuxNMUz6ZZTFFKp5vIsPwu1+324ecHY5Tnj7Mr17IQid5bkeYjgQ==
+"@boilerz/super-server-mongo@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@boilerz/super-server-mongo/-/super-server-mongo-1.1.1.tgz#555cbfacc8c902942eafbb5fce07355f0de0dff8"
+  integrity sha512-XpBOxMp3wOjS08lwNV/xxMiH//9zhqtI+yZuMDWxuc7cdbTGLrXDnHewPcCXshYgmKEMYtqECoJeSZZTq157HA==
 
-"@boilerz/super-server@^1.6.0":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@boilerz/super-server/-/super-server-1.6.0.tgz#7812e0281e4023808a575b9d225e90bfd686060d"
-  integrity sha512-cjon2vu3GfB1pnPaF8Pw6eZtsm9XXRkZKU5RQ+HoFdi3n3VyYuHD99r8Ip/zVkopDTVb1EhshhNkX2catW9dWw==
+"@boilerz/super-server@^1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@boilerz/super-server/-/super-server-1.6.1.tgz#1134d03c31d9b12ec9b142e554dfd1f127011c65"
+  integrity sha512-EtIpdgdxSCjFfGrJRQ7vNeHo63V6FlV9h1AZju9FrxrlNUXhKoev/LrvwHNzAbnJBcltLAdnfCk2/L55Rl4MAg==
   dependencies:
-    "@sentry/node" "^5.29.2"
+    "@sentry/node" "^6.0.2"
     body-parser "^1.19.0"
     reflect-metadata "^0.1.13"
 
-"@boilerz/tsconfig@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@boilerz/tsconfig/-/tsconfig-1.3.0.tgz#e00e7f6910893ed1640ae4843b5e4cd42b9dedec"
-  integrity sha512-GRVUnhbJjiNQ9Vw16YcQjOFafQ1XBWJbNhFZeVVdTm0XwisYcZNzYKq+BXe08U9RPpbO+Ncjuvrds9JHPEOqCw==
+"@boilerz/tsconfig@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@boilerz/tsconfig/-/tsconfig-1.3.1.tgz#79c9c46ad6b1da2894caa372774d20b95348204b"
+  integrity sha512-Xsv6K4/+kARSpXV3aBl3hMa13ODtFcytqCZLBv9xbu1wCxRjsnQ77DsxhaZuGReJR0TChTaYx05d5dWV5KrB+w==
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
@@ -726,7 +726,8 @@
     "@sentry/types" "6.0.2"
     tslib "^1.9.3"
 
-"@sentry/node@^5.29.0", "@sentry/node@^5.29.2":
+
+"@sentry/node@^5.30.0":
   version "5.30.0"
   resolved "https://registry.yarnpkg.com/@sentry/node/-/node-5.30.0.tgz#4ca479e799b1021285d7fe12ac0858951c11cd48"
   integrity sha512-Br5oyVBF0fZo6ZS9bxbJZG4ApAjRqAnqFFurMVJJdunNb80brh7a5Qva2kjhm+U6r9NJAB5OmDyPkA1Qnt+QVg==
@@ -6562,10 +6563,10 @@ superagent@^6.1.0:
     readable-stream "^3.6.0"
     semver "^7.3.2"
 
-supertest@^6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/supertest/-/supertest-6.1.1.tgz#4fe6ddfdad4ef3eb72926046c6c625217771d9ae"
-  integrity sha512-3WDAWfqdNifCURjGUHZFv3u5nMg5tFtFRCTJOcSZXdlYZ0gqVF3UMhA7IJDP8nDXnR3gocbQ6s0bpiPnsoFeQw==
+supertest@^6.1.3:
+  version "6.1.3"
+  resolved "https://registry.yarnpkg.com/supertest/-/supertest-6.1.3.tgz#3f49ea964514c206c334073e8dc4e70519c7403f"
+  integrity sha512-v2NVRyP73XDewKb65adz+yug1XMtmvij63qIWHZzSX8tp6wiq6xBLUy4SUAd2NII6wIipOmHT/FD9eicpJwdgQ==
   dependencies:
     methods "^1.1.2"
     superagent "^6.1.0"
