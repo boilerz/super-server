@@ -1,7 +1,7 @@
 # @boilerz/super-server-auth-core
 
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/boilerz/super-server-auth-core)](https://www.npmjs.com/package/@boilerz/super-server-auth-core)
-[![CircleCI](https://circleci.com/gh/boilerz/super-server-auth-core/tree/master.svg?style=shield)](https://circleci.com/gh/boilerz/super-server-auth-core/tree/master)
+[![GH CI Action](https://github.com/boilerz/super-server-auth-core/workflows/CI/badge.svg)](https://github.com/boilerz/super-server-auth-core/actions?query=workflow:CI)
 [![codecov](https://codecov.io/gh/boilerz/super-server-auth-core/branch/master/graph/badge.svg)](https://codecov.io/gh/boilerz/super-server-auth-core)
 
 > Core module for authentication support on super server
