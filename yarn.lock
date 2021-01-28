@@ -344,14 +344,14 @@
     eslint-plugin-react "^7.22.0"
     eslint-plugin-react-hooks "^4.2.0"
 
-"@boilerz/logger@^1.0.7":
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/@boilerz/logger/-/logger-1.1.0.tgz#61e93d3fafbc72eb91246c502c75269685bdb78c"
-  integrity sha512-Ig3vuBGVwwLRnd9UywCPR5Yzyq0Is6jc8drucJWGrBmHK6FxtCOPuR6tggkqaW4A4KC8QVUcWolHvK787d0S1g==
+"@boilerz/logger@^1.1.6":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@boilerz/logger/-/logger-1.1.6.tgz#e3158945a728d65ca8c9272553dd79ebf64c4d90"
+  integrity sha512-8jZkytoVDeTiDLtf/MlzZvbZsk3OWaKT4i6lCPgRsJ/LV8D7DvcgViC72OSx6j7wQn35nieviKX7X914mQ2N8Q==
   dependencies:
-    "@sentry/types" "^5.25.0"
+    "@sentry/types" "^6.0.1"
     "@types/bunyan" "^1.8.6"
-    bunyan "^1.8.14"
+    bunyan "^1.8.15"
     bunyan-sentry-stream "^1.2.1"
     read-pkg "^5.2.0"
 
@@ -750,10 +750,10 @@
   resolved "https://registry.npmjs.org/@sentry/types/-/types-5.30.0.tgz#19709bbe12a1a0115bc790b8942917da5636f402"
   integrity sha512-R8xOqlSTZ+htqrfteCWU5Nk0CDN5ApUTvrlvBuiH1DyP6czDZ4ktbZB0hAgBlVcK0U+qpD3ag3Tqqpa5Q67rPw==
 
-"@sentry/types@^5.25.0":
-  version "5.28.0"
-  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-5.28.0.tgz#242131fef910bded53350a36ffd7df240cfb8dcf"
-  integrity sha512-nNhoZEXdqM2xivxJBrLhxtJ2+s6FfKXUw5yBf0Jf/RBrBnH5fggPNImmyfpOoysl72igWcMWk4nnfyP5iDrriQ==
+"@sentry/types@^6.0.1":
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-6.0.2.tgz#8c1f6b5bc41708b5d6133847988752d9d184b237"
+  integrity sha512-aDUJuOe0MsqjDzx6dUTS6xXe+gNjYuZTHUuUB7EpihzoHGre7gUN3/WCCghiR4OJ703fxyl24cex6vDboZJLvg==
 
 "@sentry/utils@5.30.0":
   version "5.30.0"
@@ -1981,10 +1981,10 @@ bunyan-sentry-stream@^1.2.1:
   dependencies:
     lodash.omit "4.5.0"
 
-bunyan@^1.8.14:
-  version "1.8.14"
-  resolved "https://registry.yarnpkg.com/bunyan/-/bunyan-1.8.14.tgz#3d8c1afea7de158a5238c7cb8a66ab6b38dd45b4"
-  integrity sha512-LlahJUxXzZLuw/hetUQJmRgZ1LF6+cr5TPpRj6jf327AsiIq2jhYEH4oqUUkVKTor+9w2BT3oxVwhzE5lw9tcg==
+bunyan@^1.8.15:
+  version "1.8.15"
+  resolved "https://registry.yarnpkg.com/bunyan/-/bunyan-1.8.15.tgz#8ce34ca908a17d0776576ca1b2f6cbd916e93b46"
+  integrity sha512-0tECWShh6wUysgucJcBAoYegf3JJoZWibxdqhTm7OHPeT42qdjkZ29QCMcKwbgU1kiH+auSIasNRXMLWXafXig==
   optionalDependencies:
     dtrace-provider "~0.8"
     moment "^2.19.3"
