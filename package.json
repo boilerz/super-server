@@ -28,7 +28,7 @@
     "@boilerz/amqp-helper": "1.1.1",
     "@boilerz/build-tools": "^1.4.1",
     "@boilerz/eslint-config": "^2.0.1",
-    "@boilerz/logger": "^1.1.0",
+    "@boilerz/logger": "^1.1.4",
     "@boilerz/mongoose-helper": "1.2.1",
     "@boilerz/prettier-config": "^1.0.0",
     "@boilerz/super-server-auth-core": "^1.6.2",
@@ -61,7 +61,7 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
-    "@sentry/node": "^5.30.0",
+    "@sentry/node": "^6.0.2",
     "body-parser": "^1.19.0",
     "reflect-metadata": "^0.1.13"
   },
