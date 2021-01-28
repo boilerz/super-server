@@ -343,12 +343,12 @@
     bunyan-sentry-stream "^1.2.1"
     read-pkg "^5.2.0"
 
-"@boilerz/mongoose-helper@^1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@boilerz/mongoose-helper/-/mongoose-helper-1.2.2.tgz#3ec8400eca948b326edf9121d98378ca407caa79"
-  integrity sha512-sU1U+k0ACGNgjZY9HpHOOcuS/D7GoMHcb7LunQLHJThnQt82akyMM7ynNjpfJ5elMfwWBpuPiSM7B/EHKjS4mw==
+"@boilerz/mongoose-helper@^1.2.5":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@boilerz/mongoose-helper/-/mongoose-helper-1.2.5.tgz#553dc954731217b00a666237d2005234db235cf9"
+  integrity sha512-UcFEQBd0j6zuneS27UXIq7/S/HgV44noYtM8k6ebcL1cunYpUzSPyGtUGIshmPBu0J7FYiXCpIrg82tVekSF9g==
   dependencies:
-    "@sentry/node" "^5.29.0"
+    "@sentry/node" "^5.30.0"
 
 "@boilerz/prettier-config@^1.0.0":
   version "1.0.0"
@@ -697,7 +697,7 @@
     "@sentry/types" "5.30.0"
     tslib "^1.9.3"
 
-"@sentry/node@^5.29.0", "@sentry/node@^5.29.2", "@sentry/node@^5.30.0":
+"@sentry/node@^5.29.2", "@sentry/node@^5.30.0":
   version "5.30.0"
   resolved "https://registry.yarnpkg.com/@sentry/node/-/node-5.30.0.tgz#4ca479e799b1021285d7fe12ac0858951c11cd48"
   integrity sha512-Br5oyVBF0fZo6ZS9bxbJZG4ApAjRqAnqFFurMVJJdunNb80brh7a5Qva2kjhm+U6r9NJAB5OmDyPkA1Qnt+QVg==
