@@ -31,7 +31,7 @@
     "@boilerz/eslint-config": "^2.0.1",
     "@boilerz/logger": "^1.1.0",
     "@boilerz/mongoose-helper": "^1.2.5",
-    "@boilerz/prettier-config": "^1.0.0",
+    "@boilerz/prettier-config": "^1.0.2",
     "@boilerz/super-server": "^1.6.1",
     "@boilerz/super-server-mongo": "1.1.0",
     "@boilerz/tsconfig": "^1.3.1",
