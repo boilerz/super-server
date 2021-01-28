@@ -377,10 +377,10 @@
     jsonwebtoken "^8.5.1"
     pluralize "^8.0.0"
 
-"@boilerz/super-server-mongo@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/@boilerz/super-server-mongo/-/super-server-mongo-1.1.0.tgz#a22bd8bf46e1626cda3bc0c020fccd52c4c1aaaf"
-  integrity sha512-kW1ylz+0aD01GlVt33Iw9byJMfgP5EbvOxMuxNMUz6ZZTFFKp5vIsPwu1+324ecHY5Tnj7Mr17IQid5bkeYjgQ==
+"@boilerz/super-server-mongo@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@boilerz/super-server-mongo/-/super-server-mongo-1.1.1.tgz#555cbfacc8c902942eafbb5fce07355f0de0dff8"
+  integrity sha512-XpBOxMp3wOjS08lwNV/xxMiH//9zhqtI+yZuMDWxuc7cdbTGLrXDnHewPcCXshYgmKEMYtqECoJeSZZTq157HA==
 
 "@boilerz/super-server@1.6.1":
   version "1.6.1"
