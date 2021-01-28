@@ -1,7 +1,7 @@
 # @boilerz/super-server-auth-local
 
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/boilerz/super-server-auth-local)](https://www.npmjs.com/package/@boilerz/super-server-auth-local)
-[![CircleCI](https://circleci.com/gh/boilerz/super-server-auth-local/tree/master.svg?style=shield)](https://circleci.com/gh/boilerz/super-server-auth-local/tree/master)
+[![GH CI Action](https://github.com/boilerz/super-server-auth-local/workflows/CI/badge.svg)](https://github.com/boilerz/super-server-auth-local/actions?query=workflow:CI)
 [![codecov](https://codecov.io/gh/boilerz/super-server-auth-local/branch/master/graph/badge.svg)](https://codecov.io/gh/boilerz/super-server-auth-local)
 
 > Super server local auth
