@@ -8,5 +8,6 @@ updates:
   versioning-strategy: increase
   allow:
   - dependency-type: direct
-  - dependency-type: development
-  - dependency-type: production
+  labels:
+    - "dependencies"
+    - "automerge"
