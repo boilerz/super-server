@@ -20,7 +20,7 @@
     "passport": "^0.4.1"
   },
   "devDependencies": {
-    "@boilerz/amqp-helper": "^1.1.5",
+    "@boilerz/amqp-helper": "^1.1.7",
     "@boilerz/build-tools": "^1.4.4",
     "@boilerz/eslint-config": "^2.0.1",
     "@boilerz/logger": "^1.1.6",
