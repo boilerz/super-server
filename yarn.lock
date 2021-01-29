@@ -312,10 +312,10 @@
   dependencies:
     waait "^1.0.5"
 
-"@boilerz/build-tools@^1.4.4":
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/@boilerz/build-tools/-/build-tools-1.4.4.tgz#a5eea50fd8b353a99b34ef804445a8d19d31b50b"
-  integrity sha512-BUe3W31fdjTiq7Jy2gk3Kwy7bPFt9137kDercPvgy3G83z8taR+viDpKshSNiZVAFnNi86VKb/vctR7vKdtchw==
+"@boilerz/build-tools@^1.4.8":
+  version "1.4.8"
+  resolved "https://registry.yarnpkg.com/@boilerz/build-tools/-/build-tools-1.4.8.tgz#494bc83ea1254e8575f52c667616b9d5a391b086"
+  integrity sha512-wjEc53n0EycRkqLP+J+GeF/3eTyPq+gzkyhNoGUQ9L3Vvlq9xR0mhe9F/shWFBU2ImEisBfX83av4TVdXp+QYQ==
 
 "@boilerz/eslint-config@^2.0.3":
   version "2.0.3"
