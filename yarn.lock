@@ -360,10 +360,10 @@
   resolved "https://registry.yarnpkg.com/@boilerz/super-server-mongo/-/super-server-mongo-1.1.1.tgz#555cbfacc8c902942eafbb5fce07355f0de0dff8"
   integrity sha512-XpBOxMp3wOjS08lwNV/xxMiH//9zhqtI+yZuMDWxuc7cdbTGLrXDnHewPcCXshYgmKEMYtqECoJeSZZTq157HA==
 
-"@boilerz/super-server@^1.6.4":
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/@boilerz/super-server/-/super-server-1.6.4.tgz#af1a67edce9472d8d08df2c6802d55ea7aa2dd0f"
-  integrity sha512-wmtl+n3ob4eXJQ9vDUVk2aU+bqUMAoxMC8ZgHrJ0JPJwOmtKoIJYx/blJxtPsnOM5AWEtbk0Fp3Q/sRzrwT+Sw==
+"@boilerz/super-server@^1.6.7":
+  version "1.6.7"
+  resolved "https://registry.yarnpkg.com/@boilerz/super-server/-/super-server-1.6.7.tgz#f39f9a502f0ee93c342982555c1f8920b7e5d680"
+  integrity sha512-EkugJGf4CcpGtYageJZPGwSyep07Z5mfbqsuQQv68gKxhSQ3ODYT/2J7sOa18mi4CVZwRn9xqOu2g9kUXB1OSw==
   dependencies:
     "@sentry/node" "^6.0.2"
     body-parser "^1.19.0"
