@@ -16,7 +16,7 @@
   },
   "peerDependencies": {
     "@boilerz/amqp-helper": "^1.1.0",
-    "@boilerz/logger": "^1.1.4",
+    "@boilerz/logger": "^1.1.8",
     "@typegoose/typegoose": "^7.4.2",
     "class-validator": "^0.13.1",
     "dayjs": "^1.10.4",
@@ -29,7 +29,7 @@
     "@boilerz/amqp-helper": "^1.1.0",
     "@boilerz/build-tools": "^1.4.4",
     "@boilerz/eslint-config": "^2.0.1",
-    "@boilerz/logger": "^1.1.4",
+    "@boilerz/logger": "^1.1.8",
     "@boilerz/mongoose-helper": "^1.2.5",
     "@boilerz/prettier-config": "^1.0.3",
     "@boilerz/super-server": "^1.6.1",
