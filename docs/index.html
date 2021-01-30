@@ -7,6 +7,7 @@
 	<meta name="description" content="Documentation for @boilerz/super-server">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
 </head>
 <body>
 <header>
@@ -40,8 +41,6 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -51,12 +50,7 @@
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<ul class="tsd-breadcrumb">
-				<li>
-					<a href="globals.html">Globals</a>
-				</li>
-			</ul>
-			<h1>@boilerz/super-server</h1>
+			<h1>Project @boilerz/super-server</h1>
 		</div>
 	</div>
 </header>
@@ -69,7 +63,7 @@
 				</a>
 				<p><a href="https://github.com/boilerz/super-server/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license"></a>
 					<a href="https://www.npmjs.com/package/@boilerz/super-server"><img src="https://img.shields.io/github/package-json/v/boilerz/super-server" alt="GitHub package.json version"></a>
-					<a href="https://circleci.com/gh/boilerz/super-server"><img src="https://circleci.com/gh/boilerz/super-server.svg?style=shield" alt="CircleCI"></a>
+					<a href="https://github.com/boilerz/super-server/actions?query=workflow:CI"><img src="https://github.com/boilerz/super-server/workflows/CI/badge.svg" alt="GH CI Action"></a>
 				<a href="https://codecov.io/gh/boilerz/super-server"><img src="https://codecov.io/gh/boilerz/super-server/branch/master/graph/badge.svg" alt="codecov"></a></p>
 				<blockquote>
 					<p>Express server with type-graphql. </p>
@@ -77,40 +71,42 @@
 				<a href="#install" id="install" style="color: inherit; text-decoration: none;">
 					<h3>Install</h3>
 				</a>
-				<pre><code class="language-bash">npx install-peerdeps @boilerz/super-server</code></pre>
+				<pre><code class="language-bash"><span style="color: #000000">npx install-peerdeps @boilerz/super-server</span>
+</code></pre>
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 					<h3>Usage</h3>
 				</a>
-				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> superServer <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@boilerz/super-server&#x27;</span>;
-<span class="hljs-keyword">import</span> { Arg, Query, Resolver } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;type-graphql&#x27;</span>;
+				<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #0000FF">*</span><span style="color: #000000"> </span><span style="color: #AF00DB">as</span><span style="color: #000000"> </span><span style="color: #001080">superServer</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@boilerz/super-server&#039;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">Arg</span><span style="color: #000000">, </span><span style="color: #001080">Query</span><span style="color: #000000">, </span><span style="color: #001080">Resolver</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;type-graphql&#039;</span><span style="color: #000000">;</span>
 
-<span class="hljs-meta">@Resolver</span>()
-<span class="hljs-keyword">class</span> GreetingResolver {
-  <span class="hljs-meta">@Query</span>(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">String</span>)
-  <span class="hljs-keyword">public</span> hello(<span class="hljs-meta">@Arg</span>(<span class="hljs-string">&#x27;name&#x27;</span>) name: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">string</span> {
-    <span class="hljs-keyword">return</span> <span class="hljs-string">`Hello <span class="hljs-subst">${name}</span>`</span>;
-  }
-}
+<span style="color: #000000">@</span><span style="color: #795E26">Resolver</span><span style="color: #000000">()</span>
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">GreetingResolver</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  @</span><span style="color: #795E26">Query</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #267F99">String</span><span style="color: #000000">)</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">public</span><span style="color: #000000"> </span><span style="color: #795E26">hello</span><span style="color: #000000">(@</span><span style="color: #795E26">Arg</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;name&#039;</span><span style="color: #000000">) </span><span style="color: #001080">name</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">): </span><span style="color: #267F99">string</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #A31515">`Hello </span><span style="color: #0000FF">${</span><span style="color: #001080">name</span><span style="color: #0000FF">}</span><span style="color: #A31515">`</span><span style="color: #000000">;</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">}</span>
 
-<span class="hljs-comment">// Start the server with your resolvers</span>
-superServer.start({ resolvers: [GreetingResolver] });
+<span style="color: #008000">// Start the server with your resolvers</span>
+<span style="color: #001080">superServer</span><span style="color: #000000">.</span><span style="color: #795E26">start</span><span style="color: #000000">({ </span><span style="color: #001080">resolvers:</span><span style="color: #000000"> [</span><span style="color: #001080">GreetingResolver</span><span style="color: #000000">] });</span>
 
-<span class="hljs-comment">// OR</span>
+<span style="color: #008000">// OR</span>
 
-<span class="hljs-comment">// For more control on the underlying express app (the server is not automatically started):</span>
-<span class="hljs-keyword">const</span> server = superServer.setup({
-  graphQLServerOptions: {
-    buildSchemaOptions: {
-      resolvers: [GreetingResolver],
-    },
-  },
-});
+<span style="color: #008000">// For more control on the underlying express app (the server is not automatically started):</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">server</span><span style="color: #000000"> = </span><span style="color: #001080">superServer</span><span style="color: #000000">.</span><span style="color: #795E26">setup</span><span style="color: #000000">({</span>
+<span style="color: #000000">  </span><span style="color: #001080">graphQLServerOptions:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #001080">buildSchemaOptions:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">      </span><span style="color: #001080">resolvers:</span><span style="color: #000000"> [</span><span style="color: #001080">GreetingResolver</span><span style="color: #000000">],</span>
+<span style="color: #000000">    },</span>
+<span style="color: #000000">  },</span>
+<span style="color: #000000">});</span>
 
-<span class="hljs-comment">// Express configuration</span>
-superServer.getExpressApp().get(<span class="hljs-string">&#x27;/yo&#x27;</span>, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> res.send(<span class="hljs-string">&#x27;Yo&#x27;</span>));
+<span style="color: #008000">// Express configuration</span>
+<span style="color: #001080">superServer</span><span style="color: #000000">.</span><span style="color: #795E26">getExpressApp</span><span style="color: #000000">().</span><span style="color: #795E26">get</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;/yo&#039;</span><span style="color: #000000">, (</span><span style="color: #001080">req</span><span style="color: #000000">, </span><span style="color: #001080">res</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">res</span><span style="color: #000000">.</span><span style="color: #795E26">send</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;Yo&#039;</span><span style="color: #000000">));</span>
 
-<span class="hljs-comment">// Manually start the server</span>
-server.listen(process.env.PORT);</code></pre>
+<span style="color: #008000">// Manually start the server</span>
+<span style="color: #001080">server</span><span style="color: #000000">.</span><span style="color: #795E26">listen</span><span style="color: #000000">(</span><span style="color: #001080">process</span><span style="color: #000000">.</span><span style="color: #001080">env</span><span style="color: #000000">.</span><span style="color: #0070C1">PORT</span><span style="color: #000000">);</span>
+</code></pre>
 				<p>Some configuration can only be changed by env vars:</p>
 				<table>
 					<thead>
@@ -140,51 +136,49 @@ server.listen(process.env.PORT);</code></pre>
 				<a href="#release" id="release" style="color: inherit; text-decoration: none;">
 					<h3>Release</h3>
 				</a>
-				<pre><code class="language-bash">yarn version
-yarn build
-yarn publish dist --access public</code></pre>
+				<pre><code class="language-bash"><span style="color: #000000">yarn version</span>
+<span style="color: #000000">yarn build</span>
+<span style="color: #000000">yarn publish dist --access public</span>
+</code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals  ">
-						<a href="globals.html"><em>Globals</em></a>
-					</li>
-					<li class="label tsd-is-external">
-						<span>Internals</span>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/_index_.html">&quot;index&quot;</a>
-					</li>
-					<li class="label tsd-is-external">
-						<span>Externals</span>
-					</li>
-					<li class=" tsd-kind-module tsd-is-external">
-						<a href="modules/_config_express_.html">&quot;config/express&quot;</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-external">
-						<a href="modules/_config_index_.html">&quot;config/index&quot;</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-external">
-						<a href="modules/_graphql_helper_.html">&quot;graphql/helper&quot;</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-external">
-						<a href="modules/_graphql_index_.html">&quot;graphql/index&quot;</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-external">
-						<a href="modules/_graphql_schema_.html">&quot;graphql/schema&quot;</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-external">
-						<a href="modules/_middleware_sslredirect_.html">&quot;middleware/ssl<wbr>Redirect&quot;</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-external">
-						<a href="modules/_typings_.html">&quot;typings&quot;</a>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/graphqlserveroptions.html" class="tsd-kind-icon">GraphQLServer<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/superserveroptions.html" class="tsd-kind-icon">Super<wbr>Server<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/superserverplugin.html" class="tsd-kind-icon">Super<wbr>Server<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#resolver" class="tsd-kind-icon">Resolver</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#getexpressapp" class="tsd-kind-icon">get<wbr>Express<wbr>App</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#setup" class="tsd-kind-icon">setup</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#setupsignalhandlers" class="tsd-kind-icon">setup<wbr>Signal<wbr>Handlers</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#shutdown" class="tsd-kind-icon">shutdown</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#start" class="tsd-kind-icon">start</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -195,11 +189,8 @@ yarn publish dist --access public</code></pre>
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 		</div>
 	</div>

@@ -4,6 +4,7 @@
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/boilerz/super-server)](https://www.npmjs.com/package/@boilerz/super-server)
 [![GH CI Action](https://github.com/boilerz/super-server/workflows/CI/badge.svg)](https://github.com/boilerz/super-server/actions?query=workflow:CI)
 [![codecov](https://codecov.io/gh/boilerz/super-server/branch/master/graph/badge.svg)](https://codecov.io/gh/boilerz/super-server)
+[![Typedoc](https://img.shields.io/badge/doc-typedoc-orange)](https://boilerz.github.io/super-server/)
 
 > Express server with type-graphql. 
 
