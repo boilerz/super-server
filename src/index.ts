@@ -2,10 +2,12 @@ import type { ExpressContext } from 'apollo-server-express/dist/ApolloServer';
 import type { Express } from 'express';
 import * as jwt from 'jsonwebtoken';
 import passport from 'passport';
+import { NonEmptyArray } from 'type-graphql';
 
 import type {
   SuperServerPlugin,
   GraphQLServerOptions,
+  Resolver,
 } from '@boilerz/super-server';
 
 import config from './config';
@@ -30,9 +32,9 @@ const plugin: SuperServerPlugin<AuthCoreContext> = {
       buildSchemaOptions: {
         ...options.buildSchemaOptions,
         resolvers: [
-          ...(options?.buildSchemaOptions?.resolvers || []),
+          ...options.buildSchemaOptions.resolvers,
           AuthenticationResolver,
-        ],
+        ] as NonEmptyArray<Resolver>,
         authChecker,
       },
     };
