@@ -3,6 +3,7 @@ import http, { Server } from 'http';
 import { ExpressContext } from 'apollo-server-express/dist/ApolloServer';
 import express, { Express } from 'express';
 import _ from 'lodash';
+import { NonEmptyArray } from 'type-graphql/dist/interfaces/NonEmptyArray';
 
 import logger from '@boilerz/logger';
 
@@ -17,7 +18,9 @@ let serverPlugins: SuperServerPlugin[] = [];
 
 export interface SuperServerOptions {
   plugins?: SuperServerPlugin[];
-  resolvers?: Resolver[];
+  resolvers:
+    | NonEmptyArray<Resolver<Function>>
+    | NonEmptyArray<Resolver<string>>;
   graphQLServerOptions?: GraphQLServerOptions;
   withSignalHandlers?: boolean;
   port?: number;
@@ -47,11 +50,11 @@ export function setupSignalHandlers(): void {
 }
 
 export async function setup({
-  graphQLServerOptions = {},
+  graphQLServerOptions,
   withSignalHandlers = true,
-  resolvers = [],
+  resolvers,
   plugins = [],
-}: SuperServerOptions = {}): Promise<Server> {
+}: SuperServerOptions): Promise<Server> {
   if (withSignalHandlers) setupSignalHandlers();
 
   const appResolvers = [
@@ -67,8 +70,8 @@ export async function setup({
   let updatedGraphQLServerOptions: GraphQLServerOptions = {
     ...graphQLServerOptions,
     buildSchemaOptions: {
-      ...graphQLServerOptions.buildSchemaOptions,
-      resolvers: appResolvers,
+      ...graphQLServerOptions?.buildSchemaOptions,
+      resolvers: appResolvers as SuperServerOptions['resolvers'],
     },
     context: (context: ExpressContext): Promise<object> => {
       return plugins?.reduce(
@@ -104,12 +107,12 @@ export async function setup({
 }
 
 export async function start({
-  graphQLServerOptions = {},
+  graphQLServerOptions,
   withSignalHandlers = true,
-  resolvers = [],
+  resolvers,
   plugins = [],
   port,
-}: SuperServerOptions = {}): Promise<Server> {
+}: SuperServerOptions): Promise<Server> {
   serverPlugins = plugins;
   await setup({ graphQLServerOptions, withSignalHandlers, resolvers, plugins });
 

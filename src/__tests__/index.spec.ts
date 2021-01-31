@@ -33,12 +33,6 @@ describe('Super server 🚀', () => {
   });
 
   describe('#start', () => {
-    it('should fail to start the server without resolvers', async () => {
-      return expect(server.start()).rejects.toMatchInlineSnapshot(
-        `[Error: Missing resolvers]`,
-      );
-    });
-
     it('should start the server with a resolver', async () => {
       serverInstance = await server.start({
         withSignalHandlers: false,
