@@ -15,19 +15,19 @@
     "example:minimal": "ts-node-dev examples/minimal.ts"
   },
   "peerDependencies": {
-    "@boilerz/logger": "^1.0.6",
-    "@boilerz/super-server-auth-core": "^1.5.2",
+    "@boilerz/logger": "^1.1.11",
+    "@boilerz/super-server-auth-core": "^1.6.16",
     "passport": "^0.4.1"
   },
   "devDependencies": {
-    "@boilerz/amqp-helper": "^1.1.7",
+    "@boilerz/amqp-helper": "^1.1.13",
     "@boilerz/build-tools": "^1.4.8",
     "@boilerz/eslint-config": "^2.0.3",
-    "@boilerz/logger": "^1.1.8",
+    "@boilerz/logger": "^1.1.11",
     "@boilerz/mongoose-helper": "1.2.1",
     "@boilerz/prettier-config": "^1.0.3",
-    "@boilerz/super-server": "^1.6.4",
-    "@boilerz/super-server-auth-core": "1.6.2",
+    "@boilerz/super-server": "1.6.11",
+    "@boilerz/super-server-auth-core": "^1.6.16",
     "@boilerz/super-server-mongo": "1.1.0",
     "@boilerz/tsconfig": "^1.3.2",
     "@sentry/node": "^6.0.2",
@@ -38,11 +38,12 @@
     "@types/supertest": "^2.0.10",
     "amqplib": "^0.6.0",
     "apollo-server-express": "^2.19.2",
-    "class-validator": "^0.12.2",
+    "class-validator": "^0.13.1",
     "codecov": "^3.8.1",
     "dayjs": "^1.10.4",
     "eslint": "^7.18.0",
-    "graphql": "^14.7.0",
+    "express": "^4.17.1",
+    "graphql": "^15.4.0",
     "jest": "^25.5.4",
     "lodash": "^4.17.20",
     "mongoose": "^5.11.14",
@@ -50,13 +51,14 @@
     "prettier": "^2.2.1",
     "supertest": "^6.1.3",
     "ts-jest": "^25.5.1",
-    "type-graphql": "^0.17.4",
+    "type-graphql": "^1.1.1",
     "typescript": "^3"
   },
   "dependencies": {
     "passport-local": "^1.0.0"
   },
   "resolutions": {
-    "node-notifier": "^9.0.0"
+    "node-notifier": "^9.0.0",
+    "graphql-tools": "4.0.7"
   }
 }
