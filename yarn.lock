@@ -332,10 +332,10 @@
     eslint-plugin-react "^7.22.0"
     eslint-plugin-react-hooks "^4.2.0"
 
-"@boilerz/logger@^1.1.8":
-  version "1.1.8"
-  resolved "https://registry.yarnpkg.com/@boilerz/logger/-/logger-1.1.8.tgz#4f70e24fbca572038a67e77add60f71f5712cd81"
-  integrity sha512-0djrm0qXiYB2DdcZWUnW/TP5EhkK+trZhf/bANR9jNfEf04XwA/h4VGeXlKUN/PrZRXcZC0UoJwhW5tTKI6XkA==
+"@boilerz/logger@1.1.11":
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/@boilerz/logger/-/logger-1.1.11.tgz#340d50c58e245613e95b76ac75d9bd8c9c0fbea1"
+  integrity sha512-c2Mkjl0JqUcYfvPUfV6DR184Xf3RpHNXmJ93INi8ZPuHtzigoA6S6zFNby0UkuusE2pbEezyG5sdJuyzPdDsjw==
   dependencies:
     "@sentry/types" "^6.0.1"
     "@types/bunyan" "^1.8.6"

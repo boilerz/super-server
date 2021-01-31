@@ -17,8 +17,8 @@
     "start:example:withLocalAuth:worker": "node node_modules/@boilerz/super-server-auth-core/worker/emailValidation.js"
   },
   "peerDependencies": {
-    "@boilerz/logger": "^1.1.8",
-    "apollo-server-express": "^2.8.1",
+    "@boilerz/logger": "^1.1.11",
+    "apollo-server-express": "^2.19.2",
     "express": "^4.17.1",
     "graphql": "^15.4.0",
     "lodash": "^4.17.20",
@@ -28,7 +28,7 @@
     "@boilerz/amqp-helper": "1.1.7",
     "@boilerz/build-tools": "^1.4.8",
     "@boilerz/eslint-config": "^2.0.3",
-    "@boilerz/logger": "^1.1.8",
+    "@boilerz/logger": "^1.1.11",
     "@boilerz/mongoose-helper": "1.2.1",
     "@boilerz/prettier-config": "^1.0.3",
     "@boilerz/super-server-auth-core": "^1.6.9",
