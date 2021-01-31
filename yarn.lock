@@ -365,10 +365,10 @@
     jsonwebtoken "^8.5.1"
     pluralize "^8.0.0"
 
-"@boilerz/super-server-auth-local@^1.6.7":
-  version "1.6.7"
-  resolved "https://registry.yarnpkg.com/@boilerz/super-server-auth-local/-/super-server-auth-local-1.6.7.tgz#69e9640c7f99261b0bd1ff2e3c00243956f209ad"
-  integrity sha512-4CofzQZAsWVkkmdHD9DLBY43GA7OzaL5fbqbcTzqCjum2cW6HtMWqHRz4BTFc/9UyFEBRfLSb+c8mJw456eG1w==
+"@boilerz/super-server-auth-local@^1.6.8":
+  version "1.6.8"
+  resolved "https://registry.yarnpkg.com/@boilerz/super-server-auth-local/-/super-server-auth-local-1.6.8.tgz#60e40b343bf2aef71e692eaaeafc364e651759f1"
+  integrity sha512-HYQObPHx6BRJSBLc40h0oX35GeMYN7BTG/xZJi+EGcgtcQmNFGlmrPj9ejk+wFAsV7IHR9onbtXH3OqmCVmOKg==
   dependencies:
     passport-local "^1.0.0"
 
