@@ -1,6 +1,6 @@
 {
   "name": "@boilerz/super-server-auth-core",
-  "version": "1.6.16",
+  "version": "1.6.17",
   "repository": "git@github.com:boilerz/super-server-auth-core.git",
   "author": "boilerz",
   "description": "Core module for authentication support on super server",
