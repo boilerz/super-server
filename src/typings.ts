@@ -6,11 +6,11 @@ import { BuildSchemaOptions } from 'type-graphql';
 export interface GraphQLServerOptions {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   context?: any;
-  buildSchemaOptions?: BuildSchemaOptions;
+  buildSchemaOptions: BuildSchemaOptions;
   apolloServerExpressConfig?: ApolloServerExpressConfig;
 }
 
-export type Resolver = Function | string;
+export type Resolver<T extends Function | string = Function> = T;
 
 export interface SuperServerPlugin<ProducedContext = object> {
   setup(): Promise<void>;

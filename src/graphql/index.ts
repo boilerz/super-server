@@ -11,7 +11,7 @@ import { build as buildSchema } from './schema';
 export interface GraphQLServerOptions {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   context?: any;
-  buildSchemaOptions?: BuildSchemaOptions;
+  buildSchemaOptions: BuildSchemaOptions;
   apolloServerExpressConfig?: ApolloServerExpressConfig;
 }
 
