@@ -1,16 +1,23 @@
 import type { Express } from 'express';
 import passport from 'passport';
 
+import { GraphQLServerOptions } from '@boilerz/super-server/typings';
+
 import plugin from '../index';
 import strategy from '../strategy';
+import DummyResolver from './__fixtures/DummyResolver';
 
 describe('Plugin', () => {
+  const graphQLServerOptions: GraphQLServerOptions = Object.freeze({
+    buildSchemaOptions: { resolvers: [DummyResolver] },
+  });
+
   describe('#configure', () => {
     it('should configure express', async () => {
       const expressMock: Express = ({
         get: jest.fn(),
       } as unknown) as Express;
-      await plugin.configure(expressMock, {});
+      await plugin.configure(expressMock, graphQLServerOptions);
 
       expect(expressMock.get).toMatchInlineSnapshot(`
         [MockFunction] {
@@ -40,12 +47,15 @@ describe('Plugin', () => {
     });
 
     it('should update graphql server options', () => {
-      expect(plugin.updateGraphQLServerOptions!({})).toMatchInlineSnapshot(
+      expect(
+        plugin.updateGraphQLServerOptions!(graphQLServerOptions),
+      ).toMatchInlineSnapshot(
         {},
         `
         Object {
           "buildSchemaOptions": Object {
             "resolvers": Array [
+              [Function],
               [Function],
             ],
           },

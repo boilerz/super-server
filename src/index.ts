@@ -1,7 +1,9 @@
 import passport from 'passport';
+import { NonEmptyArray } from 'type-graphql';
 
 import type {
   GraphQLServerOptions,
+  Resolver,
   SuperServerPlugin,
 } from '@boilerz/super-server';
 
@@ -22,7 +24,7 @@ const plugin: SuperServerPlugin = {
         resolvers: [
           ...(options?.buildSchemaOptions?.resolvers || []),
           GoogleAuthenticationResolver,
-        ],
+        ] as NonEmptyArray<Resolver>,
       },
     };
   },
