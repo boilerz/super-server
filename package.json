@@ -1,6 +1,6 @@
 {
   "name": "@boilerz/super-server-auth-google",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "main": "src/index.ts",
   "repository": "git@github.com:boilerz/super-server-auth-google.git",
   "author": "boilerz",
