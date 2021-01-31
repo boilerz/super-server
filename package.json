@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@boilerz/amqp-helper": "^1.1.0",
-    "@boilerz/build-tools": "^1.4.6",
+    "@boilerz/build-tools": "^1.4.8",
     "@boilerz/eslint-config": "^2.0.4",
     "@boilerz/logger": "^1.1.8",
     "@boilerz/mongoose-helper": "^1.2.5",
