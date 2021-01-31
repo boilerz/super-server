@@ -15,18 +15,18 @@
     "example:minimal": "ts-node-dev examples/minimal.ts"
   },
   "peerDependencies": {
-    "@boilerz/amqp-helper": "^1.1.0",
+    "@boilerz/amqp-helper": "^1.1.13",
     "@boilerz/logger": "^1.1.11",
     "@typegoose/typegoose": "^7.4.2",
     "class-validator": "^0.13.1",
     "dayjs": "^1.10.4",
-    "graphql": "^14.7.0",
+    "graphql": "^15.4.0",
     "lodash": "^4.17.20",
     "passport": "^0.4.1",
-    "type-graphql": "^0.17.4"
+    "type-graphql": "^1.1.1"
   },
   "devDependencies": {
-    "@boilerz/amqp-helper": "^1.1.0",
+    "@boilerz/amqp-helper": "^1.1.13",
     "@boilerz/build-tools": "^1.4.8",
     "@boilerz/eslint-config": "^2.0.4",
     "@boilerz/logger": "^1.1.8",
