@@ -305,10 +305,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@boilerz/amqp-helper@1.1.7":
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/@boilerz/amqp-helper/-/amqp-helper-1.1.7.tgz#499b5caba4a9caeb3bf85d2a2ca3b3312e4b55ac"
-  integrity sha512-p0X+Vz+Uz81PK+79hvfCnJ1Mw+dcaRZHc5DK5VNJOwkUimvupa2qY1O5aTrwBI1rw6ST3SbtRJdR+nBrfhefWg==
+"@boilerz/amqp-helper@1.1.13":
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/@boilerz/amqp-helper/-/amqp-helper-1.1.13.tgz#ee71a7f17d64ecc67d36533e5515a0eaadd5f8c1"
+  integrity sha512-qIhLWN3M2GhmB+gpU8YxRaRqT8ArM4qZrgv7yFr69NvL/8iuUd6B1O8PYsIbQsvpZiLEZjK5i3KonuSkYrNe6w==
   dependencies:
     waait "^1.0.5"
 
@@ -332,7 +332,7 @@
     eslint-plugin-react "^7.22.0"
     eslint-plugin-react-hooks "^4.2.0"
 
-"@boilerz/logger@1.1.11":
+"@boilerz/logger@^1.1.11":
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/@boilerz/logger/-/logger-1.1.11.tgz#340d50c58e245613e95b76ac75d9bd8c9c0fbea1"
   integrity sha512-c2Mkjl0JqUcYfvPUfV6DR184Xf3RpHNXmJ93INi8ZPuHtzigoA6S6zFNby0UkuusE2pbEezyG5sdJuyzPdDsjw==
