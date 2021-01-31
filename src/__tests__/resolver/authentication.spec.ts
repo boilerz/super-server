@@ -14,6 +14,7 @@ import mongoPlugin from '@boilerz/super-server-mongo';
 
 import plugin from '../../index';
 import { auth2Client } from '../../resolver/authentication';
+import DummyResolver from '../__fixtures/DummyResolver';
 import { johnDoe } from '../__fixtures/profiles';
 import { johnDoe as johnDoeTokenPayload } from '../__fixtures/tokenPayloads';
 
@@ -30,6 +31,7 @@ describe('AuthenticationResolver', () => {
   beforeAll(async () => {
     server = await superServer.start({
       plugins: [mongoPlugin, authCorePlugin, plugin],
+      resolvers: [DummyResolver],
       port: 5000,
     });
   });
