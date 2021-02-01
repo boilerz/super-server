@@ -22,7 +22,7 @@
     "type-graphql": "^0.17.4"
   },
   "devDependencies": {
-    "@boilerz/amqp-helper": "^1.1.13",
+    "@boilerz/amqp-helper": "^1.1.14",
     "@boilerz/build-tools": "^1.4.8",
     "@boilerz/eslint-config": "^2.0.4",
     "@boilerz/logger": "^1.1.11",
