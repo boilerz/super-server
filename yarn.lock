@@ -337,10 +337,10 @@
     eslint-plugin-react "^7.22.0"
     eslint-plugin-react-hooks "^4.2.0"
 
-"@boilerz/logger@^1.1.11":
-  version "1.1.11"
-  resolved "https://registry.yarnpkg.com/@boilerz/logger/-/logger-1.1.11.tgz#340d50c58e245613e95b76ac75d9bd8c9c0fbea1"
-  integrity sha512-c2Mkjl0JqUcYfvPUfV6DR184Xf3RpHNXmJ93INi8ZPuHtzigoA6S6zFNby0UkuusE2pbEezyG5sdJuyzPdDsjw==
+"@boilerz/logger@^1.1.12":
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/@boilerz/logger/-/logger-1.1.12.tgz#1a71b3de0d1d3bf41ea9e875722e6e017f747b60"
+  integrity sha512-2Pa5G6JpMdgbxQcb5kvD5GlefViLYMdS4sJf8KLioLFMlBuOEd7G6xghny29pG3ZSmC4irDvB82WnjJvJiAaWw==
   dependencies:
     "@sentry/types" "^6.0.1"
     "@types/bunyan" "^1.8.6"
@@ -739,15 +739,10 @@
     "@sentry/utils" "6.0.3"
     tslib "^1.9.3"
 
-"@sentry/types@6.0.3":
+"@sentry/types@6.0.3", "@sentry/types@^6.0.1":
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/@sentry/types/-/types-6.0.3.tgz#a1ef6d6b2ac2a9201e3e4a894db6ecf7ceb5b27c"
   integrity sha512-266aBQbk9AGedhG2dzXshWbn23LYLElXqlI74DLku48UrU2v7TGKdyik/8/nfOfquCoRSp0GFGYHbItwU124XQ==
-
-"@sentry/types@^6.0.1":
-  version "6.0.2"
-  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-6.0.2.tgz#8c1f6b5bc41708b5d6133847988752d9d184b237"
-  integrity sha512-aDUJuOe0MsqjDzx6dUTS6xXe+gNjYuZTHUuUB7EpihzoHGre7gUN3/WCCghiR4OJ703fxyl24cex6vDboZJLvg==
 
 "@sentry/utils@6.0.3":
   version "6.0.3"
