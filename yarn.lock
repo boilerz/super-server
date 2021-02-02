@@ -360,10 +360,10 @@
   resolved "https://registry.yarnpkg.com/@boilerz/prettier-config/-/prettier-config-1.0.3.tgz#d84d0a3facee432c3f765bbf47d464e08a567dba"
   integrity sha512-BkQQVCVM6jMA3lkkcpoK1SxNn8s839uBqDLHXlA3qFCEX6mpn/A1IqFPgSyOrz5N/0kgToxdKJ4z7joCZr9yoA==
 
-"@boilerz/super-server-auth-core@^1.6.17":
-  version "1.6.17"
-  resolved "https://registry.yarnpkg.com/@boilerz/super-server-auth-core/-/super-server-auth-core-1.6.17.tgz#cd0f3f6ce4c7c2ffc10791c61bbb4d7018a0609a"
-  integrity sha512-pk1l4+VrACW8wGtMKEGgXULILrJOJxmozHi4gfQZc5X9B/HJ9xGVtCZ5BG6lT/dFNLrn+BkJjSKljvEEjahaHQ==
+"@boilerz/super-server-auth-core@^1.6.18":
+  version "1.6.18"
+  resolved "https://registry.yarnpkg.com/@boilerz/super-server-auth-core/-/super-server-auth-core-1.6.18.tgz#b13a9bc1899b121c1652279ad2ce2ee30279bd92"
+  integrity sha512-KhPkT70B3zRrx8KZFNQnokj9EMlasSJkL+50UYw/MbPJjn7/ssnb1LyfLENqunScSS8M+pqNbx43s2Rb4q7Ftg==
   dependencies:
     "@sendgrid/mail" "^7.4.2"
     bson "^4.2.2"
