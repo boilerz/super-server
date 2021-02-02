@@ -370,10 +370,10 @@
   resolved "https://registry.npmjs.org/@boilerz/super-server-mongo/-/super-server-mongo-1.1.0.tgz#a22bd8bf46e1626cda3bc0c020fccd52c4c1aaaf"
   integrity sha512-kW1ylz+0aD01GlVt33Iw9byJMfgP5EbvOxMuxNMUz6ZZTFFKp5vIsPwu1+324ecHY5Tnj7Mr17IQid5bkeYjgQ==
 
-"@boilerz/super-server@1.6.14":
-  version "1.6.14"
-  resolved "https://registry.yarnpkg.com/@boilerz/super-server/-/super-server-1.6.14.tgz#48938cf3df3582252242cef66e0cef19e10463df"
-  integrity sha512-FeHB/SVVCSrR07Q9r+tpvgKfQ96zRHjRQeW/NWpabhNYvcC4k+M7kBa1eEXAWWwnW31NtNpImGtAu0F9Ct2NAw==
+"@boilerz/super-server@1.6.15":
+  version "1.6.15"
+  resolved "https://registry.yarnpkg.com/@boilerz/super-server/-/super-server-1.6.15.tgz#f41e054c0e906a5c10b018ec032b01921118b73e"
+  integrity sha512-Y3i40JCNbBHqU3u6wzkp/UlAyZ52FeIRhsBIo4U6SNCMrIEHMtBIC+5TeWYCx16QBGwwI5Uhpw7QN8HbAfh/Uw==
   dependencies:
     "@sentry/node" "^6.0.3"
     body-parser "^1.19.0"
