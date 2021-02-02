@@ -15,7 +15,7 @@
     "example:minimal": "ts-node-dev examples/minimal.ts"
   },
   "peerDependencies": {
-    "@boilerz/amqp-helper": "^1.1.14",
+    "@boilerz/amqp-helper": "^1.1.15",
     "@boilerz/logger": "^1.1.11",
     "@typegoose/typegoose": "^7.4.2",
     "class-validator": "^0.13.1",
@@ -26,7 +26,7 @@
     "type-graphql": "^1.1.1"
   },
   "devDependencies": {
-    "@boilerz/amqp-helper": "^1.1.14",
+    "@boilerz/amqp-helper": "^1.1.15",
     "@boilerz/build-tools": "^1.4.8",
     "@boilerz/eslint-config": "^2.0.5",
     "@boilerz/logger": "^1.1.8",
