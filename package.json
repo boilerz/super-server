@@ -30,7 +30,7 @@
     "@boilerz/super-server-auth-core": "^1.6.17",
     "@boilerz/super-server-mongo": "1.1.0",
     "@boilerz/tsconfig": "^1.3.2",
-    "@sentry/node": "^6.0.3",
+    "@sentry/node": "^6.0.4",
     "@typegoose/typegoose": "^7.4.2",
     "@types/jest": "^26.0.20",
     "@types/passport": "^1.0.5",
