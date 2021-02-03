@@ -370,12 +370,12 @@
   resolved "https://registry.npmjs.org/@boilerz/super-server-mongo/-/super-server-mongo-1.1.0.tgz#a22bd8bf46e1626cda3bc0c020fccd52c4c1aaaf"
   integrity sha512-kW1ylz+0aD01GlVt33Iw9byJMfgP5EbvOxMuxNMUz6ZZTFFKp5vIsPwu1+324ecHY5Tnj7Mr17IQid5bkeYjgQ==
 
-"@boilerz/super-server@1.6.15":
-  version "1.6.15"
-  resolved "https://registry.yarnpkg.com/@boilerz/super-server/-/super-server-1.6.15.tgz#f41e054c0e906a5c10b018ec032b01921118b73e"
-  integrity sha512-Y3i40JCNbBHqU3u6wzkp/UlAyZ52FeIRhsBIo4U6SNCMrIEHMtBIC+5TeWYCx16QBGwwI5Uhpw7QN8HbAfh/Uw==
+"@boilerz/super-server@1.6.16":
+  version "1.6.16"
+  resolved "https://registry.yarnpkg.com/@boilerz/super-server/-/super-server-1.6.16.tgz#3499da788f00936b3a03a3ed3e48b6c942e6d748"
+  integrity sha512-RiSIwu1ofleul8TWs7XDIqWrAF1dO40MlxZCNO54Zq+W5tpg/GRTUshuL0FJSu7QtDeQU7qsAfEU6xnyp20CJQ==
   dependencies:
-    "@sentry/node" "^6.0.3"
+    "@sentry/node" "^6.0.4"
     body-parser "^1.19.0"
     class-validator "^0.13.1"
     reflect-metadata "^0.1.13"
@@ -752,7 +752,7 @@
     lru_map "^0.3.3"
     tslib "^1.9.3"
 
-"@sentry/node@^6.0.3", "@sentry/node@^6.0.4":
+"@sentry/node@^6.0.4":
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/@sentry/node/-/node-6.0.4.tgz#edd55088f5c4baf8c0cd01232f310ce40057002d"
   integrity sha512-ce3hybOOPRx93rG2V1ac8baNFMlGF+n0Ddbc2mGNl4nV20djI7dyACjUsmERqBzRrz3ozKfS379AkIa2dP2lcA==
