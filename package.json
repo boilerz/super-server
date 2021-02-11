@@ -57,7 +57,7 @@
     "typescript": "^3"
   },
   "dependencies": {
-    "google-auth-library": "^7.0.1",
+    "google-auth-library": "^7.0.2",
     "passport-google-oauth": "^2.0.0"
   },
   "resolutions": {
