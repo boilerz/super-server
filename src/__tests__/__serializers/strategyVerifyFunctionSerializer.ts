@@ -8,7 +8,7 @@ import { LinkRequestOption } from '../../strategy';
 
 const strategyVerifyFunctionMockName = 'strategy.verifyFunction';
 
-export const mockVerifyFunction = () =>
+export const mockVerifyFunction = (): jest.Mock =>
   jest.fn().mockName(strategyVerifyFunctionMockName);
 
 const serializer: jest.SnapshotSerializerPlugin = {
