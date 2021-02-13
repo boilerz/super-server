@@ -21,8 +21,9 @@ import { johnDoe as johnDoeTokenPayload } from '../__fixtures/tokenPayloads';
 function mockVerifyIdToken(tokenPayload: TokenPayload): void {
   jest
     .spyOn(auth2Client, 'verifyIdToken')
-    // @ts-ignore
-    .mockResolvedValue(new LoginTicket('', tokenPayload));
+    .mockImplementation(
+      async (): Promise<LoginTicket> => new LoginTicket('', tokenPayload),
+    );
 }
 
 describe('AuthenticationResolver', () => {
