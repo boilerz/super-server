@@ -335,10 +335,10 @@
   resolved "https://registry.yarnpkg.com/@boilerz/build-tools/-/build-tools-1.4.8.tgz#494bc83ea1254e8575f52c667616b9d5a391b086"
   integrity sha512-wjEc53n0EycRkqLP+J+GeF/3eTyPq+gzkyhNoGUQ9L3Vvlq9xR0mhe9F/shWFBU2ImEisBfX83av4TVdXp+QYQ==
 
-"@boilerz/eslint-config@^2.0.6":
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/@boilerz/eslint-config/-/eslint-config-2.0.6.tgz#0c12d8bad2f20ecb7201b8ad32732a2b78ec4401"
-  integrity sha512-PQwluOalu8v4aAuytgMvIAy17Gzc+VhahW9za6nOjE1VLXGnkE99Yc5xD2bWzg35RakfuVOlc1sGqW9eQxDv3Q==
+"@boilerz/eslint-config@^2.0.7":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@boilerz/eslint-config/-/eslint-config-2.0.7.tgz#31aa43d507a9411142efe297d0a9845199e0be19"
+  integrity sha512-ZeHwq4cpl5b4uYEL656prRU6G6TBeVgUvS5lYHAaCvovfKNZ0l+8Y9j2TUzbmExgTnWD9khIUogmH/2mPGzoBQ==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.15.0"
     "@typescript-eslint/parser" "^4.15.0"
