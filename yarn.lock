@@ -374,10 +374,10 @@
   resolved "https://registry.yarnpkg.com/@boilerz/prettier-config/-/prettier-config-1.0.3.tgz#d84d0a3facee432c3f765bbf47d464e08a567dba"
   integrity sha512-BkQQVCVM6jMA3lkkcpoK1SxNn8s839uBqDLHXlA3qFCEX6mpn/A1IqFPgSyOrz5N/0kgToxdKJ4z7joCZr9yoA==
 
-"@boilerz/super-server-mongo@1.1.8":
-  version "1.1.8"
-  resolved "https://registry.yarnpkg.com/@boilerz/super-server-mongo/-/super-server-mongo-1.1.8.tgz#439f1f0c6a133e6709c0c4e4bd0fda9b374a7c12"
-  integrity sha512-AAzChh5187A4g7x6gBfobhK8dULmJq6m+c8Nx8ji960kJFRyryqGH2AlXSU96LQT/7KAj0FVENB7NIfu6oXgLA==
+"@boilerz/super-server-mongo@1.1.9":
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/@boilerz/super-server-mongo/-/super-server-mongo-1.1.9.tgz#a66ec975abe8d3a4f96332e930963a7c5fe01fe7"
+  integrity sha512-+guUN80OsIwFaSvGwu9BLWZ+CM87fiRg2TD0Ry9VA8Mqoixagf/lyiydAy2FYCB9h1JacHwYrFNthn6h6XdrHw==
 
 "@boilerz/super-server@1.6.17":
   version "1.6.17"
