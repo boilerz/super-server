@@ -48,7 +48,7 @@
     "graphql": "^15.4.0",
     "jest": "^25.5.4",
     "lodash": "^4.17.20",
-    "mongoose": "^5.11.16",
+    "mongoose": "^5.11.17",
     "passport": "^0.4.1",
     "prettier": "^2.2.1",
     "supertest": "^6.1.3",
