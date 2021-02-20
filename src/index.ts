@@ -1,7 +1,7 @@
 import type { DocumentType } from '@typegoose/typegoose';
 import type { Express } from 'express';
 import passport from 'passport';
-import { Strategy as LocalStrategy } from 'passport-local';
+import { Strategy as LocalStrategy, VerifyFunction } from 'passport-local';
 
 import logger from '@boilerz/logger';
 import type { SuperServerPlugin } from '@boilerz/super-server';
@@ -16,7 +16,7 @@ const plugin: SuperServerPlugin = {
     app.post('/auth/local', (req, res, next) => {
       passport.authenticate(
         'local',
-        async (err: Error, user: UserSchema, info: object) => {
+        async (err: Error, user: UserSchema, info: Record<string, unknown>) => {
           if (err || !user) {
             logger.error(
               { err, info },
@@ -43,7 +43,11 @@ const plugin: SuperServerPlugin = {
     passport.use(
       new LocalStrategy(
         { usernameField: 'email', passwordField: 'password' },
-        (email: string, password: string, done: Function) => {
+        (
+          email: string,
+          password: string,
+          done: Parameters<VerifyFunction>[2],
+        ) => {
           UserModel.findOne({ email })
             .then((user: DocumentType<UserSchema>) => {
               if (!user || !user.provider.local) return done(null, false);
