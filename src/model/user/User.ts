@@ -1,16 +1,17 @@
 import { prop } from '@typegoose/typegoose';
 import _ from 'lodash';
+import type { Document } from 'mongoose';
 import { ObjectType, Field } from 'type-graphql';
 
 import Role from '../../enum/Role';
 import Entity from '../Entity';
 import Profile from './Profile';
 
-async function validateEmailInUse(email: string): Promise<boolean> {
-  return (
-    // @ts-ignore
-    !this.isNew || (await this.constructor.countDocuments({ email })) === 0
-  );
+async function validateEmailInUse(
+  this: Document<User>,
+  email: string,
+): Promise<boolean> {
+  return !this.isNew || (await this.collection.countDocuments({ email })) === 0;
 }
 
 @ObjectType()

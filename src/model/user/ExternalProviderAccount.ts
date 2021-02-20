@@ -21,7 +21,7 @@ export class ExternalProviderData {
   id: string;
 
   @prop()
-  data: object;
+  data: Record<string, unknown>;
 }
 
 export default class ExternalProviderAccount extends ExternalProviderData {
