@@ -10,9 +10,10 @@ export interface GraphQLServerOptions {
   apolloServerExpressConfig?: ApolloServerExpressConfig;
 }
 
-export type Resolver<T extends Function | string = Function> = T;
+type Unpacked<T> = T extends (infer U)[] ? U : T;
+export type Resolver = Unpacked<BuildSchemaOptions['resolvers']>;
 
-export interface SuperServerPlugin<ProducedContext = object> {
+export interface SuperServerPlugin<ProducedContext = Record<string, unknown>> {
   setup(): Promise<void>;
   /** Options are updated before the `configure` call */
   updateGraphQLServerOptions?(

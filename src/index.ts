@@ -3,7 +3,7 @@ import http, { Server } from 'http';
 import { ExpressContext } from 'apollo-server-express/dist/ApolloServer';
 import express, { Express } from 'express';
 import _ from 'lodash';
-import { NonEmptyArray } from 'type-graphql/dist/interfaces/NonEmptyArray';
+import { BuildSchemaOptions } from 'type-graphql';
 
 import logger from '@boilerz/logger';
 
@@ -18,9 +18,7 @@ let serverPlugins: SuperServerPlugin[] = [];
 
 export interface SuperServerOptions {
   plugins?: SuperServerPlugin[];
-  resolvers:
-    | NonEmptyArray<Resolver<Function>>
-    | NonEmptyArray<Resolver<string>>;
+  resolvers: Resolver[];
   graphQLServerOptions?: GraphQLServerOptions;
   withSignalHandlers?: boolean;
   port?: number;
@@ -71,14 +69,14 @@ export async function setup({
     ...graphQLServerOptions,
     buildSchemaOptions: {
       ...graphQLServerOptions?.buildSchemaOptions,
-      resolvers: appResolvers as SuperServerOptions['resolvers'],
+      resolvers: appResolvers as BuildSchemaOptions['resolvers'],
     },
-    context: (context: ExpressContext): Promise<object> => {
+    context: (context: ExpressContext): Promise<Record<string, unknown>> => {
       return plugins?.reduce(
         async (
-          producedContext: Promise<object>,
+          producedContext: Promise<Record<string, unknown>>,
           plugin: SuperServerPlugin,
-        ): Promise<object> => {
+        ): Promise<Record<string, unknown>> => {
           return {
             ...(await producedContext),
             ...(plugin.buildContext ? await plugin.buildContext(context) : {}),
