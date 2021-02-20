@@ -55,8 +55,9 @@ describe('Super server 🚀', () => {
     });
 
     it('should start the server and setup signal handlers', async () => {
-      // @ts-ignore
-      const processOnSpy = jest.spyOn(process, 'on').mockImplementation(_.noop);
+      const processOnSpy = jest
+        .spyOn(process, 'on')
+        .mockImplementation(_.noop as typeof process.on);
       serverInstance = await server.start({
         withSignalHandlers: true,
         resolvers: [GreetingResolver],
@@ -132,8 +133,7 @@ describe('Super server 🚀', () => {
     it('should shutdown a started server successfully', async () => {
       const processExitSpy = jest
         .spyOn(process, 'exit')
-        // @ts-ignore
-        .mockImplementation(_.noop);
+        .mockImplementation(_.noop as typeof process.exit);
       serverInstance = await server.start({
         resolvers: [GreetingResolver],
         plugins: [dummyPlugin],
