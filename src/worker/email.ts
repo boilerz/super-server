@@ -14,6 +14,7 @@ import {
   EmailRootingKey,
   LinkAccountMessage,
   sendLinkAccountEmail,
+  CommonMailMessage,
 } from '../helper/email';
 
 let consumerClient: ConsumerClient<EmailValidationMessage>;
@@ -41,14 +42,14 @@ export async function start(): Promise<void> {
     exchangeName: EXCHANGE_NAME,
     queueName: 'email',
     nAckThrottle: 5000,
-    onMessageHandlerByRootingKey: {
-      async emailValidation(message: EmailValidationMessage): Promise<void> {
+    onMessageHandlerByRoutingKey: {
+      async emailValidation(message: CommonMailMessage): Promise<void> {
         logger.info({ message }, '[worker.email] Email validation');
-        await sendValidationEmail(message);
+        await sendValidationEmail(message as EmailValidationMessage);
       },
-      async linkAccount(message: LinkAccountMessage): Promise<void> {
+      async linkAccount(message: CommonMailMessage): Promise<void> {
         logger.info({ message }, '[worker.email] Account linking');
-        await sendLinkAccountEmail(message);
+        await sendLinkAccountEmail(message as LinkAccountMessage);
       },
     },
   });

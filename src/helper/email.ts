@@ -9,7 +9,8 @@ import User from '../model/user/User';
 
 export const EXCHANGE_NAME = 'super-server-auth-core';
 
-interface CommonMailMessage extends Pick<User, 'firstName' | 'lastName'> {
+export interface CommonMailMessage
+  extends Pick<User, 'firstName' | 'lastName'> {
   email: string;
 }
 
