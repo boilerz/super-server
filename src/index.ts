@@ -37,7 +37,7 @@ export async function shutdown(exit = false, code?: number): Promise<void> {
 }
 
 export function setupSignalHandlers(): void {
-  process.on('SIGINT', shutdown.bind(null, { exit: true }));
+  process.on('SIGINT', shutdown.bind(null, true));
   process.on(
     'uncaughtException',
     (err: Error): Promise<void> => {
