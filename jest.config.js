@@ -5,5 +5,5 @@ module.exports = {
     '^.+\\.ts$': 'ts-jest',
   },
   collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
-  testPathIgnorePatterns: ['dist'],
+  testPathIgnorePatterns: ['dist', 'coverage'],
 };
