@@ -1,4 +1,3 @@
-import type { DocumentType } from '@typegoose/typegoose';
 import type { Express } from 'express';
 import passport from 'passport';
 import { Strategy as LocalStrategy, VerifyFunction } from 'passport-local';
@@ -49,7 +48,7 @@ const plugin: SuperServerPlugin = {
           done: Parameters<VerifyFunction>[2],
         ) => {
           UserModel.findOne({ email })
-            .then((user: DocumentType<UserSchema>) => {
+            .then((user) => {
               if (!user || !user.provider.local) return done(null, false);
               if (!user.provider.local.authenticate(password)) {
                 return done(null, false);
