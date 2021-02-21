@@ -1,11 +1,7 @@
 {
   "extends": "@boilerz/tsconfig",
   "compilerOptions": {
-    "rootDir": "src",
-    "outDir": "dist",
-    "declaration": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
-  },
-  "exclude": ["examples"]
+  }
 }
