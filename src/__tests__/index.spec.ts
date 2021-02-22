@@ -5,6 +5,7 @@ import { Arg, Query, Resolver } from 'type-graphql';
 
 import * as mongooseHelper from '@boilerz/mongoose-helper';
 import * as superServer from '@boilerz/super-server';
+import { SuperServerPlugin } from '@boilerz/super-server';
 import authCorePlugin from '@boilerz/super-server-auth-core';
 import { ExternalProvider } from '@boilerz/super-server-auth-core/model/user/ExternalProviderAccount';
 import UserModel from '@boilerz/super-server-auth-core/model/user/UserModel';
@@ -36,7 +37,7 @@ describe('Plugin', () => {
       useCreateIndex: true,
     });
     server = await superServer.start({
-      plugins: [mongoPlugin, authCorePlugin, plugin],
+      plugins: [mongoPlugin, authCorePlugin, plugin] as SuperServerPlugin[],
       resolvers: [GreetingResolver],
       port: 5000,
     });
