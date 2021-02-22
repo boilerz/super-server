@@ -1,5 +1,3 @@
-import { SuperServerPlugin } from '@boilerz/super-server';
-
 process.env.GOOGLE_LINK_PROVIDER_CALLBACK_URL = '/connect.html';
 
 import path from 'path';
@@ -8,6 +6,7 @@ import express from 'express';
 import { Query, Resolver } from 'type-graphql';
 
 import logger from '@boilerz/logger';
+import { SuperServerPlugin } from '@boilerz/super-server';
 import * as superServer from '@boilerz/super-server';
 import authCorePlugin from '@boilerz/super-server-auth-core';
 import mongoPlugin from '@boilerz/super-server-mongo';
