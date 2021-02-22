@@ -3,7 +3,6 @@ import { NonEmptyArray } from 'type-graphql';
 
 import type {
   GraphQLServerOptions,
-  Resolver,
   SuperServerPlugin,
 } from '@boilerz/super-server';
 
@@ -22,9 +21,10 @@ const plugin: SuperServerPlugin = {
       buildSchemaOptions: {
         ...options.buildSchemaOptions,
         resolvers: [
-          ...(options?.buildSchemaOptions?.resolvers || []),
+          ...((options?.buildSchemaOptions
+            ?.resolvers as NonEmptyArray<Function>) || []),
           GoogleAuthenticationResolver,
-        ] as NonEmptyArray<Resolver>,
+        ],
       },
     };
   },

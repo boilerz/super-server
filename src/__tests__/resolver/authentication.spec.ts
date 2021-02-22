@@ -6,6 +6,7 @@ import request from 'supertest';
 
 import * as mongooseHelper from '@boilerz/mongoose-helper';
 import * as superServer from '@boilerz/super-server';
+import type { SuperServerPlugin } from '@boilerz/super-server';
 import authCorePlugin from '@boilerz/super-server-auth-core';
 import * as emailHelper from '@boilerz/super-server-auth-core/helper/email';
 import { ExternalProvider } from '@boilerz/super-server-auth-core/model/user/ExternalProviderAccount';
@@ -31,7 +32,7 @@ describe('AuthenticationResolver', () => {
 
   beforeAll(async () => {
     server = await superServer.start({
-      plugins: [mongoPlugin, authCorePlugin, plugin],
+      plugins: [mongoPlugin, authCorePlugin, plugin] as SuperServerPlugin[],
       resolvers: [DummyResolver],
       port: 5000,
     });

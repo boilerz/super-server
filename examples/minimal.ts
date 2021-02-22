@@ -1,3 +1,5 @@
+import { SuperServerPlugin } from '@boilerz/super-server';
+
 process.env.GOOGLE_LINK_PROVIDER_CALLBACK_URL = '/connect.html';
 
 import path from 'path';
@@ -25,7 +27,11 @@ superServer
 
 superServer
   .start({
-    plugins: [mongoPlugin, authCorePlugin, authGooglePlugin],
+    plugins: [
+      mongoPlugin,
+      authCorePlugin,
+      authGooglePlugin,
+    ] as SuperServerPlugin[],
     resolvers: [DummyResolver],
   })
   .catch(logger.error);
