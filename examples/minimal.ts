@@ -2,6 +2,7 @@ import { Arg, Query, Resolver } from 'type-graphql';
 
 import logger from '@boilerz/logger';
 import * as superServer from '@boilerz/super-server';
+import type { SuperServerPlugin } from '@boilerz/super-server';
 import mongoPlugin from '@boilerz/super-server-mongo';
 
 import authCorePlugin from '../src';
@@ -17,6 +18,6 @@ class GreetingResolver {
 superServer
   .start({
     resolvers: [GreetingResolver],
-    plugins: [mongoPlugin, authCorePlugin],
+    plugins: [mongoPlugin, authCorePlugin] as SuperServerPlugin[],
   })
   .catch(logger.error);

@@ -7,7 +7,6 @@ import { NonEmptyArray } from 'type-graphql';
 import type {
   SuperServerPlugin,
   GraphQLServerOptions,
-  Resolver,
 } from '@boilerz/super-server';
 
 import config from './config';
@@ -32,9 +31,9 @@ const plugin: SuperServerPlugin<AuthCoreContext> = {
       buildSchemaOptions: {
         ...options.buildSchemaOptions,
         resolvers: [
-          ...options.buildSchemaOptions.resolvers,
+          ...(options.buildSchemaOptions.resolvers as NonEmptyArray<Function>),
           AuthenticationResolver,
-        ] as NonEmptyArray<Resolver>,
+        ],
         authChecker,
       },
     };

@@ -7,6 +7,7 @@ import { Authorized, Query, Resolver } from 'type-graphql';
 
 import * as mongooseHelper from '@boilerz/mongoose-helper';
 import * as superServer from '@boilerz/super-server';
+import { SuperServerPlugin } from '@boilerz/super-server';
 
 import Role from '../../enum/Role';
 import * as emailHelper from '../../helper/email';
@@ -52,7 +53,7 @@ describe('AuthenticationResolver', () => {
       useCreateIndex: true,
     });
     server = await superServer.start({
-      plugins: [plugin],
+      plugins: [(plugin as unknown) as SuperServerPlugin],
       resolvers: [DummyResolver],
       port: 5000,
     });
