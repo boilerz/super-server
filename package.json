@@ -26,7 +26,7 @@
     "@boilerz/logger": "^1.1.15",
     "@boilerz/mongoose-helper": "1.2.20",
     "@boilerz/prettier-config": "^1.0.3",
-    "@boilerz/super-server": "1.6.17",
+    "@boilerz/super-server": "1.6.21",
     "@boilerz/super-server-auth-core": "^1.6.19",
     "@boilerz/super-server-mongo": "1.1.9",
     "@boilerz/tsconfig": "^1.4.6",
