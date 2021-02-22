@@ -5,6 +5,6 @@ module.exports = {
     '^.+\\.ts$': 'ts-jest',
   },
   collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
-  testPathIgnorePatterns: ['dist'],
+  modulePathIgnorePatterns: ['<rootDir>/dist/'],
   restoreMocks: true,
 };
