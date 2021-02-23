@@ -402,10 +402,10 @@
     jsonwebtoken "^8.5.1"
     pluralize "^8.0.0"
 
-"@boilerz/super-server-auth-local@^1.6.15":
-  version "1.6.15"
-  resolved "https://registry.yarnpkg.com/@boilerz/super-server-auth-local/-/super-server-auth-local-1.6.15.tgz#23ff020eb958e23f4aab5956921cb57c155175de"
-  integrity sha512-TRqq8GPyYORgud1pujO4oVH3pbKFNbJar0sJx6UFG9+m8RkRUNdnB8Z1cx4vSqr0Uy5rPPtzkaWbC5OgSLYGHg==
+"@boilerz/super-server-auth-local@^1.6.16":
+  version "1.6.16"
+  resolved "https://registry.yarnpkg.com/@boilerz/super-server-auth-local/-/super-server-auth-local-1.6.16.tgz#685318b49f5651d074a90f3562e36664df2a5c98"
+  integrity sha512-RfWa1HvR+eYcXLE5e9IgKMClTKOn7IT0ODqf36fNy+pTcxr2Vb0b8jRXyomozXVF3It11BGxbmw5zv3mUKQ5IQ==
   dependencies:
     passport-local "^1.0.0"
 
