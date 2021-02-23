@@ -16,7 +16,7 @@
   },
   "peerDependencies": {
     "@boilerz/logger": "^1.1.18",
-    "@boilerz/super-server-auth-core": "^1.6.23",
+    "@boilerz/super-server-auth-core": "^1.6.24",
     "passport": "^0.4.1"
   },
   "devDependencies": {
@@ -27,7 +27,7 @@
     "@boilerz/mongoose-helper": "1.2.20",
     "@boilerz/prettier-config": "^1.0.3",
     "@boilerz/super-server": "1.6.21",
-    "@boilerz/super-server-auth-core": "^1.6.23",
+    "@boilerz/super-server-auth-core": "^1.6.24",
     "@boilerz/super-server-mongo": "1.1.12",
     "@boilerz/tsconfig": "^1.4.6",
     "@boilerz/tsconfig-production": "^1.4.6",
