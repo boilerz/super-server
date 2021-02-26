@@ -8,6 +8,7 @@
   "private": false,
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "typecheck": "tsc",
     "build": "buildTSPackage",
     "build:watch": "tsc --watch",
     "test": "jest --coverage",
