@@ -9,6 +9,7 @@
   "private": false,
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "typecheck": "tsc",
     "build": "buildTSPackage",
     "docs": "typedoc && cp docs_config.yml docs/_config.yml",
     "test": "jest --coverage --runInBand",
