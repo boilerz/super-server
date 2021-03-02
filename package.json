@@ -16,7 +16,7 @@
     "example:minimal": "ts-node-dev examples/minimal.ts"
   },
   "peerDependencies": {
-    "@boilerz/logger": "^1.1.19",
+    "@boilerz/logger": "^1.1.20",
     "@boilerz/super-server-auth-core": "^1.6.26",
     "dayjs": "^1.10.4",
     "passport": "^0.4.1",
@@ -27,7 +27,7 @@
     "@boilerz/build-tools": "^1.5.2",
     "@boilerz/eslint-config": "^2.0.17",
     "@boilerz/jest-config": "^1.0.5",
-    "@boilerz/logger": "^1.1.19",
+    "@boilerz/logger": "^1.1.20",
     "@boilerz/mongoose-helper": "1.2.20",
     "@boilerz/prettier-config": "^1.0.3",
     "@boilerz/super-server": "^1.6.21",
