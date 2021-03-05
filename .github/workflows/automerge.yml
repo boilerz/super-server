@@ -1,4 +1,5 @@
-name: Automerge
+name: Auto merge
+
 on:
   pull_request:
     types:
@@ -17,12 +18,11 @@ on:
     types:
       - completed
   status: {}
+
 jobs:
   automerge:
     runs-on: ubuntu-latest
     steps:
-      - name: automerge
-        uses: "pascalgn/automerge-action@v0.13.0"
+      - uses: boilerz/action-automerge@master
         env:
-          GITHUB_TOKEN: "${{ secrets.GH_BOILERZ_BOT_TOKEN }}"
-          MERGE_COMMIT_MESSAGE:  ":twisted_rightwards_arrows: Merge pull request #{pullRequest.number} - {pullRequest.title}"
+          GITHUB_TOKEN: ${{ secrets.GH_BOILERZ_BOT_TOKEN }}
