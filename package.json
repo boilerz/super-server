@@ -32,7 +32,7 @@
     "@boilerz/jest-config": "^1.0.6",
     "@boilerz/logger": "^1.1.21",
     "@boilerz/mongoose-helper": "1.2.20",
-    "@boilerz/prettier-config": "^1.0.3",
+    "@boilerz/prettier-config": "^1.0.4",
     "@boilerz/super-server-auth-core": "^1.6.26",
     "@boilerz/super-server-auth-local": "^1.6.18",
     "@boilerz/super-server-mongo": "1.1.12",
