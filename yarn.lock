@@ -386,10 +386,10 @@
     bunyan-sentry-stream "^1.2.1"
     read-pkg "^5.2.0"
 
-"@boilerz/mongoose-helper@1.2.27":
-  version "1.2.27"
-  resolved "https://registry.yarnpkg.com/@boilerz/mongoose-helper/-/mongoose-helper-1.2.27.tgz#8201b80942b0b00400b92f85f9560e89d865e573"
-  integrity sha512-vP2WCEmblCHr5MxU3x4z6eIZ3gsEQNLqbhe+/7k94Yv8kBXSQJNMPD+2Xjeh2t9cqesNnOr1OTGOXwwStVMbVA==
+"@boilerz/mongoose-helper@1.2.28":
+  version "1.2.28"
+  resolved "https://registry.yarnpkg.com/@boilerz/mongoose-helper/-/mongoose-helper-1.2.28.tgz#5096240eafdad6c8f6649ea2106d4a31408a5cc3"
+  integrity sha512-eMtHyCBwdjA2LTa8DhdJz70zAiQmv/iV5Yq15+Ojuqartderb7LpbNUKmhjl2oQ4JHlz+78eO2FnqzcmAeAnOA==
   dependencies:
     "@sentry/node" "^6.2.2"
 
