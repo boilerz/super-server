@@ -26,7 +26,7 @@
     "@boilerz/prettier-config": "^1.0.4",
     "@boilerz/super-server": "^1.6.26",
     "@boilerz/tsconfig": "^1.4.10",
-    "@boilerz/tsconfig-production": "^1.4.8",
+    "@boilerz/tsconfig-production": "^1.4.10",
     "@types/jest": "^26.0.22",
     "apollo-server-express": "^2.22.1",
     "codecov": "^3.8.1",
