@@ -15,14 +15,14 @@
     "codecov": "codecov"
   },
   "peerDependencies": {
-    "@boilerz/mongoose-helper": "1.2.28"
+    "@boilerz/mongoose-helper": "1.2.29"
   },
   "devDependencies": {
     "@boilerz/build-tools": "^1.5.6",
     "@boilerz/eslint-config": "^2.0.20",
     "@boilerz/jest-config": "^1.0.7",
     "@boilerz/logger": "^1.1.23",
-    "@boilerz/mongoose-helper": "1.2.28",
+    "@boilerz/mongoose-helper": "1.2.29",
     "@boilerz/prettier-config": "^1.0.4",
     "@boilerz/super-server": "^1.6.26",
     "@boilerz/tsconfig": "^1.4.10",
