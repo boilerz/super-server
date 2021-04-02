@@ -1,6 +1,6 @@
 {
   "name": "@boilerz/super-server",
-  "version": "1.6.27",
+  "version": "1.6.28",
   "main": "src/index.ts",
   "repository": "git@github.com:boilerz/super-server.git",
   "author": "boilerz",
