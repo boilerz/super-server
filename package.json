@@ -69,7 +69,7 @@
   },
   "dependencies": {
     "@sendgrid/mail": "^7.4.2",
-    "bson": "^4.2.3",
+    "bson": "^4.3.0",
     "jsonwebtoken": "^8.5.1",
     "pluralize": "^8.0.0"
   },
