@@ -41,7 +41,7 @@
     "@sentry/node": "^6.3.1",
     "@typegoose/typegoose": "^7.6.0",
     "@types/bson": "^4.0.3",
-    "@types/jest": "^26.0.22",
+    "@types/jest": "^26.0.23",
     "@types/jsonwebtoken": "^8.5.1",
     "@types/lodash": "^4.14.168",
     "@types/mongoose": "^5.10.5",
