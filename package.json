@@ -27,7 +27,7 @@
     "@boilerz/super-server": "^1.6.30",
     "@boilerz/tsconfig": "^1.4.10",
     "@boilerz/tsconfig-production": "^1.4.10",
-    "@types/jest": "^26.0.22",
+    "@types/jest": "^26.0.23",
     "apollo-server-express": "^2.23.0",
     "codecov": "^3.8.1",
     "eslint": "^7.25.0",
