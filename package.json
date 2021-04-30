@@ -34,7 +34,7 @@
     "@boilerz/logger": "^1.1.25",
     "@boilerz/mongoose-helper": "^1.2.20",
     "@boilerz/prettier-config": "^1.0.4",
-    "@boilerz/super-server": "1.6.29",
+    "@boilerz/super-server": "1.6.30",
     "@boilerz/super-server-mongo": "1.1.12",
     "@boilerz/tsconfig": "^1.4.10",
     "@boilerz/tsconfig-production": "^1.4.10",
