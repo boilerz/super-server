@@ -53,7 +53,7 @@ describe('AuthenticationResolver', () => {
       useCreateIndex: true,
     });
     server = await superServer.start({
-      plugins: [(plugin as unknown) as SuperServerPlugin],
+      plugins: [plugin as unknown as SuperServerPlugin],
       resolvers: [DummyResolver],
       port: 5000,
     });
