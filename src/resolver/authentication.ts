@@ -57,7 +57,7 @@ class GoogleAuthenticationResolver {
       ExternalProvider.GOOGLE,
       {
         id,
-        data: (payload as unknown) as Record<string, unknown>,
+        data: payload as unknown as Record<string, unknown>,
       },
     );
 

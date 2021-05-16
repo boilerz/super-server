@@ -16,8 +16,7 @@ export const johnDoe: GoogleProfile = Object.freeze({
   ],
   photos: [],
   provider: 'google',
-  _raw:
-    '{\n  "sub": "42",\n  "name": "John",\n  "given_name": "John",\n  "family_name": "Doe",\n  "picture": "https://upload.wikimedia.org/wikipedia/commons/8/89/Tomato_je.jpg",\n  "email": "john@doe.co",\n  "email_verified": true,\n  "locale": "fr"\n}',
+  _raw: '{\n  "sub": "42",\n  "name": "John",\n  "given_name": "John",\n  "family_name": "Doe",\n  "picture": "https://upload.wikimedia.org/wikipedia/commons/8/89/Tomato_je.jpg",\n  "email": "john@doe.co",\n  "email_verified": true,\n  "locale": "fr"\n}',
   _json: {
     sub: '42',
     name: 'John',
