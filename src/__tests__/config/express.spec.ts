@@ -14,11 +14,11 @@ describe('config/express', () => {
     request = {
       authInfo: {},
     } as Request;
-    response = ({
+    response = {
       cookie: jest.fn(),
       redirect: jest.fn(),
       sendStatus: jest.fn(),
-    } as unknown) as Response;
+    } as unknown as Response;
   });
 
   describe('#callbackHandler', () => {

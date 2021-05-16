@@ -14,9 +14,9 @@ describe('Plugin', () => {
 
   describe('#configure', () => {
     it('should configure express', async () => {
-      const expressMock: Express = ({
+      const expressMock: Express = {
         get: jest.fn(),
-      } as unknown) as Express;
+      } as unknown as Express;
       await plugin.configure(expressMock, graphQLServerOptions);
 
       expect(expressMock.get).toMatchInlineSnapshot(`
