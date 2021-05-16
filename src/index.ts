@@ -38,13 +38,10 @@ export async function shutdown(exit = false, code?: number): Promise<void> {
 
 export function setupSignalHandlers(): void {
   process.on('SIGINT', shutdown.bind(null, true));
-  process.on(
-    'uncaughtException',
-    (err: Error): Promise<void> => {
-      logger.error({ err }, '✘ Uncaught exception');
-      return shutdown(true);
-    },
-  );
+  process.on('uncaughtException', (err: Error): Promise<void> => {
+    logger.error({ err }, '✘ Uncaught exception');
+    return shutdown(true);
+  });
 }
 
 export async function setup({
