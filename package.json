@@ -36,7 +36,7 @@
     "@boilerz/tsconfig": "^1.4.10",
     "@boilerz/tsconfig-production": "^1.4.10",
     "@typegoose/typegoose": "^7.6.0",
-    "@types/express": "^4.17.11",
+    "@types/express": "^4.17.12",
     "@types/jest": "^26.0.23",
     "@types/passport": "^1.0.6",
     "@types/passport-google-oauth": "^1.0.41",
