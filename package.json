@@ -18,7 +18,7 @@
   "peerDependencies": {
     "@boilerz/amqp-helper": "^1.1.16",
     "@boilerz/logger": "^1.1.11",
-    "@typegoose/typegoose": "^7.6.0",
+    "@typegoose/typegoose": "^7.6.1",
     "class-validator": "^0.13.1",
     "dayjs": "^1.10.5",
     "graphql": "^15.4.0",
@@ -39,7 +39,7 @@
     "@boilerz/tsconfig": "^1.4.10",
     "@boilerz/tsconfig-production": "^1.4.10",
     "@sentry/node": "^6.4.1",
-    "@typegoose/typegoose": "^7.6.0",
+    "@typegoose/typegoose": "^7.6.1",
     "@types/bson": "^4.0.3",
     "@types/jest": "^26.0.23",
     "@types/jsonwebtoken": "^8.5.1",
