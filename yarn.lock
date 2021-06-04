@@ -398,12 +398,12 @@
   resolved "https://registry.yarnpkg.com/@boilerz/prettier-config/-/prettier-config-1.0.4.tgz#0afda4c9b48a2e7f58aefe14145e272364307cc8"
   integrity sha512-+/O8QSjpqunRuQ4dMAx4vuIZWy8q/76KPrR8UzSo1KAu3/qjo5IpoicncbNoVS4ZM4ZEKQsozRa4HL/nZ0xBsw==
 
-"@boilerz/super-server@^1.6.33":
-  version "1.6.33"
-  resolved "https://registry.yarnpkg.com/@boilerz/super-server/-/super-server-1.6.33.tgz#f688643dcdaaa7d603ed1c423181e4226b34b03c"
-  integrity sha512-2/nvxMbokKPN05m0+Yx6EaxBYZhsGlLL9fy+1SgxRQaNZ5aS5iirW/GBZYa6eqkESkkUHRAgWwHnBbzPx/kenw==
+"@boilerz/super-server@^1.6.34":
+  version "1.6.34"
+  resolved "https://registry.yarnpkg.com/@boilerz/super-server/-/super-server-1.6.34.tgz#2ca7ecfd4adf2033c07e01099f16de73c2f5d9ac"
+  integrity sha512-ZYa2oGLsqEyhl9ECUKKgcAV3UAySD8bvgxLwH1Iu81vsHS9b0ziLtLT3UQ9BAIQOkdPYogO9OxO0+sSiwgBQmQ==
   dependencies:
-    "@sentry/node" "^6.3.6"
+    "@sentry/node" "^6.5.1"
     body-parser "^1.19.0"
     class-validator "^0.13.1"
     reflect-metadata "^0.1.13"
@@ -739,7 +739,7 @@
     "@sentry/types" "6.5.1"
     tslib "^1.9.3"
 
-"@sentry/node@^6.3.6", "@sentry/node@^6.5.1":
+"@sentry/node@^6.5.1":
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/@sentry/node/-/node-6.5.1.tgz#a572b380858de5aeaf98eade6d8d3afcba13d364"
   integrity sha512-Yh8J/QJ5e8gRBVL9VLCDpUvmiaxsxVZm0CInPHw3V/smgMkrzSKEiqxSeMq8ImPlaJrCFECqdpv4gnvYKI+mQQ==
