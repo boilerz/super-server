@@ -408,10 +408,10 @@
     class-validator "^0.13.1"
     reflect-metadata "^0.1.13"
 
-"@boilerz/tsconfig-production@^1.4.10":
-  version "1.4.10"
-  resolved "https://registry.yarnpkg.com/@boilerz/tsconfig-production/-/tsconfig-production-1.4.10.tgz#3889d3dd3d53116fb67bcc63082e477976e8997b"
-  integrity sha512-YwLS5uCAxGVU7+uHH46HwvlSaKjCgwnlsamrMn8GVRSshdgJQOiV3qkIhKKGhaHL1/EgiWh3dx6ihMEVgDNCgA==
+"@boilerz/tsconfig-production@^1.4.11":
+  version "1.4.11"
+  resolved "https://registry.yarnpkg.com/@boilerz/tsconfig-production/-/tsconfig-production-1.4.11.tgz#ec3c446e7a22b40fdc281db9cd8b1f7582d3b3ef"
+  integrity sha512-uQJPXfY/0V5M5PPoTtLYiMqugQiFAO9NXIEjwKdHKwHLFyVUrfynCN0uJ+VTq4FKxG8GjVahHOBz2Vlo69V09A==
   dependencies:
     "@tsconfig/node14" "^1.0.0"
 
