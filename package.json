@@ -68,7 +68,7 @@
     "typescript": "^4.3.2"
   },
   "dependencies": {
-    "@sendgrid/mail": "^7.4.4",
+    "@sendgrid/mail": "^7.4.5",
     "bson": "^4.4.0",
     "jsonwebtoken": "^8.5.1",
     "pluralize": "^8.0.0"
