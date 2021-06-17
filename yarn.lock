@@ -405,13 +405,13 @@
   resolved "https://registry.yarnpkg.com/@boilerz/prettier-config/-/prettier-config-1.0.4.tgz#0afda4c9b48a2e7f58aefe14145e272364307cc8"
   integrity sha512-+/O8QSjpqunRuQ4dMAx4vuIZWy8q/76KPrR8UzSo1KAu3/qjo5IpoicncbNoVS4ZM4ZEKQsozRa4HL/nZ0xBsw==
 
-"@boilerz/super-server-auth-core@^1.6.32":
-  version "1.6.32"
-  resolved "https://registry.yarnpkg.com/@boilerz/super-server-auth-core/-/super-server-auth-core-1.6.32.tgz#1c05d92b21f4d686614de5a54d0c41f6605341eb"
-  integrity sha512-50ze2egpqyieE8qtjFTR59o0J/JVu0E4XvugzS8gN4WAOkqF6yNV5z4RDdCxbtvOwQ4jf5YfAM5HyHBLpYLFtQ==
+"@boilerz/super-server-auth-core@^1.6.33":
+  version "1.6.33"
+  resolved "https://registry.yarnpkg.com/@boilerz/super-server-auth-core/-/super-server-auth-core-1.6.33.tgz#3b069623884d407ab1f502747d6bf398213e892d"
+  integrity sha512-dWeZI+ZMGkdXI4w7PlxjwOS3lFrvs/Vegm3gWh6kBN0kngOkjM/81iC7ry5wX3bzdgfLJ5O6bWpBdCWe10NOJA==
   dependencies:
     "@sendgrid/mail" "^7.4.4"
-    bson "^4.3.0"
+    bson "^4.4.0"
     jsonwebtoken "^8.5.1"
     pluralize "^8.0.0"
 
@@ -1989,10 +1989,10 @@ bson@^1.1.4:
   resolved "https://registry.npmjs.org/bson/-/bson-1.1.5.tgz#2aaae98fcdf6750c0848b0cba1ddec3c73060a34"
   integrity sha512-kDuEzldR21lHciPQAIulLs1LZlCXdLziXI6Mb/TDkwXhb//UORJNPXgcRs2CuO4H0DcMkpfT3/ySsP3unoZjBg==
 
-bson@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/bson/-/bson-4.3.0.tgz#b466abeb6555f9b621dc6681b175a634e14356d4"
-  integrity sha512-LkKKeFJx5D6RRCRvLE+fDs40M2ZQNuk7W7tFXmKd7OOcQQ+BHdzCgRdL4XEGjc1UEGtiYuMvIVk91Bv8qsI50A==
+bson@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/bson/-/bson-4.4.0.tgz#6a4cac7de8c5cc24a9bcc059cd42a9852e2bad4a"
+  integrity sha512-uX9Zqzv2DpFXJgQOWKD8nbf0dTQV57WM8eiXDXVWeJYgiu/zIRz61OGLJKwbfSEEjZJ+AgS+7TUT7Y8EloTaqQ==
   dependencies:
     buffer "^5.6.0"
 
