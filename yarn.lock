@@ -423,10 +423,10 @@
   resolved "https://registry.yarnpkg.com/@boilerz/super-server-mongo/-/super-server-mongo-1.1.12.tgz#f2517436819a68c2e4dfb7d3766eaef6a503021e"
   integrity sha512-ghjd36Z3FNj0CCgUShRoiT1yUKcA6EP+7PaH6cOFc09YUjvlZBhvQrl0YXI1ZMdMOjmNWLN1W+vD/a5f2xeZog==
 
-"@boilerz/tsconfig-production@^1.4.11":
-  version "1.4.11"
-  resolved "https://registry.yarnpkg.com/@boilerz/tsconfig-production/-/tsconfig-production-1.4.11.tgz#ec3c446e7a22b40fdc281db9cd8b1f7582d3b3ef"
-  integrity sha512-uQJPXfY/0V5M5PPoTtLYiMqugQiFAO9NXIEjwKdHKwHLFyVUrfynCN0uJ+VTq4FKxG8GjVahHOBz2Vlo69V09A==
+"@boilerz/tsconfig-production@^1.4.12":
+  version "1.4.12"
+  resolved "https://registry.yarnpkg.com/@boilerz/tsconfig-production/-/tsconfig-production-1.4.12.tgz#2f52a8ce079e0c27d7be6472549622f985271cbb"
+  integrity sha512-/xlMUyVVaj7UHosX/k4CMFuAyCnzM4y7S6ENi6qr2HcGtzMQhk1CM7ji4HdbYOa6I9dxfcd6Dw/JhTdpE9f9Ug==
   dependencies:
     "@tsconfig/node14" "^1.0.0"
 
