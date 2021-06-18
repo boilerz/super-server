@@ -37,7 +37,7 @@
     "@boilerz/super-server": "1.6.35",
     "@boilerz/super-server-mongo": "1.1.12",
     "@boilerz/tsconfig": "^1.4.12",
-    "@boilerz/tsconfig-production": "^1.4.11",
+    "@boilerz/tsconfig-production": "^1.4.12",
     "@sentry/node": "^6.7.1",
     "@typegoose/typegoose": "^7.6.1",
     "@types/bson": "^4.0.3",
