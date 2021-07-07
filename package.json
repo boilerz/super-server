@@ -35,7 +35,7 @@
     "@boilerz/tsconfig-production": "^1.4.12",
     "@sentry/node": "^6.7.1",
     "@typegoose/typegoose": "^7.4.2",
-    "@types/jest": "^26.0.23",
+    "@types/jest": "^26.0.24",
     "@types/passport": "^1.0.6",
     "@types/passport-local": "^1.0.33",
     "@types/supertest": "^2.0.11",
