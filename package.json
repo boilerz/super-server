@@ -24,7 +24,7 @@
     "@boilerz/logger": "^1.1.29",
     "@boilerz/mongoose-helper": "1.2.40",
     "@boilerz/prettier-config": "^1.0.4",
-    "@boilerz/super-server": "^1.6.35",
+    "@boilerz/super-server": "^1.6.36",
     "@boilerz/tsconfig": "^1.4.12",
     "@boilerz/tsconfig-production": "^1.4.12",
     "@types/jest": "^26.0.23",
