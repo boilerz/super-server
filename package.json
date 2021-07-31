@@ -34,7 +34,7 @@
     "@boilerz/mongoose-helper": "1.2.41",
     "@boilerz/prettier-config": "^1.0.4",
     "@boilerz/super-server-auth-core": "^1.6.26",
-    "@boilerz/super-server-auth-local": "^1.6.23",
+    "@boilerz/super-server-auth-local": "^1.6.24",
     "@boilerz/super-server-mongo": "1.1.20",
     "@boilerz/tsconfig": "^1.4.12",
     "@boilerz/tsconfig-production": "^1.4.12",
