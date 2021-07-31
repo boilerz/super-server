@@ -46,7 +46,7 @@
     "class-validator": "^0.13.1",
     "codecov": "^3.8.3",
     "dayjs": "^1.10.6",
-    "eslint": "^7.30.0",
+    "eslint": "^7.31.0",
     "express": "^4.17.1",
     "graphql": "^15.5.1",
     "jest": "^26.6.3",
