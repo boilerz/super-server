@@ -1976,10 +1976,10 @@ bson@^1.1.4:
   resolved "https://registry.yarnpkg.com/bson/-/bson-1.1.5.tgz#2aaae98fcdf6750c0848b0cba1ddec3c73060a34"
   integrity sha512-kDuEzldR21lHciPQAIulLs1LZlCXdLziXI6Mb/TDkwXhb//UORJNPXgcRs2CuO4H0DcMkpfT3/ySsP3unoZjBg==
 
-bson@^4.5.1:
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/bson/-/bson-4.5.1.tgz#02e9d649ce017ab14ed258737756c11809963d6c"
-  integrity sha512-XqFP74pbTVLyLy5KFxVfTUyRrC1mgOlmu/iXHfXqfCKT59jyP9lwbotGfbN59cHBRbJSamZNkrSopjv+N0SqAA==
+bson@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/bson/-/bson-4.6.0.tgz#15c3b39ba3940c3d915a0c44d51459f4b4fbf1b2"
+  integrity sha512-8jw1NU1hglS+Da1jDOUYuNcBJ4cNHCFIqzlwoFNnsTOg2R/ox0aTYcTiBN4dzRa9q7Cvy6XErh3L8ReTEb9AQQ==
   dependencies:
     buffer "^5.6.0"
 
