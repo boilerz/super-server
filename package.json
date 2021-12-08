@@ -21,7 +21,7 @@
     "@boilerz/logger": "^1.1.31",
     "apollo-server-express": "^2.25.2",
     "express": "^4.17.1",
-    "graphql": "^15.5.3",
+    "graphql": "^15.8.0",
     "lodash": "^4.17.21",
     "type-graphql": "^1.1.1"
   },
@@ -50,7 +50,7 @@
     "dayjs": "^1.10.7",
     "eslint": "^7.32.0",
     "express": "^4.17.1",
-    "graphql": "^15.5.3",
+    "graphql": "^15.8.0",
     "jest": "^26.6.3",
     "lodash": "^4.17.21",
     "mongoose": "^5.13.9",
