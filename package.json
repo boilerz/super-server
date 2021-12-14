@@ -42,7 +42,7 @@
     "@typegoose/typegoose": "^8.3.0",
     "@types/bson": "^4.2.0",
     "@types/jest": "^27.0.1",
-    "@types/jsonwebtoken": "^8.5.4",
+    "@types/jsonwebtoken": "^8.5.6",
     "@types/lodash": "^4.14.178",
     "@types/mongoose": "^5.11.97",
     "@types/passport": "^1.0.7",
