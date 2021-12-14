@@ -23,7 +23,7 @@
     "dayjs": "^1.10.7",
     "graphql": "^15.8.0",
     "lodash": "^4.17.21",
-    "passport": "^0.4.1",
+    "passport": "^0.5.0",
     "type-graphql": "^1.1.1"
   },
   "devDependencies": {
@@ -60,7 +60,7 @@
     "lodash": "^4.17.21",
     "mockdate": "^3.0.5",
     "mongoose": "^5.13.13",
-    "passport": "^0.4.1",
+    "passport": "^0.5.0",
     "prettier": "^2.5.1",
     "supertest": "^6.1.6",
     "ts-node-dev": "^1.1.8",
