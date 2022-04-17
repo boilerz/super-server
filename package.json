@@ -43,7 +43,7 @@
     "apollo-server-express": "^2.25.3",
     "class-validator": "^0.13.2",
     "codecov": "^3.8.3",
-    "dayjs": "^1.10.7",
+    "dayjs": "^1.11.1",
     "eslint": "^7.32.0",
     "express": "^4.17.3",
     "graphql": "^15.8.0",
