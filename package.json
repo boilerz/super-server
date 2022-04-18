@@ -59,7 +59,7 @@
     "supertest": "^6.2.2",
     "ts-node-dev": "^1.1.8",
     "type-graphql": "^1.1.1",
-    "typedoc": "^0.22.10",
+    "typedoc": "^0.22.15",
     "typescript": "^4.5.4"
   },
   "dependencies": {
