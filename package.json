@@ -34,7 +34,7 @@
     "@boilerz/super-server-auth-core": "^1.6.35",
     "@boilerz/super-server-mongo": "^1.1.20",
     "@boilerz/tsconfig": "^1.4.13",
-    "@boilerz/tsconfig-production": "^1.4.13",
+    "@boilerz/tsconfig-production": "^1.4.14",
     "@typegoose/typegoose": "^7.6.3",
     "@types/express": "^4.17.13",
     "@types/jest": "^27.4.1",
