@@ -65,7 +65,7 @@
     "supertest": "^6.2.2",
     "ts-node-dev": "^1.1.8",
     "type-graphql": "^1.1.1",
-    "typescript": "^4.5.4"
+    "typescript": "^4.6.3"
   },
   "dependencies": {
     "@sendgrid/mail": "^7.6.2",
