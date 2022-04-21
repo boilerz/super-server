@@ -30,6 +30,9 @@ export async function setupGraphQLServer(
     context,
     ...apolloServerExpressConfig,
   });
+
+  await server.start();
+
   server.applyMiddleware({
     app,
     cors: {

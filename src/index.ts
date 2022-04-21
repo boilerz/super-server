@@ -24,7 +24,7 @@ export interface SuperServerOptions {
   port?: number;
 }
 
-export async function shutdown(exit = false, code?: number): Promise<void> {
+export async function shutdown(exit?: boolean, code?: number): Promise<void> {
   logger.info({ code }, '✘ Server shutdown');
   server.close();
 

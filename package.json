@@ -19,7 +19,7 @@
   },
   "peerDependencies": {
     "@boilerz/logger": "^1.1.32",
-    "apollo-server-express": "^2.25.2",
+    "apollo-server-express": "^3.6.7",
     "express": "^4.17.3",
     "graphql": "^15.8.0",
     "lodash": "^4.17.21",
@@ -45,7 +45,7 @@
     "@types/lodash": "^4.14.182",
     "@types/supertest": "^2.0.12",
     "amqplib": "^0.6.0",
-    "apollo-server-express": "^2.25.2",
+    "apollo-server-express": "^3.6.7",
     "codecov": "^3.8.3",
     "dayjs": "^1.11.1",
     "eslint": "^7.32.0",
