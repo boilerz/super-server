@@ -575,12 +575,12 @@
     bunyan-sentry-stream "^1.2.1"
     read-pkg "^5.2.0"
 
-"@boilerz/mongoose-helper@1.2.41":
-  version "1.2.41"
-  resolved "https://registry.yarnpkg.com/@boilerz/mongoose-helper/-/mongoose-helper-1.2.41.tgz#5fbbbb339236fda21925e15ed95470ca42569b94"
-  integrity sha512-xG2fgLLpsvwVF2scZYmiDfk5eJyxc5pc245YD+kYQKSEgc0kyGekkhLYoE1OtpDGB04n/TASrlouzoUOi+Hw9g==
+"@boilerz/mongoose-helper@1.2.42":
+  version "1.2.42"
+  resolved "https://registry.yarnpkg.com/@boilerz/mongoose-helper/-/mongoose-helper-1.2.42.tgz#d062a6124777a6c4efe700f6ec806a13d94a6634"
+  integrity sha512-8275PT0ay5aH1jdI7yWC/0fb5O9S8b0yMdcgS9bmcEii16DA6fNMd+lVF6fnusOel9SczNZ6qLfeTUjwjA8W2Q==
   dependencies:
-    "@sentry/node" "^6.8.0"
+    "@sentry/node" "^6.10.0"
 
 "@boilerz/prettier-config@^1.0.4":
   version "1.0.4"
@@ -604,10 +604,10 @@
   dependencies:
     passport-local "^1.0.0"
 
-"@boilerz/super-server-mongo@1.1.20":
-  version "1.1.20"
-  resolved "https://registry.yarnpkg.com/@boilerz/super-server-mongo/-/super-server-mongo-1.1.20.tgz#f5556f18d7ac3aa642f4f522ea9211ea6f892e5b"
-  integrity sha512-fJhyWiM9lnpt08yHzjzojnZj2KR2NWMftQDEMMF1FGp1U9PEnKuOdY2rjKDnTIFpk/hEcytOBEOHhgMJJnjQtg==
+"@boilerz/super-server-mongo@1.1.21":
+  version "1.1.21"
+  resolved "https://registry.yarnpkg.com/@boilerz/super-server-mongo/-/super-server-mongo-1.1.21.tgz#4cf3530a7b452f2c4f71a10c3858ce12a72e8792"
+  integrity sha512-O3tQBR2XeOF0rm0uWYv2ZK5bwfwC+fz1OvUT+9n7mJfVCt9t90aeah7iOhMxkq/2M4Vgd1QYGxtR6f5OMmXU8A==
 
 "@boilerz/tsconfig-production@^1.4.14":
   version "1.4.14"
@@ -1021,7 +1021,7 @@
     "@sentry/types" "6.19.6"
     tslib "^1.9.3"
 
-"@sentry/node@^6.19.6", "@sentry/node@^6.8.0":
+"@sentry/node@^6.10.0", "@sentry/node@^6.19.6":
   version "6.19.6"
   resolved "https://registry.yarnpkg.com/@sentry/node/-/node-6.19.6.tgz#d63c4ffcf0150b4175a2e4e5021b53af46e5946f"
   integrity sha512-kHQMfsy40ZxxdS9zMPmXCOOLWOJbQj6/aVSHt/L1QthYcgkAi7NJQNXnQIPWQDe8eP3DfNIWM7dc446coqjXrQ==
