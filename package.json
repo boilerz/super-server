@@ -26,7 +26,7 @@
     "type-graphql": "^1.1.1"
   },
   "devDependencies": {
-    "@boilerz/amqp-helper": "1.1.20",
+    "@boilerz/amqp-helper": "1.1.29",
     "@boilerz/build-tools": "^1.5.9",
     "@boilerz/eslint-config": "^2.0.38",
     "@boilerz/jest-config": "^1.0.11",
@@ -44,7 +44,7 @@
     "@types/jest": "^27.4.1",
     "@types/lodash": "^4.14.182",
     "@types/supertest": "^2.0.12",
-    "amqplib": "^0.6.0",
+    "amqplib": "^0.8.0",
     "apollo-server-express": "^3.6.7",
     "codecov": "^3.8.3",
     "dayjs": "^1.11.1",
