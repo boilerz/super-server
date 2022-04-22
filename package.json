@@ -26,7 +26,7 @@
     "@boilerz/amqp-helper": "^1.1.20",
     "@boilerz/build-tools": "^1.5.8",
     "@boilerz/eslint-config": "^2.0.38",
-    "@boilerz/jest-config": "^1.0.9",
+    "@boilerz/jest-config": "^1.0.11",
     "@boilerz/logger": "^1.1.32",
     "@boilerz/mongoose-helper": "1.2.41",
     "@boilerz/prettier-config": "^1.0.4",
