@@ -77,7 +77,7 @@ export async function shutdown(signalOrError: string | Error): Promise<void> {
 }
 
 /* istanbul ignore if */
-if (!module.parent) {
+if (require.main === module) {
   process
     .on('SIGTERM', shutdown)
     .on('SIGINT', shutdown)
