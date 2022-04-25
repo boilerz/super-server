@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@boilerz/amqp-helper": "1.1.29",
-    "@boilerz/build-tools": "^1.5.8",
+    "@boilerz/build-tools": "^1.5.9",
     "@boilerz/eslint-config": "^2.0.38",
     "@boilerz/jest-config": "^1.0.11",
     "@boilerz/logger": "^1.1.32",
