@@ -52,7 +52,7 @@
     "mongoose": "^5.13.14",
     "passport": "^0.4.1",
     "prettier": "^2.6.2",
-    "supertest": "^6.2.2",
+    "supertest": "^6.2.3",
     "type-graphql": "^1.1.1",
     "typescript": "^4.6.3"
   },
