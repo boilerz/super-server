@@ -474,10 +474,10 @@
   dependencies:
     passport-local "^1.0.0"
 
-"@boilerz/super-server-mongo@1.1.21":
-  version "1.1.21"
-  resolved "https://registry.yarnpkg.com/@boilerz/super-server-mongo/-/super-server-mongo-1.1.21.tgz#4cf3530a7b452f2c4f71a10c3858ce12a72e8792"
-  integrity sha512-O3tQBR2XeOF0rm0uWYv2ZK5bwfwC+fz1OvUT+9n7mJfVCt9t90aeah7iOhMxkq/2M4Vgd1QYGxtR6f5OMmXU8A==
+"@boilerz/super-server-mongo@1.1.22":
+  version "1.1.22"
+  resolved "https://registry.yarnpkg.com/@boilerz/super-server-mongo/-/super-server-mongo-1.1.22.tgz#608cd8be4abba607ba3602f619a2f535a1e403f2"
+  integrity sha512-igE2T996Ye7bhYz0N7vdzdYYtYe2d8Y5KHG0RNVk/rZCr1dQOPxjswAP7dztorl/1UZNiOKj/JC4AnLyPBdDSA==
 
 "@boilerz/tsconfig-production@^1.4.15":
   version "1.4.15"
