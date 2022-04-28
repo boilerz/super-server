@@ -35,7 +35,7 @@
     "@boilerz/prettier-config": "^1.0.4",
     "@boilerz/super-server-auth-core": "^1.6.35",
     "@boilerz/super-server-auth-local": "^1.6.24",
-    "@boilerz/super-server-mongo": "1.1.21",
+    "@boilerz/super-server-mongo": "1.1.22",
     "@boilerz/tsconfig": "^1.4.15",
     "@boilerz/tsconfig-production": "^1.4.15",
     "@typegoose/typegoose": "^7.6.2",
