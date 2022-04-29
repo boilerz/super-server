@@ -1,0 +1,7 @@
+{
+  "extends": "@boilerz/eslint-config",
+  "rules": {
+    "class-methods-use-this": "off",
+    "@typescript-eslint/no-non-null-assertion": "off"
+  }
+}
