@@ -1,6 +1,6 @@
 {
   "extends": "nx/presets/core.json",
-  "npmScope": "super-server-mono",
+  "npmScope": "boilerz",
   "affected": {
     "defaultBase": "master"
   },
