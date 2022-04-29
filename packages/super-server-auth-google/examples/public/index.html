@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" >
+<head >
+    <meta charset="UTF-8" >
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" >
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" >
+    <title >Home</title >
+</head >
+<body >
+
+<div id="welcomeBox" style="display: none">
+    <h2>Welcome <span id="name"></span></h2>
+
+    <button id="logout" onclick="deleteCookie('jwt'); checkToken();">Logout</button>
+</div>
+
+<a id="login" style="display: none" href="/auth/google">Sign In with Google</a>
+
+<script type="application/javascript" src="common.js"></script>
+<script type="application/javascript">
+  function checkToken() {
+    const token = getCookie('jwt');
+    const decodedToken = token ? parseJwt(token) : null;
+    const isAuthenticated = decodedToken && (decodedToken.exp * 1000 - Date.now()) > 0
+
+      document.getElementById('name').innerHTML = isAuthenticated ? `${decodedToken.firstName} ${decodedToken.lastName}` : '';
+      document.getElementById('welcomeBox').style.display = isAuthenticated ? 'block' : 'none';
+      document.getElementById('login').style.display = isAuthenticated ? 'none' : 'block';
+  }
+
+  checkToken();
+</script>
+
+</body >
+</html >

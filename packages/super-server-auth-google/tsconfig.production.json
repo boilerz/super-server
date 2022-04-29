@@ -1,0 +1,7 @@
+{
+  "extends": "@boilerz/tsconfig-production",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
+}
