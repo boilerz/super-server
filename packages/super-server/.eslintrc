@@ -1,0 +1,17 @@
+{
+  "extends": "@boilerz/eslint-config",
+  "rules": {
+    "import/prefer-default-export": "off",
+    "class-methods-use-this": "off",
+    "no-restricted-syntax": [
+      "error",
+      "ForInStatement",
+      "LabeledStatement",
+      "WithStatement"
+    ],
+    "no-await-in-loop": "off"
+  },
+  "env": {
+    "jest": true
+  }
+}

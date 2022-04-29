@@ -1,0 +1,204 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@boilerz/super-server</title>
+	<meta name="description" content="Documentation for @boilerz/super-server">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@boilerz/super-server</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>Project @boilerz/super-server</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#boilerzsuper-server" id="boilerzsuper-server" style="color: inherit; text-decoration: none;">
+					<h1>@boilerz/super-server</h1>
+				</a>
+				<p><a href="https://github.com/boilerz/super-server/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license"></a>
+					<a href="https://www.npmjs.com/package/@boilerz/super-server"><img src="https://img.shields.io/github/package-json/v/boilerz/super-server" alt="GitHub package.json version"></a>
+					<a href="https://github.com/boilerz/super-server/actions?query=workflow:CI"><img src="https://github.com/boilerz/super-server/workflows/CI/badge.svg" alt="GH CI Action"></a>
+				<a href="https://codecov.io/gh/boilerz/super-server"><img src="https://codecov.io/gh/boilerz/super-server/branch/master/graph/badge.svg" alt="codecov"></a></p>
+				<blockquote>
+					<p>Express server with type-graphql. </p>
+				</blockquote>
+				<a href="#install" id="install" style="color: inherit; text-decoration: none;">
+					<h3>Install</h3>
+				</a>
+				<pre><code class="language-bash"><span style="color: #000000">npx install-peerdeps @boilerz/super-server</span>
+</code></pre>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h3>Usage</h3>
+				</a>
+				<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #0000FF">*</span><span style="color: #000000"> </span><span style="color: #AF00DB">as</span><span style="color: #000000"> </span><span style="color: #001080">superServer</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@boilerz/super-server&#039;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">Arg</span><span style="color: #000000">, </span><span style="color: #001080">Query</span><span style="color: #000000">, </span><span style="color: #001080">Resolver</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;type-graphql&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #000000">@</span><span style="color: #795E26">Resolver</span><span style="color: #000000">()</span>
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">GreetingResolver</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  @</span><span style="color: #795E26">Query</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #267F99">String</span><span style="color: #000000">)</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">public</span><span style="color: #000000"> </span><span style="color: #795E26">hello</span><span style="color: #000000">(@</span><span style="color: #795E26">Arg</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;name&#039;</span><span style="color: #000000">) </span><span style="color: #001080">name</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">): </span><span style="color: #267F99">string</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #A31515">`Hello </span><span style="color: #0000FF">${</span><span style="color: #001080">name</span><span style="color: #0000FF">}</span><span style="color: #A31515">`</span><span style="color: #000000">;</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">}</span>
+
+<span style="color: #008000">// Start the server with your resolvers</span>
+<span style="color: #001080">superServer</span><span style="color: #000000">.</span><span style="color: #795E26">start</span><span style="color: #000000">({ </span><span style="color: #001080">resolvers:</span><span style="color: #000000"> [</span><span style="color: #001080">GreetingResolver</span><span style="color: #000000">] });</span>
+
+<span style="color: #008000">// OR</span>
+
+<span style="color: #008000">// For more control on the underlying express app (the server is not automatically started):</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">server</span><span style="color: #000000"> = </span><span style="color: #001080">superServer</span><span style="color: #000000">.</span><span style="color: #795E26">setup</span><span style="color: #000000">({</span>
+<span style="color: #000000">  </span><span style="color: #001080">graphQLServerOptions:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #001080">buildSchemaOptions:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">      </span><span style="color: #001080">resolvers:</span><span style="color: #000000"> [</span><span style="color: #001080">GreetingResolver</span><span style="color: #000000">],</span>
+<span style="color: #000000">    },</span>
+<span style="color: #000000">  },</span>
+<span style="color: #000000">});</span>
+
+<span style="color: #008000">// Express configuration</span>
+<span style="color: #001080">superServer</span><span style="color: #000000">.</span><span style="color: #795E26">getExpressApp</span><span style="color: #000000">().</span><span style="color: #795E26">get</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;/yo&#039;</span><span style="color: #000000">, (</span><span style="color: #001080">req</span><span style="color: #000000">, </span><span style="color: #001080">res</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">res</span><span style="color: #000000">.</span><span style="color: #795E26">send</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;Yo&#039;</span><span style="color: #000000">));</span>
+
+<span style="color: #008000">// Manually start the server</span>
+<span style="color: #001080">server</span><span style="color: #000000">.</span><span style="color: #795E26">listen</span><span style="color: #000000">(</span><span style="color: #001080">process</span><span style="color: #000000">.</span><span style="color: #001080">env</span><span style="color: #000000">.</span><span style="color: #0070C1">PORT</span><span style="color: #000000">);</span>
+</code></pre>
+				<p>Some configuration can only be changed by env vars:</p>
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Default</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td>PORT</td>
+							<td><code>3000</code></td>
+							<td>Server port.</td>
+						</tr>
+						<tr>
+							<td>ALLOWED_DOMAINS</td>
+							<td><code>/http:\/\/localhost.*/</code></td>
+							<td>CORS whitelisted domains (separated using a comma).</td>
+						</tr>
+						<tr>
+							<td>SSL_REDIRECT</td>
+							<td><code>false</code></td>
+							<td>Have to be set to <code>true</code> to redirect any http request to https.</td>
+						</tr>
+				</tbody></table>
+				<p>For the <code>@boilerz/logger</code>&#39;s configuration here the <a href="https://github.com/boilerz/logger#usage">readme</a>.</p>
+				<a href="#release" id="release" style="color: inherit; text-decoration: none;">
+					<h3>Release</h3>
+				</a>
+				<pre><code class="language-bash"><span style="color: #000000">yarn version</span>
+<span style="color: #000000">yarn build</span>
+<span style="color: #000000">yarn publish dist --access public</span>
+</code></pre>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/graphqlserveroptions.html" class="tsd-kind-icon">GraphQLServer<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/superserveroptions.html" class="tsd-kind-icon">Super<wbr>Server<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/superserverplugin.html" class="tsd-kind-icon">Super<wbr>Server<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#resolver" class="tsd-kind-icon">Resolver</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#getexpressapp" class="tsd-kind-icon">get<wbr>Express<wbr>App</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#setup" class="tsd-kind-icon">setup</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#setupsignalhandlers" class="tsd-kind-icon">setup<wbr>Signal<wbr>Handlers</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#shutdown" class="tsd-kind-icon">shutdown</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#start" class="tsd-kind-icon">start</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
