@@ -407,10 +407,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@boilerz/amqp-helper@1.1.30":
-  version "1.1.30"
-  resolved "https://registry.yarnpkg.com/@boilerz/amqp-helper/-/amqp-helper-1.1.30.tgz#66ff2191cd05059199da8be69ef01214a7465fce"
-  integrity sha512-oJ2u6VBwEXun8USpDH4DPmBIgBeQD39V7CUZRPhgq5I4M2FDZG62+e4f62YsAZW+SziMyvoJGxMdh8LeTCv2+w==
+"@boilerz/amqp-helper@1.1.32":
+  version "1.1.32"
+  resolved "https://registry.yarnpkg.com/@boilerz/amqp-helper/-/amqp-helper-1.1.32.tgz#dcb28dcc39e2a4488082459aa67e2da2a12fd107"
+  integrity sha512-qagNXYnyRQTkC7hP4CuBaaPD4bA2bHqjqP3LxbpDPY6uYwkN6BBGKyHUJOv9cUBp2YxAJXjuGLJVK0QZzv4Vsg==
   dependencies:
     waait "^1.0.5"
 
